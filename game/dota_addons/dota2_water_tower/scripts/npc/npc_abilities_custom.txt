@@ -378,7 +378,7 @@
     {
         "BaseClass"                     "ability_datadriven"
         "AbilityTextureName"            "build_tower"
-        "MaxLevel"                         "1"
+        "MaxLevel"                       "1"
     
         "AbilityBehavior"                "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
         "AbilityCastPoint"                "0"
@@ -386,13 +386,13 @@
         // BuildingHelper info
         "Building"                        "1" //bool
         "BuildingSize"                    "2"
-        "BuildTime"                        "5.0"
+        "BuildTime"                       "5.0"
         "AbilityCastRange"                "200"
         "UpdateHealth"                    "1" //bool
-        "Scale"                            "0" //bool
+        "Scale"                           "0" //bool
         "PlayerCanControl"                "1" //bool
     
-        "UnitName"                        "tower"
+        "UnitName"                       "tower"
         "AbilityCooldown"                "0"
         "AbilityGoldCost"                "50"
         // End of BuildingHelper info
@@ -402,12 +402,12 @@
             "01"
             {
                 "var_type"                "FIELD_FLOAT"
-                "build_time"            "5.0"
+                "build_time"              "5.0"
             }
             "02"
             {
                 "var_type"                "FIELD_INTEGER"
-                "gold_cost"                "50"
+                "gold_cost"                "0"
             }
             "03"
             {

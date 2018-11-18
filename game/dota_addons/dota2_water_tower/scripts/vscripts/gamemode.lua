@@ -246,7 +246,7 @@ function CustomGameMode:OnPlayerChat( event )
 end
 
 function GenerateEnemy()
-    for i=1,10 do
+    for i=1,1 do
         local entityStart = Entities:FindByName(nil, "player1_path_corner_start")
         local enemyUnit = CreateUnitByName("npc_dota_lone_druid_bear1", entityStart:GetOrigin(), false, nil, nil, DOTA_TEAM_BADGUYS)
  
