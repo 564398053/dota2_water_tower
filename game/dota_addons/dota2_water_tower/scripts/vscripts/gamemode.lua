@@ -8,7 +8,7 @@ HERO_ABILITY_TABLE_DEFAULT_LV1 =
 
 function CustomGameMode:InitGameMode()
     GameRules:GetGameModeEntity():SetFogOfWarDisabled( true )
-    GameRules:GetGameModeEntity():SetCustomGameForceHero( "npc_dota_hero_lina" )
+    GameRules:GetGameModeEntity():SetCustomGameForceHero( "npc_dota_hero_windrunner" )
 
 	-- Get Rid of Shop button - Change the UI Layout if you want a shop button
 	GameRules:GetGameModeEntity():SetHUDVisible(6, false)

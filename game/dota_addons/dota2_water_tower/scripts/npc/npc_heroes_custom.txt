@@ -1,5 +1,25 @@
 "DOTAHeroes"
 {
+    // ranger见习游侠
+    "npc_dota_hero_windrunner"
+    {
+        "override_hero"                "npc_dota_hero_windrunner"
+    
+        "UnitLabel"                    "builder"
+    
+        "AbilityLayout"                "6"
+        "Ability1"                     "blink"
+        "Ability2"                     "compound"
+        "Ability3"                     "build_ranger_first_stage"
+        "Ability4"                     ""
+        "Ability5"                     ""
+        "Ability6"                     ""
+        
+        "SelectOnSpawn"                "1"
+        "MovementCapabilities"         "DOTA_UNIT_CAP_MOVE_FLY"
+        "MovementSpeed"                "550" 
+    }
+
     "npc_dota_hero_lina"
     {
         "override_hero"                "npc_dota_hero_lina"
@@ -9,16 +29,13 @@
         "AbilityLayout"                "6"
         "Ability1"                     "blink"
         "Ability2"                     "compound"
-        "Ability3"                     "build_city_center"
+        "Ability3"                     "build_tower"
         "Ability4"                     "build_tech_center"
         "Ability5"                     "build_dragon_tower"
         "Ability6"                     "ultimate_ability"
-        "Ability7"                     "build_tower"
-        "Ability8"                     ""
-        "Ability9"                     ""
-        "Ability10"                    ""
         
+        "SelectOnSpawn"                "1"
         "MovementCapabilities"         "DOTA_UNIT_CAP_MOVE_FLY"
-        "MovementSpeed"                "600" 
+        "MovementSpeed"                "550" 
     }
 }
