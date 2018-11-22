@@ -11,8 +11,8 @@
         "Ability1"                     "blink"
         "Ability2"                     "compound"
         "Ability3"                     "build_ranger_first_stage"
-        "Ability4"                     ""
-        "Ability5"                     ""
+        "Ability4"                     "build_ranger_middle_stage"
+        "Ability5"                     "build_ranger_final_stage"
         "Ability6"                     ""
         
         "SelectOnSpawn"                "1"

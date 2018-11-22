@@ -805,18 +805,18 @@
     //=================================================================================
     // Building: ranger游侠
     //=================================================================================
-    // 见习游侠
+    // 初阶猎手
     "ranger_first_stage"
     {
         // General
         //----------------------------------------------------------------
         "BaseClass"                     "npc_dota_creature"
-        "Model"                         "models/heroes/windrunner/windrunner.vmdl"
+        "Model"                         "models/heroes/mirana/mirana.vmdl"
         "ModelScale"                    "0.8"
         "Level"                         "1"
         "HealthBarOffset"               "140"
         "HasInventory"                  "1"
-        "ConsideredHero"                "1"
+        "ConsideredHero"                "0"
         
         // Abilities
         //----------------------------------------------------------------
@@ -832,9 +832,9 @@
         //----------------------------------------------------------------
         "AttackCapabilities"         "DOTA_UNIT_CAP_RANGED_ATTACK"
         "AttackDamageType"           "DAMAGE_TYPE_ArmorPhysical"
-        "AttackDamageMin"            "23.0"
-        "AttackDamageMax"            "27.0"
-        "AttackRate"                 "0.9"
+        "AttackDamageMin"            "43"
+        "AttackDamageMax"            "43"
+        "AttackRate"                 "1.5"
         "AttackAnimationPoint"       "0.3"
         "AttackAcquisitionRange"     "700"
         "AttackRange"                "700"
@@ -877,6 +877,145 @@
                 "Wearable3"     {    "ItemDef"        "11"        } //Hands
                 "Wearable4"     {    "ItemDef"        "12"        } //Sword
                 "Wearable5"     {    "ItemDef"        "10"        } //Boots
+            }
+        }
+    }
+    
+    // 熟练猎手
+    "ranger_middle_stage"
+    {
+        // General
+        //----------------------------------------------------------------
+        "BaseClass"                     "npc_dota_creature"
+        "Model"                         "models/heroes/mirana/mirana.vmdl"
+        "ModelScale"                    "0.8"
+        "Level"                         "1"
+        "HealthBarOffset"               "140"
+        "HasInventory"                  "1"
+        "ConsideredHero"                "0"
+        
+        // Abilities
+        //----------------------------------------------------------------
+        "AbilityLayout"               "6"
+        "Ability1"                    ""
+        "Ability2"                    ""
+        "Ability3"                    ""
+        "Ability4"                    ""
+        "Ability5"                    ""
+        "Ability6"                    ""
+
+        // Attack
+        //----------------------------------------------------------------
+        "AttackCapabilities"         "DOTA_UNIT_CAP_RANGED_ATTACK"
+        "AttackDamageType"           "DAMAGE_TYPE_ArmorPhysical"
+        "AttackDamageMin"            "309"
+        "AttackDamageMax"            "309"
+        "AttackRate"                 "1.5"
+        "AttackAnimationPoint"       "0.3"
+        "AttackAcquisitionRange"     "700"
+        "AttackRange"                "700"
+        "ProjectileModel"            "particles/units/heroes/hero_windrunner/windrunner_base_attack.vpcf"    
+        "ProjectileSpeed"            "1800"
+        
+        // Bounds
+        //----------------------------------------------------------------
+        "BoundsHullName"            "DOTA_HULL_SIZE_SMALL"
+        "RingRadius"                "100"
+        "CollisionSize"             "100"
+
+        // Status
+        //----------------------------------------------------------------
+        "StatusHealth"                "1500"
+        "StatusHealthRegen"           "0"
+        "StatusMana"                  "0"
+        "StatusManaRegen"             "0"
+        
+        // Vision
+        //----------------------------------------------------------------
+        "VisionDaytimeRange"        "900"
+        "VisionNighttimeRange"      "600"
+        
+        // Team
+        //----------------------------------------------------------------
+        "TeamName"                     "DOTA_TEAM_GOODGUYS"
+        "CombatClassAttack"            "DOTA_COMBAT_CLASS_ATTACK_BASIC"
+        "CombatClassDefend"            "DOTA_COMBAT_CLASS_DEFEND_STRUCTURE"
+    }
+    
+    // 高阶猎手
+    "ranger_final_stage"
+    {
+        // General
+        //----------------------------------------------------------------
+        "BaseClass"                     "npc_dota_creature"
+        "Model"                         "models/heroes/mirana/mirana.vmdl"
+        "ModelScale"                    "1"
+        "Level"                         "1"
+        "HealthBarOffset"               "140"
+        "HasInventory"                  "1"
+        "ConsideredHero"                "0"
+        
+        // Abilities
+        //----------------------------------------------------------------
+        "AbilityLayout"               "6"
+        "Ability1"                    ""
+        "Ability2"                    ""
+        "Ability3"                    ""
+        "Ability4"                    ""
+        "Ability5"                    ""
+        "Ability6"                    ""
+
+        // Attack
+        //----------------------------------------------------------------
+        "AttackCapabilities"         "DOTA_UNIT_CAP_RANGED_ATTACK"
+        "AttackDamageType"           "DAMAGE_TYPE_ArmorPhysical"
+        "AttackDamageMin"            "1003"
+        "AttackDamageMax"            "1003"
+        "AttackRate"                 "1.5"
+        "AttackAnimationPoint"       "0.3"
+        "AttackAcquisitionRange"     "700"
+        "AttackRange"                "700"
+        "ProjectileModel"            "particles/units/heroes/hero_windrunner/windrunner_base_attack.vpcf"    
+        "ProjectileSpeed"            "1800"
+        
+        // Bounds
+        //----------------------------------------------------------------
+        "BoundsHullName"            "DOTA_HULL_SIZE_SMALL"
+        "RingRadius"                "100"
+        "CollisionSize"             "100"
+
+        // Status
+        //----------------------------------------------------------------
+        "StatusHealth"                "1500"
+        "StatusHealthRegen"           "0"
+        "StatusMana"                  "0"
+        "StatusManaRegen"             "0"
+        
+        // Vision
+        //----------------------------------------------------------------
+        "VisionDaytimeRange"        "900"
+        "VisionNighttimeRange"      "600"
+        
+        // Team
+        //----------------------------------------------------------------
+        "TeamName"                     "DOTA_TEAM_GOODGUYS"
+        "CombatClassAttack"            "DOTA_COMBAT_CLASS_ATTACK_BASIC"
+        "CombatClassDefend"            "DOTA_COMBAT_CLASS_DEFEND_STRUCTURE"
+        
+        // Creature Data
+        //----------------------------------------------------------------
+        "Creature"
+        {
+            //"DisableClumpingBehavior"    "1"
+            "AttachWearables"
+            {
+                "Wearable"     {    "ItemDef"        "403"     }
+                "Wearable"     {    "ItemDef"        "404"     } // "Mirana's Mount"
+                "Wearable"     {    "ItemDef"        "405"     }
+                "Wearable"     {    "ItemDef"        "406"     }
+                "Wearable"     {    "ItemDef"        "407"     }
+                "Wearable"     {    "ItemDef"        "408"     }
+                "Wearable"     {    "ItemDef"        "409"     }
             }
         }
     }

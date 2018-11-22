@@ -3,7 +3,7 @@ DEBUG_SPEW = 1
 
 HERO_ABILITY_TABLE_DEFAULT_LV1 = 
 {
-    "compound", "blink", "build_npc_dota_tower_basedef"
+    "compound", "blink", "build_npc_dota_tower_basedef", "build_ranger_first_stage", "build_ranger_middle_stage", "build_ranger_final_stage"
 }
 
 function CustomGameMode:InitGameMode()

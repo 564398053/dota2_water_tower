@@ -1074,7 +1074,111 @@
 
         "UnitName"                       "ranger_first_stage"
         "AbilityCooldown"                "0"
-        "AbilityGoldCost"                "50"
+        "AbilityGoldCost"                "0"
+        // End of BuildingHelper info
+
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                "FIELD_FLOAT"
+                "build_time"              "5.0"
+            }
+            "02"
+            {
+                "var_type"                "FIELD_INTEGER"
+                "gold_cost"               "0"
+            }
+            "03"
+            {
+                "var_type"                "FIELD_INTEGER"
+                "lumber_cost"             "0"
+            }
+        }
+
+        "OnSpellStart"
+        {
+            "RunScript"
+            {
+                "ScriptFile"      "builder.lua"
+                "Function"        "Build"
+            }
+        }
+    }
+    
+    "build_ranger_middle_stage"
+    {
+        "BaseClass"                      "ability_datadriven"
+        "AbilityTextureName"             "ranger_middle_stage"
+        "MaxLevel"                       "1"
+    
+        "AbilityBehavior"                "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+        "AbilityCastPoint"                "0"
+    
+        // BuildingHelper info
+        "Building"                        "1" //bool
+        "BuildingSize"                    "2"
+        "BuildTime"                       "5.0"
+        "AbilityCastRange"                "200"
+        "UpdateHealth"                    "1" //bool
+        "Scale"                           "0" //bool
+        "PlayerCanControl"                "1" //bool
+
+        "UnitName"                       "ranger_middle_stage"
+        "AbilityCooldown"                "0"
+        "AbilityGoldCost"                "0"
+        // End of BuildingHelper info
+
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                "FIELD_FLOAT"
+                "build_time"              "5.0"
+            }
+            "02"
+            {
+                "var_type"                "FIELD_INTEGER"
+                "gold_cost"               "0"
+            }
+            "03"
+            {
+                "var_type"                "FIELD_INTEGER"
+                "lumber_cost"             "0"
+            }
+        }
+
+        "OnSpellStart"
+        {
+            "RunScript"
+            {
+                "ScriptFile"      "builder.lua"
+                "Function"        "Build"
+            }
+        }
+    }
+    
+    "build_ranger_final_stage"
+    {
+        "BaseClass"                      "ability_datadriven"
+        "AbilityTextureName"             "ranger_final_stage"
+        "MaxLevel"                       "1"
+    
+        "AbilityBehavior"                "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+        "AbilityCastPoint"               "0"
+    
+        // BuildingHelper info
+        "Building"                        "1" //bool
+        "BuildingSize"                    "2"
+        "BuildTime"                       "5.0"
+        "AbilityCastRange"                "200"
+        "UpdateHealth"                    "1" //bool
+        "Scale"                           "0" //bool
+        "PlayerCanControl"                "1" //bool
+
+        "UnitName"                       "ranger_final_stage"
+        "AbilityCooldown"                "0"
+        "AbilityGoldCost"                "0"
         // End of BuildingHelper info
 
         "AbilitySpecial"
