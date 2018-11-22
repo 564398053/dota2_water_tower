@@ -3,7 +3,7 @@ DEBUG_SPEW = 1
 
 HERO_ABILITY_TABLE_DEFAULT_LV1 = 
 {
-    "compound", "blink", "build_npc_dota_tower_basedef", "build_ranger_first_stage", "build_ranger_middle_stage", "build_ranger_final_stage"
+    "compound", "blink", "build_npc_dota_tower_basedef", "build_ranger_first_stage", "build_ranger_middle_stage", "build_ranger_final_stage "
 }
 
 function CustomGameMode:InitGameMode()
@@ -246,9 +246,9 @@ function CustomGameMode:OnPlayerChat( event )
 end
 
 function GenerateEnemy()
-    for i=1,1 do
+    for i=1, 16 do
         local entityStart = Entities:FindByName(nil, "player1_path_corner_start")
-        local enemyUnit = CreateUnitByName("npc_dota_lone_druid_bear1", entityStart:GetOrigin(), false, nil, nil, DOTA_TEAM_BADGUYS)
+        local enemyUnit = CreateUnitByName("bad_guy_lv1", entityStart:GetOrigin(), false, nil, nil, DOTA_TEAM_BADGUYS)
  
         enemyUnit:SetMustReachEachGoalEntity(true)
         enemyUnit:SetInitialGoalEntity(entityStart)

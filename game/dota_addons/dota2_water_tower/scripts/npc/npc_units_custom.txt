@@ -945,8 +945,7 @@
     // 高阶猎手
     "ranger_final_stage"
     {
-        // General
-        //----------------------------------------------------------------
+        // General -------------------------------------------------------
         "BaseClass"                     "npc_dota_creature"
         "Model"                         "models/heroes/mirana/mirana.vmdl"
         "ModelScale"                    "1"
@@ -955,8 +954,7 @@
         "HasInventory"                  "1"
         "ConsideredHero"                "0"
         
-        // Abilities
-        //----------------------------------------------------------------
+        // Abilities -----------------------------------------------------
         "AbilityLayout"               "6"
         "Ability1"                    ""
         "Ability2"                    ""
@@ -965,8 +963,7 @@
         "Ability5"                    ""
         "Ability6"                    ""
 
-        // Attack
-        //----------------------------------------------------------------
+        // Attack --------------------------------------------------------
         "AttackCapabilities"         "DOTA_UNIT_CAP_RANGED_ATTACK"
         "AttackDamageType"           "DAMAGE_TYPE_ArmorPhysical"
         "AttackDamageMin"            "1003"
@@ -977,33 +974,24 @@
         "AttackRange"                "700"
         "ProjectileModel"            "particles/units/heroes/hero_windrunner/windrunner_base_attack.vpcf"    
         "ProjectileSpeed"            "1800"
+        "MovementTurnRate"           "0.1" // 值越大转身速率越高
         
-        // Bounds
-        //----------------------------------------------------------------
+        // Bounds --------------------------------------------------------
         "BoundsHullName"            "DOTA_HULL_SIZE_SMALL"
         "RingRadius"                "100"
         "CollisionSize"             "100"
 
-        // Status
-        //----------------------------------------------------------------
+        // Status --------------------------------------------------------
         "StatusHealth"                "1500"
         "StatusHealthRegen"           "0"
         "StatusMana"                  "0"
         "StatusManaRegen"             "0"
-        
-        // Vision
-        //----------------------------------------------------------------
-        "VisionDaytimeRange"        "900"
-        "VisionNighttimeRange"      "600"
-        
-        // Team
-        //----------------------------------------------------------------
+
+        // Team ----------------------------------------------------------
         "TeamName"                     "DOTA_TEAM_GOODGUYS"
         "CombatClassAttack"            "DOTA_COMBAT_CLASS_ATTACK_BASIC"
-        "CombatClassDefend"            "DOTA_COMBAT_CLASS_DEFEND_STRUCTURE"
         
-        // Creature Data
-        //----------------------------------------------------------------
+        // Creature Data -------------------------------------------------
         "Creature"
         {
             //"DisableClumpingBehavior"    "1"
@@ -1018,5 +1006,77 @@
                 "Wearable"     {    "ItemDef"        "409"     }
             }
         }
+    }
+    
+    //------------------------------------------------------------------------------------------
+    // bad guys
+    //------------------------------------------------------------------------------------------
+    "bad_guy_lv1"
+    {
+        // General
+        //----------------------------------------------------------------
+        "BaseClass"                    "npc_dota_creature"
+        "Model"                        "models\items\courier\mighty_chicken\mighty_chicken.vmdl"
+        "ModelScale"                   "0.8"
+        "Level"                        "1"
+        "HealthBarOffset"              "140"
+        "SelectionGroup"               "bad_guy_lv1"
+        "SoundSet"                     "Hero_Kunkka"
+        "UnitLabel"                    "bad_guy_lv1"
+    
+        "precache"
+        {
+            "soundfile" "soundevents/game_sounds_heroes/game_sounds_kunkka.vsndevts"
+        }
+        
+        "PathfindingSearchDepthScale" "1"
+        
+        // Abilities
+        //----------------------------------------------------------------
+        "AbilityLayout"                "4"
+        "Ability1"                     ""
+        "Ability2"                     ""
+        "Ability3"                     ""
+        "Ability4"                     ""
+    
+        // Armor
+        //----------------------------------------------------------------
+        "ArmorPhysical"                "0"
+        "MagicalResistance"            "0"
+
+        // Bounty
+        //----------------------------------------------------------------
+        "BountyGoldMin"                "1.0"
+        "BountyGoldMax"                "4.0"
+        
+        // Bounds
+        //----------------------------------------------------------------
+        "BoundsHullName"                "DOTA_HULL_SIZE_SMALL"
+        "RingRadius"                    "36"
+        "CollisionSize"                 "1"
+            
+        // Movement
+        //----------------------------------------------------------------
+        "MovementCapabilities"         "DOTA_UNIT_CAP_MOVE_GROUND"
+        "MovementSpeed"                "550"
+        "MovementTurnRate"             "4"
+        
+        // Status
+        //----------------------------------------------------------------
+        "StatusHealth"                "10"
+        "StatusHealthRegen"           "0"
+        "StatusMana"                  "0"
+        "StatusManaRegen"             "0"
+        
+        // Vision
+        //----------------------------------------------------------------
+        "VisionDaytimeRange"         "800"
+        "VisionNighttimeRange"       "600"
+        
+        // Team
+        //----------------------------------------------------------------
+        "TeamName"                    "DOTA_TEAM_BAD_GUYS"
+        "CombatClassAttack"           "DOTA_COMBAT_CLASS_ATTACK_BASIC"
+        "CombatClassDefend"           "DOTA_COMBAT_CLASS_DEFEND_BASIC"
     }
 }
