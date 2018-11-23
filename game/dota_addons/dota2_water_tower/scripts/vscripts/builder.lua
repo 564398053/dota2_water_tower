@@ -146,6 +146,29 @@ function Build( event )
 
 		-- Let the building cast abilities
 		unit:RemoveModifierByName("modifier_construction")
+        
+        -- TODO: set defualt ability level
+        local unitName = unit:GetUnitName()
+        if unitName == "ranger_middle_stage" then
+            local abilityCount = unit:GetAbilityCount()
+            for i = 0, abilityCount - 1 do
+                local ability = unit:GetAbilityByIndex(i)
+                if ability and ability:GetName() == "ranger_split_shot" then
+                    ability:SetLevel(3)
+                    break;
+                end
+            end
+        elseif unitName == "ranger_final_stage" then
+            local abilityCount = unit:GetAbilityCount()
+            for i = 0, abilityCount - 1 do
+                local ability = unit:GetAbilityByIndex(i)
+                if ability and ability:GetName() == "ranger_split_shot" then
+                    ability:SetLevel(3)
+                    print("[WT] ability SetLevel(3)", ability:GetName())
+                    break;
+                end
+            end
+        end
 
 		-- Remove item_building_cancel
         for i=0,5 do

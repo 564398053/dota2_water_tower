@@ -20,7 +20,8 @@ function CustomGameMode:InitGameMode()
 	-- Event Hooks
 	ListenToGameEvent('entity_killed', Dynamic_Wrap(CustomGameMode, 'OnEntityKilled'), self)
 	ListenToGameEvent('dota_player_pick_hero', Dynamic_Wrap(CustomGameMode, 'OnPlayerPickHero'), self)
-    ListenToGameEvent("player_chat", Dynamic_Wrap(CustomGameMode, 'OnPlayerChat'), self)
+    ListenToGameEvent('player_chat', Dynamic_Wrap(CustomGameMode, 'OnPlayerChat'), self)
+    ListenToGameEvent('npc_spawned', Dynamic_Wrap(CustomGameMode, 'OnNpcSpawned'), self)
 
 	-- Filters
     GameRules:GetGameModeEntity():SetExecuteOrderFilter( Dynamic_Wrap( CustomGameMode, "FilterExecuteOrder" ), self )
@@ -227,22 +228,26 @@ function CreateDrop (itemName, pos)
  end
  
 -- on player chart
-function CustomGameMode:OnPlayerChat( event )
+function CustomGameMode:OnPlayerChat(keys)
     print("player chart")
-    for key,val in pairs(event) do
+    for key,val in pairs(keys) do
         print(key, val)
     end
-    local playerid = event.playerid
+    local playerid = keys.playerid
     local player = PlayerResource:GetPlayer(playerid)
     local hero = player:GetAssignedHero()
     local position = hero:GetAbsOrigin()
     
-    if event.text == "m" then 
+    if keys.text == "m" then 
         CreateDrop("item_glimmer_cape", position)
         CreateDrop("item_gem", position)
-    elseif event.text == "e" then
+    elseif keys.text == "e" then
         GenerateEnemy()
     end
+end
+
+-- on npc spawned
+function CustomGameMode:OnNpcSpawned(keys)
 end
 
 function GenerateEnemy()

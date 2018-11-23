@@ -821,7 +821,7 @@
         // Abilities
         //----------------------------------------------------------------
         "AbilityLayout"               "6"
-        "Ability1"                    ""
+        "Ability1"                    "ranger_split_shot"
         "Ability2"                    ""
         "Ability3"                    ""
         "Ability4"                    ""
@@ -897,7 +897,7 @@
         // Abilities
         //----------------------------------------------------------------
         "AbilityLayout"               "6"
-        "Ability1"                    ""
+        "Ability1"                    "ranger_split_shot"
         "Ability2"                    ""
         "Ability3"                    ""
         "Ability4"                    ""
@@ -956,7 +956,7 @@
         
         // Abilities -----------------------------------------------------
         "AbilityLayout"               "6"
-        "Ability1"                    ""
+        "Ability1"                    "ranger_split_shot"
         "Ability2"                    ""
         "Ability3"                    ""
         "Ability4"                    ""
