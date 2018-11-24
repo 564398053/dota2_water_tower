@@ -494,7 +494,7 @@
         // Abilities -----------------------------------------------------
         "AbilityLayout"               "6"
         "Ability1"                    "ranger_split_shot"
-        "Ability2"                    ""
+        "Ability2"                    "ranger_trueshot_aura"
         "Ability3"                    ""
         "Ability4"                    ""
         "Ability5"                    ""
