@@ -840,6 +840,7 @@
         "AttackRange"                "700"
         "ProjectileModel"            "particles/units/heroes/hero_windrunner/windrunner_base_attack.vpcf"    
         "ProjectileSpeed"            "1800"
+        "MovementTurnRate"           "4" // 值越大转身速率越高
         
         // Bounds
         //----------------------------------------------------------------
@@ -974,7 +975,7 @@
         "AttackRange"                "700"
         "ProjectileModel"            "particles/units/heroes/hero_windrunner/windrunner_base_attack.vpcf"    
         "ProjectileSpeed"            "1800"
-        "MovementTurnRate"           "0.1" // 值越大转身速率越高
+        "MovementTurnRate"           "4" // 值越大转身速率越高
         
         // Bounds --------------------------------------------------------
         "BoundsHullName"            "DOTA_HULL_SIZE_SMALL"
@@ -1007,11 +1008,616 @@
             }
         }
     }
+
+    // 驯兽猎手Lv1
+    "ranger_beastmaster_Lv1"
+    {
+        // General -------------------------------------------------------
+        "BaseClass"                     "npc_dota_creature"
+        "Model"                         "models/heroes/beastmaster/beastmaster.vmdl"
+        "ModelScale"                    "1"
+        "Level"                         "1"
+        "HealthBarOffset"               "140"
+        "HasInventory"                  "1"
+        "ConsideredHero"                "0"
+        
+        // Abilities -----------------------------------------------------
+        "AbilityLayout"               "6"
+        "Ability1"                    "ranger_call_of_the_wild_bear_Lv1"
+        "Ability2"                    "ranger_beastmaster_upgrade_to_Lv2"
+        "Ability3"                    ""
+        "Ability4"                    ""
+        "Ability5"                    ""
+        "Ability6"                    ""
+
+        // Attack --------------------------------------------------------
+        "AttackCapabilities"         "DOTA_UNIT_CAP_RANGED_ATTACK"
+        "AttackDamageType"           "DAMAGE_TYPE_ArmorPhysical"
+        "AttackDamageMin"            "1371"
+        "AttackDamageMax"            "1371"
+        "AttackRate"                 "2"
+        "AttackAnimationPoint"       "0.3"
+        "AttackAcquisitionRange"     "700"
+        "AttackRange"                "700"
+        "ProjectileModel"            "particles/units/heroes/hero_windrunner/windrunner_base_attack.vpcf"    
+        "ProjectileSpeed"            "1800"
+        "MovementTurnRate"           "4" // 值越大转身速率越高
+        
+        // Bounds --------------------------------------------------------
+        "BoundsHullName"            "DOTA_HULL_SIZE_SMALL"
+        "RingRadius"                "100"
+        "CollisionSize"             "100"
+
+        // Status --------------------------------------------------------
+        "StatusHealth"                "1500"
+        "StatusHealthRegen"           "0"
+        "StatusMana"                  "0"
+        "StatusManaRegen"             "0"
+
+        // Team ----------------------------------------------------------
+        "TeamName"                     "DOTA_TEAM_GOODGUYS"
+        "CombatClassAttack"            "DOTA_COMBAT_CLASS_ATTACK_BASIC"
+        
+        // Creature Data -------------------------------------------------
+        "Creature"
+        {
+            //"DisableClumpingBehavior"    "1"
+            "AttachWearables"
+            {
+                "Wearable"     {    "ItemDef"        "313"     }
+                "Wearable"     {    "ItemDef"        "315"     }
+                "Wearable"     {    "ItemDef"        "316"     }
+                "Wearable"     {    "ItemDef"        "317"     }
+            }
+        }
+    }
     
+    // 驯兽猎手Lv2
+    "ranger_beastmaster_Lv2"
+    {
+        // General -------------------------------------------------------
+        "BaseClass"                     "npc_dota_creature"
+        "Model"                         "models/heroes/beastmaster/beastmaster.vmdl"
+        "ModelScale"                    "1"
+        "Level"                         "1"
+        "HealthBarOffset"               "140"
+        "HasInventory"                  "1"
+        "ConsideredHero"                "0"
+        
+        // Abilities -----------------------------------------------------
+        "AbilityLayout"               "6"
+        "Ability1"                    "ranger_call_of_the_wild_bear_Lv2"
+        "Ability2"                    "ranger_beastmaster_upgrade_to_Lv3"
+        "Ability3"                    ""
+        "Ability4"                    ""
+        "Ability5"                    ""
+        "Ability6"                    ""
+
+        // Attack --------------------------------------------------------
+        "AttackCapabilities"         "DOTA_UNIT_CAP_RANGED_ATTACK"
+        "AttackDamageType"           "DAMAGE_TYPE_ArmorPhysical"
+        "AttackDamageMin"            "4114"
+        "AttackDamageMax"            "4114"
+        "AttackRate"                 "2"
+        "AttackAnimationPoint"       "0.3"
+        "AttackAcquisitionRange"     "700"
+        "AttackRange"                "700"
+        "ProjectileModel"            "particles/units/heroes/hero_windrunner/windrunner_base_attack.vpcf"    
+        "ProjectileSpeed"            "1800"
+        "MovementTurnRate"           "4" // 值越大转身速率越高
+        
+        // Bounds --------------------------------------------------------
+        "BoundsHullName"            "DOTA_HULL_SIZE_SMALL"
+        "RingRadius"                "100"
+        "CollisionSize"             "100"
+
+        // Status --------------------------------------------------------
+        "StatusHealth"                "1500"
+        "StatusHealthRegen"           "0"
+        "StatusMana"                  "0"
+        "StatusManaRegen"             "0"
+
+        // Team ----------------------------------------------------------
+        "TeamName"                     "DOTA_TEAM_GOODGUYS"
+        "CombatClassAttack"            "DOTA_COMBAT_CLASS_ATTACK_BASIC"
+        
+        // Creature Data -------------------------------------------------
+        "Creature"
+        {
+            //"DisableClumpingBehavior"    "1"
+            "AttachWearables"
+            {
+                "Wearable"     {    "ItemDef"        "313"     }
+                "Wearable"     {    "ItemDef"        "315"     }
+                "Wearable"     {    "ItemDef"        "316"     }
+                "Wearable"     {    "ItemDef"        "317"     }
+            }
+        }
+    }
+
+    // 驯兽猎手Lv3
+    "ranger_beastmaster_Lv3"
+    {
+        // General -------------------------------------------------------
+        "BaseClass"                     "npc_dota_creature"
+        "Model"                         "models/heroes/beastmaster/beastmaster.vmdl"
+        "ModelScale"                    "1"
+        "Level"                         "1"
+        "HealthBarOffset"               "140"
+        "HasInventory"                  "1"
+        "ConsideredHero"                "0"
+        
+        // Abilities -----------------------------------------------------
+        "AbilityLayout"               "6"
+        "Ability1"                    "ranger_call_of_the_wild_bear_Lv3"
+        "Ability2"                    "ranger_beastmaster_upgrade_to_Lv4"
+        "Ability3"                    ""
+        "Ability4"                    ""
+        "Ability5"                    ""
+        "Ability6"                    ""
+
+        // Attack --------------------------------------------------------
+        "AttackCapabilities"         "DOTA_UNIT_CAP_RANGED_ATTACK"
+        "AttackDamageType"           "DAMAGE_TYPE_ArmorPhysical"
+        "AttackDamageMin"            "12343"
+        "AttackDamageMax"            "12343"
+        "AttackRate"                 "2"
+        "AttackAnimationPoint"       "0.3"
+        "AttackAcquisitionRange"     "700"
+        "AttackRange"                "700"
+        "ProjectileModel"            "particles/units/heroes/hero_windrunner/windrunner_base_attack.vpcf"    
+        "ProjectileSpeed"            "1800"
+        "MovementTurnRate"           "4" // 值越大转身速率越高
+        
+        // Bounds --------------------------------------------------------
+        "BoundsHullName"            "DOTA_HULL_SIZE_SMALL"
+        "RingRadius"                "100"
+        "CollisionSize"             "100"
+
+        // Status --------------------------------------------------------
+        "StatusHealth"                "1500"
+        "StatusHealthRegen"           "0"
+        "StatusMana"                  "0"
+        "StatusManaRegen"             "0"
+
+        // Team ----------------------------------------------------------
+        "TeamName"                     "DOTA_TEAM_GOODGUYS"
+        "CombatClassAttack"            "DOTA_COMBAT_CLASS_ATTACK_BASIC"
+        
+        // Creature Data -------------------------------------------------
+        "Creature"
+        {
+            //"DisableClumpingBehavior"    "1"
+            "AttachWearables"
+            {
+                "Wearable"     {    "ItemDef"        "313"     }
+                "Wearable"     {    "ItemDef"        "315"     }
+                "Wearable"     {    "ItemDef"        "316"     }
+                "Wearable"     {    "ItemDef"        "317"     }
+            }
+        }
+    }
+
+    // 驯兽猎手Lv4
+    "ranger_beastmaster_Lv4"
+    {
+        // General -------------------------------------------------------
+        "BaseClass"                     "npc_dota_creature"
+        "Model"                         "models/heroes/beastmaster/beastmaster.vmdl"
+        "ModelScale"                    "1"
+        "Level"                         "1"
+        "HealthBarOffset"               "140"
+        "HasInventory"                  "1"
+        "ConsideredHero"                "0"
+        
+        // Abilities -----------------------------------------------------
+        "AbilityLayout"               "6"
+        "Ability1"                    "ranger_call_of_the_wild_bear_Lv4"
+        "Ability2"                    "ranger_beastmaster_upgrade_to_Lv5"
+        "Ability3"                    ""
+        "Ability4"                    ""
+        "Ability5"                    ""
+        "Ability6"                    ""
+
+        // Attack --------------------------------------------------------
+        "AttackCapabilities"         "DOTA_UNIT_CAP_RANGED_ATTACK"
+        "AttackDamageType"           "DAMAGE_TYPE_ArmorPhysical"
+        "AttackDamageMin"            "37029"
+        "AttackDamageMax"            "37029"
+        "AttackRate"                 "2"
+        "AttackAnimationPoint"       "0.3"
+        "AttackAcquisitionRange"     "700"
+        "AttackRange"                "700"
+        "ProjectileModel"            "particles/units/heroes/hero_windrunner/windrunner_base_attack.vpcf"    
+        "ProjectileSpeed"            "1800"
+        "MovementTurnRate"           "4" // 值越大转身速率越高
+        
+        // Bounds --------------------------------------------------------
+        "BoundsHullName"            "DOTA_HULL_SIZE_SMALL"
+        "RingRadius"                "100"
+        "CollisionSize"             "100"
+
+        // Status --------------------------------------------------------
+        "StatusHealth"                "1500"
+        "StatusHealthRegen"           "0"
+        "StatusMana"                  "0"
+        "StatusManaRegen"             "0"
+
+        // Team ----------------------------------------------------------
+        "TeamName"                     "DOTA_TEAM_GOODGUYS"
+        "CombatClassAttack"            "DOTA_COMBAT_CLASS_ATTACK_BASIC"
+        
+        // Creature Data -------------------------------------------------
+        "Creature"
+        {
+            //"DisableClumpingBehavior"    "1"
+            "AttachWearables"
+            {
+                "Wearable"     {    "ItemDef"        "313"     }
+                "Wearable"     {    "ItemDef"        "315"     }
+                "Wearable"     {    "ItemDef"        "316"     }
+                "Wearable"     {    "ItemDef"        "317"     }
+            }
+        }
+    }
+
+    // 雷克萨
+    "ranger_beastmaster_Lv5"
+    {
+        // General -------------------------------------------------------
+        "BaseClass"                     "npc_dota_creature"
+        "Model"                         "models/heroes/beastmaster/beastmaster.vmdl"
+        "ModelScale"                    "1"
+        "Level"                         "1"
+        "HealthBarOffset"               "140"
+        "HasInventory"                  "1"
+        "ConsideredHero"                "0"
+        
+        // Abilities -----------------------------------------------------
+        "AbilityLayout"               "6"
+        "Ability1"                    "ranger_call_of_the_wild_bear_Lv5"
+        "Ability3"                    ""
+        "Ability4"                    ""
+        "Ability5"                    ""
+        "Ability6"                    ""
+
+        // Attack --------------------------------------------------------
+        "AttackCapabilities"         "DOTA_UNIT_CAP_RANGED_ATTACK"
+        "AttackDamageType"           "DAMAGE_TYPE_ArmorPhysical"
+        "AttackDamageMin"            "111086"
+        "AttackDamageMax"            "111086"
+        "AttackRate"                 "2"
+        "AttackAnimationPoint"       "0.3"
+        "AttackAcquisitionRange"     "700"
+        "AttackRange"                "700"
+        "ProjectileModel"            "particles/units/heroes/hero_windrunner/windrunner_base_attack.vpcf"    
+        "ProjectileSpeed"            "1800"
+        "MovementTurnRate"           "4" // 值越大转身速率越高
+        
+        // Bounds --------------------------------------------------------
+        "BoundsHullName"            "DOTA_HULL_SIZE_SMALL"
+        "RingRadius"                "100"
+        "CollisionSize"             "100"
+
+        // Status --------------------------------------------------------
+        "StatusHealth"                "1500"
+        "StatusHealthRegen"           "0"
+        "StatusMana"                  "0"
+        "StatusManaRegen"             "0"
+
+        // Team ----------------------------------------------------------
+        "TeamName"                     "DOTA_TEAM_GOODGUYS"
+        "CombatClassAttack"            "DOTA_COMBAT_CLASS_ATTACK_BASIC"
+        
+        // Creature Data -------------------------------------------------
+        "Creature"
+        {
+            //"DisableClumpingBehavior"    "1"
+            "AttachWearables"
+            {
+                "Wearable"     {    "ItemDef"        "313"     }
+                "Wearable"     {    "ItemDef"        "315"     }
+                "Wearable"     {    "ItemDef"        "316"     }
+                "Wearable"     {    "ItemDef"        "317"     }
+            }
+        }
+    }
+
+    // 1级熊宝宝
+    "ranger_beastmaster_bear_Lv1"
+    {
+        // General -------------------------------------------------------
+        "BaseClass"                     "npc_dota_creature"
+        "Model"                         "models/heroes/lone_druid/spirit_bear.vmdl"
+        "ModelScale"                    "0.8"
+        "Level"                         "1"
+        "HealthBarOffset"               "140"
+        "SelectionGroup"                "ranger_beastmaster_bear"
+        "UnitLabel"                     "ranger_beastmaster_bear_Lv1"
+        "PathfindingSearchDepthScale"   "0.5"
+        
+        // Abilities -----------------------------------------------------
+        "AbilityLayout"                "6"
+        "Ability1"                     "ranger_cleave_disabled"
+        "Ability2"                     ""
+        "Ability3"                     ""
+        "Ability4"                     ""
+        "Ability5"                     ""
+        "Ability6"                     ""
+
+        // Attack ---------------------------------------------------------
+        "AttackCapabilities"         "DOTA_UNIT_CAP_MELEE_ATTACK"
+        "AttackDamageMin"            "2057"
+        "AttackDamageMax"            "2057"
+        "AttackDamageType"           "DAMAGE_TYPE_ArmorPhysical"
+        "AttackRate"                 "2"
+        "AttackAnimationPoint"       "0.433"
+        "AttackAcquisitionRange"     "500"
+        "AttackRange"                "90"
+
+        // Bounds ---------------------------------------------------------
+        "BoundsHullName"            "DOTA_HULL_SIZE_SMALL"
+        "RingRadius"                "40"
+        "CollisionSize"             "0"
+        "FormationRank"             "3"
+            
+        // Movement -------------------------------------------------------
+        "MovementCapabilities"        "DOTA_UNIT_CAP_MOVE_FLY"
+        "MovementSpeed"               "550"
+        "MovementTurnRate"            "4"
+        
+        // Status ---------------------------------------------------------
+        "StatusHealth"                "220"
+        "StatusHealthRegen"           "0"
+        "StatusMana"                  "0"
+        "StatusManaRegen"             "0"
+        
+        // Vision ---------------------------------------------------------
+        "VisionDaytimeRange"          "800"
+        "VisionNighttimeRange"        "600"
+        
+        // Team -----------------------------------------------------------
+        "TeamName"                     "DOTA_TEAM_GOODGUYS"
+        "CombatClassAttack"            "DOTA_COMBAT_CLASS_ATTACK_BASIC"
+        "CombatClassDefend"            "DOTA_COMBAT_CLASS_DEFEND_BASIC"
+    }
+
+    "ranger_beastmaster_bear_Lv2"
+    {
+        // General -------------------------------------------------------
+        "BaseClass"                     "npc_dota_creature"
+        "Model"                         "models/heroes/lone_druid/spirit_bear.vmdl"
+        "ModelScale"                    "0.8"
+        "Level"                         "1"
+        "HealthBarOffset"               "140"
+        "SelectionGroup"                "ranger_beastmaster_bear"
+        "UnitLabel"                     "ranger_beastmaster_bear_Lv2"
+        "PathfindingSearchDepthScale"   "0.5"
+        
+        // Abilities -----------------------------------------------------
+        "AbilityLayout"                "6"
+        "Ability1"                     "ranger_cleave_disabled"
+        "Ability2"                     ""
+        "Ability3"                     ""
+        "Ability4"                     ""
+        "Ability5"                     ""
+        "Ability6"                     ""
+
+        // Attack ---------------------------------------------------------
+        "AttackCapabilities"         "DOTA_UNIT_CAP_MELEE_ATTACK"
+        "AttackDamageMin"            "6171"
+        "AttackDamageMax"            "6171"
+        "AttackDamageType"           "DAMAGE_TYPE_ArmorPhysical"
+        "AttackRate"                 "2"
+        "AttackAnimationPoint"       "0.433"
+        "AttackAcquisitionRange"     "500"
+        "AttackRange"                "90"
+
+        // Bounds ---------------------------------------------------------
+        "BoundsHullName"            "DOTA_HULL_SIZE_SMALL"
+        "RingRadius"                "40"
+        "CollisionSize"             "0"
+        "FormationRank"             "3"
+            
+        // Movement -------------------------------------------------------
+        "MovementCapabilities"        "DOTA_UNIT_CAP_MOVE_FLY"
+        "MovementSpeed"               "550"
+        "MovementTurnRate"            "4"
+        
+        // Status ---------------------------------------------------------
+        "StatusHealth"                "220"
+        "StatusHealthRegen"           "0"
+        "StatusMana"                  "0"
+        "StatusManaRegen"             "0"
+        
+        // Vision ---------------------------------------------------------
+        "VisionDaytimeRange"          "800"
+        "VisionNighttimeRange"        "600"
+        
+        // Team -----------------------------------------------------------
+        "TeamName"                     "DOTA_TEAM_GOODGUYS"
+        "CombatClassAttack"            "DOTA_COMBAT_CLASS_ATTACK_BASIC"
+        "CombatClassDefend"            "DOTA_COMBAT_CLASS_DEFEND_BASIC"
+    }
+    
+    "ranger_beastmaster_bear_Lv3"
+    {
+        // General -------------------------------------------------------
+        "BaseClass"                     "npc_dota_creature"
+        "Model"                         "models/heroes/lone_druid/spirit_bear.vmdl"
+        "ModelScale"                    "0.8"
+        "Level"                         "1"
+        "HealthBarOffset"               "140"
+        "SelectionGroup"                "ranger_beastmaster_bear"
+        "UnitLabel"                     "ranger_beastmaster_bear_Lv3"
+        "PathfindingSearchDepthScale"   "0.5"
+        
+        // Abilities -----------------------------------------------------
+        "AbilityLayout"                "6"
+        "Ability1"                     "ranger_cleave_disabled"
+        "Ability2"                     ""
+        "Ability3"                     ""
+        "Ability4"                     ""
+        "Ability5"                     ""
+        "Ability6"                     ""
+
+        // Attack ---------------------------------------------------------
+        "AttackCapabilities"         "DOTA_UNIT_CAP_MELEE_ATTACK"
+        "AttackDamageMin"            "18514"
+        "AttackDamageMax"            "18514"
+        "AttackDamageType"           "DAMAGE_TYPE_ArmorPhysical"
+        "AttackRate"                 "2"
+        "AttackAnimationPoint"       "0.433"
+        "AttackAcquisitionRange"     "500"
+        "AttackRange"                "90"
+
+        // Bounds ---------------------------------------------------------
+        "BoundsHullName"            "DOTA_HULL_SIZE_SMALL"
+        "RingRadius"                "40"
+        "CollisionSize"             "0"
+        "FormationRank"             "3"
+            
+        // Movement -------------------------------------------------------
+        "MovementCapabilities"        "DOTA_UNIT_CAP_MOVE_FLY"
+        "MovementSpeed"               "550"
+        "MovementTurnRate"            "4"
+        
+        // Status ---------------------------------------------------------
+        "StatusHealth"                "220"
+        "StatusHealthRegen"           "0"
+        "StatusMana"                  "0"
+        "StatusManaRegen"             "0"
+        
+        // Vision ---------------------------------------------------------
+        "VisionDaytimeRange"          "800"
+        "VisionNighttimeRange"        "600"
+        
+        // Team -----------------------------------------------------------
+        "TeamName"                     "DOTA_TEAM_GOODGUYS"
+        "CombatClassAttack"            "DOTA_COMBAT_CLASS_ATTACK_BASIC"
+        "CombatClassDefend"            "DOTA_COMBAT_CLASS_DEFEND_BASIC"
+    }
+
+    "ranger_beastmaster_bear_Lv4"
+    {
+        // General -------------------------------------------------------
+        "BaseClass"                     "npc_dota_creature"
+        "Model"                         "models/heroes/lone_druid/spirit_bear.vmdl"
+        "ModelScale"                    "0.8"
+        "Level"                         "1"
+        "HealthBarOffset"               "140"
+        "SelectionGroup"                "ranger_beastmaster_bear"
+        "UnitLabel"                     "ranger_beastmaster_bear_Lv4"
+        "PathfindingSearchDepthScale"   "0.5"
+        
+        // Abilities -----------------------------------------------------
+        "AbilityLayout"                "6"
+        "Ability1"                     "ranger_cleave_disabled"
+        "Ability2"                     ""
+        "Ability3"                     ""
+        "Ability4"                     ""
+        "Ability5"                     ""
+        "Ability6"                     ""
+
+        // Attack ---------------------------------------------------------
+        "AttackCapabilities"         "DOTA_UNIT_CAP_MELEE_ATTACK"
+        "AttackDamageMin"            "55543"
+        "AttackDamageMax"            "55543"
+        "AttackDamageType"           "DAMAGE_TYPE_ArmorPhysical"
+        "AttackRate"                 "2"
+        "AttackAnimationPoint"       "0.433"
+        "AttackAcquisitionRange"     "500"
+        "AttackRange"                "90"
+
+        // Bounds ---------------------------------------------------------
+        "BoundsHullName"            "DOTA_HULL_SIZE_SMALL"
+        "RingRadius"                "40"
+        "CollisionSize"             "0"
+        "FormationRank"             "3"
+            
+        // Movement -------------------------------------------------------
+        "MovementCapabilities"        "DOTA_UNIT_CAP_MOVE_FLY"
+        "MovementSpeed"               "550"
+        "MovementTurnRate"            "4"
+        
+        // Status ---------------------------------------------------------
+        "StatusHealth"                "220"
+        "StatusHealthRegen"           "0"
+        "StatusMana"                  "0"
+        "StatusManaRegen"             "0"
+        
+        // Vision ---------------------------------------------------------
+        "VisionDaytimeRange"          "800"
+        "VisionNighttimeRange"        "600"
+        
+        // Team -----------------------------------------------------------
+        "TeamName"                     "DOTA_TEAM_GOODGUYS"
+        "CombatClassAttack"            "DOTA_COMBAT_CLASS_ATTACK_BASIC"
+        "CombatClassDefend"            "DOTA_COMBAT_CLASS_DEFEND_BASIC"
+    }
+
+    "ranger_beastmaster_bear_Lv5"
+    {
+        // General -------------------------------------------------------
+        "BaseClass"                     "npc_dota_creature"
+        "Model"                         "models/items/lone_druid/viciouskraitpanda/viciouskrait_panda.vmdl"
+        "ModelScale"                    "1"
+        "Level"                         "1"
+        "HealthBarOffset"               "140"
+        "SelectionGroup"                "ranger_beastmaster_bear"
+        "UnitLabel"                     "ranger_beastmaster_bear_Lv5"
+        "PathfindingSearchDepthScale"   "0.5"
+        
+        // Abilities -----------------------------------------------------
+        "AbilityLayout"                "6"
+        "Ability1"                     "ranger_cleave_disabled"
+        "Ability2"                     ""
+        "Ability3"                     ""
+        "Ability4"                     ""
+        "Ability5"                     ""
+        "Ability6"                     ""
+
+        // Attack ---------------------------------------------------------
+        "AttackCapabilities"         "DOTA_UNIT_CAP_MELEE_ATTACK"
+        "AttackDamageMin"            "166629"
+        "AttackDamageMax"            "166629"
+        "AttackDamageType"           "DAMAGE_TYPE_ArmorPhysical"
+        "AttackRate"                 "2"
+        "AttackAnimationPoint"       "0.433"
+        "AttackAcquisitionRange"     "500"
+        "AttackRange"                "90"
+
+        // Bounds ---------------------------------------------------------
+        "BoundsHullName"            "DOTA_HULL_SIZE_SMALL"
+        "RingRadius"                "40"
+        "CollisionSize"             "0"
+        "FormationRank"             "3"
+            
+        // Movement -------------------------------------------------------
+        "MovementCapabilities"        "DOTA_UNIT_CAP_MOVE_FLY"
+        "MovementSpeed"               "550"
+        "MovementTurnRate"            "4"
+        
+        // Status ---------------------------------------------------------
+        "StatusHealth"                "220"
+        "StatusHealthRegen"           "0"
+        "StatusMana"                  "0"
+        "StatusManaRegen"             "0"
+        
+        // Vision ---------------------------------------------------------
+        "VisionDaytimeRange"          "800"
+        "VisionNighttimeRange"        "600"
+        
+        // Team -----------------------------------------------------------
+        "TeamName"                     "DOTA_TEAM_GOODGUYS"
+        "CombatClassAttack"            "DOTA_COMBAT_CLASS_ATTACK_BASIC"
+        "CombatClassDefend"            "DOTA_COMBAT_CLASS_DEFEND_BASIC"
+    }
+
     //------------------------------------------------------------------------------------------
     // bad guys
     //------------------------------------------------------------------------------------------
-    "bad_guy_lv1"
+    "bad_guy_Lv1"
     {
         // General
         //----------------------------------------------------------------
@@ -1020,9 +1626,9 @@
         "ModelScale"                   "0.8"
         "Level"                        "1"
         "HealthBarOffset"              "140"
-        "SelectionGroup"               "bad_guy_lv1"
+        "SelectionGroup"               "bad_guy_Lv1"
         "SoundSet"                     "Hero_Kunkka"
-        "UnitLabel"                    "bad_guy_lv1"
+        "UnitLabel"                    "bad_guy_Lv1"
     
         "precache"
         {

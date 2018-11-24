@@ -10,6 +10,8 @@ function UpgradeBuilding( event )
 	local player = PlayerResource:GetPlayer(playerID)
 	local currentHealthPercentage = caster:GetHealthPercent() * 0.01
 
+	print('[BH] upgrade to ', new_unit)
+
 	-- Keep the gridnav blockers and orientation
 	local blockers = caster.blockers
 	local angle = caster:GetAngles()

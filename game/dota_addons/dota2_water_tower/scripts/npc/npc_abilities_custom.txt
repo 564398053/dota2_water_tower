@@ -23,40 +23,6 @@
         "AbilityBehavior"                   "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
     }
     
-    // build a tower, the name after underscore is the tower_name
-    "build_npc_dota_tower_basedef"
-    {
-        "BaseClass"                     "ability_datadriven"
-        "AbilityTextureName"            "drow_ranger_marksmanship"
-        "MaxLevel"                      "1"
-    
-        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_POINT"
-        "AbilityCastPoint"              "0"
-
-        "AbilitySpecial"
-        {
-            "01"
-            {
-                "var_type"                "FIELD_INTEGER"
-                "gold_cost"               "0"
-            }
-            "02"
-            {
-                "var_type"                "FIELD_INTEGER"
-                "lumber_cost"             "0"
-            }
-        }
-    
-        "OnSpellStart"
-        {
-            "RunScript"
-            {
-                "ScriptFile"        "build_tower.lua"
-                "Function"          "Build"
-            }
-        }
-    }
-    
     //======================================================================================================================================================
     // passive abilities
     //======================================================================================================================================================
@@ -191,12 +157,6 @@
         }
     }
     
-    "train_city_center_tier2_disabled"
-    {
-        "BaseClass"                     "ability_datadriven"
-        "AbilityTextureName"            "train_city_center_tier2"
-        "MaxLevel"                         "0"
-    }
     
     "train_tower_tier2"
     {
@@ -330,13 +290,6 @@
         }
     }
     
-    "train_dark_tower_disabled"
-    {
-        "BaseClass"                     "ability_datadriven"
-        "AbilityTextureName"            "train_dark_tower"
-        "MaxLevel"                         "0"
-    }
-    
     
     "city_center_tier2_passive"
     {
@@ -370,58 +323,6 @@
                         }
                     }
                 }
-            }
-        }
-    }
-    // Simple tower placement, normal behavior
-    "build_tower"
-    {
-        "BaseClass"                     "ability_datadriven"
-        "AbilityTextureName"            "build_tower"
-        "MaxLevel"                       "1"
-    
-        "AbilityBehavior"                "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
-        "AbilityCastPoint"                "0"
-    
-        // BuildingHelper info
-        "Building"                        "1" //bool
-        "BuildingSize"                    "2"
-        "BuildTime"                       "5.0"
-        "AbilityCastRange"                "200"
-        "UpdateHealth"                    "1" //bool
-        "Scale"                           "0" //bool
-        "PlayerCanControl"                "1" //bool
-    
-        "UnitName"                       "tower"
-        "AbilityCooldown"                "0"
-        "AbilityGoldCost"                "50"
-        // End of BuildingHelper info
-    
-        "AbilitySpecial"
-        {
-            "01"
-            {
-                "var_type"                "FIELD_FLOAT"
-                "build_time"              "5.0"
-            }
-            "02"
-            {
-                "var_type"                "FIELD_INTEGER"
-                "gold_cost"                "0"
-            }
-            "03"
-            {
-                "var_type"                "FIELD_INTEGER"
-                "lumber_cost"            "0"
-            }
-        }
-    
-        "OnSpellStart"
-        {
-            "RunScript"
-            {
-                "ScriptFile"      "builder.lua"
-                "Function"        "Build"
             }
         }
     }
@@ -536,14 +437,6 @@
         }
     }
     
-    // A _disabled ability is required to show the requirements on the tooltip
-    "build_tech_center_disabled"
-    {
-        "BaseClass"                     "ability_datadriven"
-        "AbilityTextureName"            "build_tech_center"
-        "MaxLevel"                         "0"
-    }
-    
     // The builder is killed after finishing the building
     "build_dragon_tower"
     {
@@ -599,13 +492,7 @@
             }
         }
     }
-    
-    "build_dragon_tower_disabled"
-    {
-        "BaseClass"                     "ability_datadriven"
-        "AbilityTextureName"            "build_dragon_tower"
-        "MaxLevel"                         "0"
-    }
+
     "repair"
     {
         "BaseClass"                     "ability_datadriven"
@@ -829,12 +716,7 @@
             }
         }
     }
-    "research_ultimate_ability_disabled"
-    {
-        "BaseClass"                     "ability_datadriven"
-        "AbilityTextureName"            "research_ultimate_ability"
-        "MaxLevel"                         "0"
-    }
+
     //SOME COOL ABILITY WITH WISPS
     "ultimate_ability"
     {
@@ -846,12 +728,6 @@
         "AbilityCastPoint"                "0"
     }
     
-    "ultimate_ability_disabled"
-    {
-        "BaseClass"                     "ability_datadriven"
-        "AbilityTextureName"            "research_ultimate_ability"
-        "MaxLevel"                         "0"
-    }
     "ability_building"
     {
         "BaseClass"                     "ability_datadriven"
@@ -1209,12 +1085,1178 @@
             }
         }
     }
+
+    // 建造驯兽猎手Lv1
+    "build_ranger_beastmaster_Lv1"
+    {
+        "BaseClass"                      "ability_datadriven"
+        "AbilityTextureName"             "build_ranger_beastmaster"
+        "MaxLevel"                       "1"
     
+        "AbilityBehavior"                "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+        "AbilityCastPoint"                "0"
+    
+        // BuildingHelper info
+        "Building"                        "1" //bool
+        "BuildingSize"                    "2"
+        "BuildTime"                       "5.0"
+        "AbilityCastRange"                "200"
+        "UpdateHealth"                    "1" //bool
+        "Scale"                           "0" //bool
+        "PlayerCanControl"                "1" //bool
+
+        "UnitName"                       "ranger_beastmaster_Lv1"
+        "AbilityCooldown"                "0"
+        "AbilityGoldCost"                "0"
+        // End of BuildingHelper info
+
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                "FIELD_FLOAT"
+                "build_time"              "5.0"
+            }
+            "02"
+            {
+                "var_type"                "FIELD_INTEGER"
+                "gold_cost"               "0"
+            }
+            "03"
+            {
+                "var_type"                "FIELD_INTEGER"
+                "lumber_cost"             "0"
+            }
+        }
+
+        "OnSpellStart"
+        {
+            "RunScript"
+            {
+                "ScriptFile"      "builder.lua"
+                "Function"        "Build"
+            }
+        }
+    }
+
+    // 升级驯兽猎手Lv2
+    "ranger_beastmaster_upgrade_to_Lv2"
+    {
+        "BaseClass"                     "ability_datadriven"
+        "AbilityTextureName"            "templar_assassin_psionic_trap"
+        "MaxLevel"                      "1"
+    
+        "AbilityBehavior"                "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE"
+    
+        "AbilityGoldCost"                "2400"
+        "AbilityChannelTime"             "5"
+    
+        "AbilityMultiOrder"                "1"
+    
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                "FIELD_FLOAT"
+                "build_time"            "5.0" 
+            }
+            "02"
+            {
+                "var_type"                "FIELD_INTEGER"
+                "gold_cost"                "2400"
+            }
+            "03"
+            {
+                "var_type"                "FIELD_INTEGER"
+                "lumber_cost"            "0"
+            }
+        }
+    
+        "OnSpellStart"
+        {
+            "RunScript"
+            {
+                "ScriptFile"    "buildings/queue.lua"
+                "Function"        "EnqueueUnit"
+            }
+    
+            "RunScript"
+            {
+                "ScriptFile"    "buildings/upgrades.lua"
+                "Function"        "StartUpgrade"
+                "ModifierName"    "modifier_building_particle"
+            }
+        }
+    
+        "OnChannelSucceeded"
+        {
+            // Consume the first item in the queue
+            "RunScript"
+            {
+                "ScriptFile"       "buildings/queue.lua"
+                "Function"      "NextQueue"
+            }
+    
+            "RunScript"
+            {
+                "ScriptFile"    "buildings/upgrades.lua"
+                "Function"        "UpgradeBuilding"
+                "UnitName"        "ranger_beastmaster_Lv2"
+            }        
+        }
+    }
+
+    // 升级驯兽猎手Lv3
+    "ranger_beastmaster_upgrade_to_Lv3"
+    {
+        "BaseClass"                     "ability_datadriven"
+        "AbilityTextureName"            "templar_assassin_psionic_trap"
+        "MaxLevel"                      "1"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE"
+    
+        "AbilityGoldCost"               "7200"
+        "AbilityChannelTime"            "5"
+    
+        "AbilityMultiOrder"              "1"
+    
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"              "FIELD_FLOAT"
+                "build_time"            "5.0" 
+            }
+            "02"
+            {
+                "var_type"               "FIELD_INTEGER"
+                "gold_cost"              "7200"
+            }
+            "03"
+            {
+                "var_type"               "FIELD_INTEGER"
+                "lumber_cost"            "0"
+            }
+        }
+    
+        "OnSpellStart"
+        {
+            "RunScript"
+            {
+                "ScriptFile"     "buildings/queue.lua"
+                "Function"       "EnqueueUnit"
+            }
+    
+            "RunScript"
+            {
+                "ScriptFile"      "buildings/upgrades.lua"
+                "Function"        "StartUpgrade"
+                "ModifierName"    "modifier_building_particle"
+            }
+        }
+    
+        "OnChannelSucceeded"
+        {
+            // Consume the first item in the queue
+            "RunScript"
+            {
+                "ScriptFile"    "buildings/queue.lua"
+                "Function"      "NextQueue"
+            }
+    
+            "RunScript"
+            {
+                "ScriptFile"      "buildings/upgrades.lua"
+                "Function"        "UpgradeBuilding"
+                "UnitName"        "ranger_beastmaster_Lv3"
+            }        
+        }
+    }
+
+    // 升级驯兽猎手Lv4
+    "ranger_beastmaster_upgrade_to_Lv4"
+    {
+        "BaseClass"                     "ability_datadriven"
+        "AbilityTextureName"            "templar_assassin_psionic_trap"
+        "MaxLevel"                      "1"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE"
+    
+        "AbilityGoldCost"               "21600"
+        "AbilityChannelTime"            "5"
+    
+        "AbilityMultiOrder"              "1"
+    
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"              "FIELD_FLOAT"
+                "build_time"            "5.0" 
+            }
+            "02"
+            {
+                "var_type"               "FIELD_INTEGER"
+                "gold_cost"              "21600"
+            }
+            "03"
+            {
+                "var_type"               "FIELD_INTEGER"
+                "lumber_cost"            "0"
+            }
+        }
+    
+        "OnSpellStart"
+        {
+            "RunScript"
+            {
+                "ScriptFile"     "buildings/queue.lua"
+                "Function"       "EnqueueUnit"
+            }
+    
+            "RunScript"
+            {
+                "ScriptFile"      "buildings/upgrades.lua"
+                "Function"        "StartUpgrade"
+                "ModifierName"    "modifier_building_particle"
+            }
+        }
+    
+        "OnChannelSucceeded"
+        {
+            // Consume the first item in the queue
+            "RunScript"
+            {
+                "ScriptFile"    "buildings/queue.lua"
+                "Function"      "NextQueue"
+            }
+    
+            "RunScript"
+            {
+                "ScriptFile"      "buildings/upgrades.lua"
+                "Function"        "UpgradeBuilding"
+                "UnitName"        "ranger_beastmaster_Lv4"
+            }        
+        }
+    }
+
+    // 升级雷克萨
+    "ranger_beastmaster_upgrade_to_Lv5"
+    {
+        "BaseClass"                     "ability_datadriven"
+        "AbilityTextureName"            "templar_assassin_psionic_trap"
+        "MaxLevel"                      "1"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE"
+    
+        "AbilityGoldCost"               "64800"
+        "AbilityChannelTime"            "5"
+    
+        "AbilityMultiOrder"             "1"
+    
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"              "FIELD_FLOAT"
+                "build_time"            "5.0" 
+            }
+            "02"
+            {
+                "var_type"               "FIELD_INTEGER"
+                "gold_cost"              "64800"
+            }
+            "03"
+            {
+                "var_type"               "FIELD_INTEGER"
+                "lumber_cost"            "0"
+            }
+        }
+    
+        "OnSpellStart"
+        {
+            "RunScript"
+            {
+                "ScriptFile"     "buildings/queue.lua"
+                "Function"       "EnqueueUnit"
+            }
+    
+            "RunScript"
+            {
+                "ScriptFile"      "buildings/upgrades.lua"
+                "Function"        "StartUpgrade"
+                "ModifierName"    "modifier_building_particle"
+            }
+        }
+    
+        "OnChannelSucceeded"
+        {
+            // Consume the first item in the queue
+            "RunScript"
+            {
+                "ScriptFile"    "buildings/queue.lua"
+                "Function"      "NextQueue"
+            }
+    
+            "RunScript"
+            {
+                "ScriptFile"      "buildings/upgrades.lua"
+                "Function"        "UpgradeBuilding"
+                "UnitName"        "ranger_beastmaster_Lv5"
+            }        
+        }
+    }
+
+    // 召唤熊宝宝Lv1
+    "ranger_call_of_the_wild_bear_Lv1"
+    {
+        // General -------------------------------------------------------------------
+        "BaseClass"                     "ability_datadriven"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+        "AbilityTextureName"            "beastmaster_call_of_the_wild_boar"
+        "MaxLevel"                      "1"
+        
+        // Casting -------------------------------------------------------------------
+        "AbilityCastPoint"              "0.3"
+
+        // Time ----------------------------------------------------------------------
+        "AbilityCooldown"               "18.0"
+
+        // Cost ----------------------------------------------------------------------
+        "AbilityManaCost"               "0"
+
+        // Special -------------------------------------------------------------------
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "hawk_duration"             "60"
+            }
+            "02"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "boar_hp_tooltip"           "200"
+            }
+            "03"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "boar_damage_tooltip"       "15"
+            }
+            "04"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "boar_moveslow_tooltip"     "10"
+            }
+            "05"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "boar_attackslow_tooltip"   "10"
+            }
+            "06"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "poison_duration_tooltip"   "3"
+            }
+            "07"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "bear_duration"             "18"
+            }
+            "08"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "distance"              "150" // The distance in front of the target at which units will be created
+            }
+        }
+
+        "precache"
+        {
+            "particle"  "particles/units/heroes/hero_beastmaster/beastmaster_call_boar.vpcf"
+            "particle"  "particles/units/heroes/hero_lone_druid/lone_druid_spirit_bear_death.vpcf"
+            "particle"  "particles/units/heroes/hero_beastmaster/beastmaster_boar_attack.vpcf"
+            "soundfile" "soundevents/game_sounds_heroes/game_sounds_beastmaster.vsndevts"
+            "model"     "models/heroes/beastmaster/beastmaster_beast.vmdl"
+        }
+
+        "OnSpellStart"
+        {
+            "FireSound"
+            {
+                "EffectName"    "Hero_Beastmaster.Call.Boar"
+                "Target"        "CASTER"
+            }
+
+            "SpawnUnit"
+            {
+                "UnitName"          "ranger_beastmaster_bear_Lv1"
+                "Target"
+                {
+                    "Center"                "CASTER"
+                    "ScriptSelectPoints"
+                    {
+                        "ScriptFile"    "race/ranger/call_of_the_wild.lua"
+                        "Function"      "GetFrontPoint"
+                        "Target"        "CASTER"
+                        "Distance"      "%distance"
+                    }
+                }
+
+                "UnitCount"         "1"
+                "Duration"          "%bear_duration"
+
+                // This makes sure units never get stuck
+                "OnSpawn"
+                {
+                    "ApplyModifier"
+                    {
+                        "ModifierName"  "modifier_phased"
+                        "Target"        "TARGET"
+                        "Duration"      "0.03"
+                    }
+
+                    "ApplyModifier"
+                    {
+                        "ModifierName"  "modifier_beastmaster_boar"
+                        "Target"        "TARGET"
+                    }
+
+                    "RunScript"
+                    {
+                        "ScriptFile"    "race/ranger/call_of_the_wild.lua"
+                        "Function"      "SetUnitsMoveForward"
+                    }
+                }
+            }
+        }
+
+        "Modifiers"
+        {
+            "modifier_autocast"
+            {
+                "Passive"             "1"
+                "IsHidden"            "1"
+                "IsDebuff"            "0"
+        
+                "OnAttack"
+                {
+                    "RunScript"
+                    {
+                        "ScriptFile"               "common_ability/autocast.lua"
+                        "Function"                 "AutocastOnAttack"
+                    }
+                }
+            }
+ 
+            "modifier_beastmaster_boar"
+            {
+                "IsHidden"      "1"
+
+                "OnCreated"
+                {
+                    "FireEffect"
+                    {
+                        "Target"            "TARGET"
+                        "EffectName"        "particles/units/heroes/hero_beastmaster/beastmaster_call_boar.vpcf"
+                        "EffectAttachType"  "follow_origin"
+                    }
+                }
+
+                "OnDeath"
+                {
+                    "FireEffect"
+                    {
+                        "Target"            
+                        {
+                            "Center"    "UNIT"
+                            "Flags"     "DOTA_UNIT_TARGET_FLAG_DEAD"
+                        }
+                        "EffectName"        "particles/units/heroes/hero_lone_druid/lone_druid_spirit_bear_death.vpcf"
+                        "EffectAttachType"  "follow_origin"
+                    }
+                    
+                    "FireSound"
+                    {
+                        "Target"            
+                        {
+                            "Center"    "UNIT"
+                            "Flags"     "DOTA_UNIT_TARGET_FLAG_DEAD"
+                        }
+                        "EffectName"    "Hero_Beastmaster_Boar.Death"
+                    }
+                }
+            }
+        }
+    }
+
+    // 召唤熊宝宝Lv2
+    "ranger_call_of_the_wild_bear_Lv2"
+    {
+        // General -------------------------------------------------------------------
+        "BaseClass"                     "ability_datadriven"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+        "AbilityTextureName"            "beastmaster_call_of_the_wild_boar"
+        "MaxLevel"                      "1"
+        
+        // Casting -------------------------------------------------------------------
+        "AbilityCastPoint"              "0.3"
+
+        // Time ----------------------------------------------------------------------
+        "AbilityCooldown"               "40.0"
+
+        // Cost ----------------------------------------------------------------------
+        "AbilityManaCost"               "0"
+
+        // Special -------------------------------------------------------------------
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "hawk_duration"             "60"
+            }
+            "02"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "boar_hp_tooltip"           "200"
+            }
+            "03"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "boar_damage_tooltip"       "15"
+            }
+            "04"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "boar_moveslow_tooltip"     "10"
+            }
+            "05"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "boar_attackslow_tooltip"   "10"
+            }
+            "06"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "poison_duration_tooltip"   "3"
+            }
+            "07"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "bear_duration"             "60"
+            }
+            "08"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "distance"              "150" // The distance in front of the target at which units will be created
+            }
+        }
+
+        "precache"
+        {
+            "particle"  "particles/units/heroes/hero_beastmaster/beastmaster_call_boar.vpcf"
+            "particle"  "particles/units/heroes/hero_lone_druid/lone_druid_spirit_bear_death.vpcf"
+            "particle"  "particles/units/heroes/hero_beastmaster/beastmaster_boar_attack.vpcf"
+            "soundfile" "soundevents/game_sounds_heroes/game_sounds_beastmaster.vsndevts"
+            "model"     "models/heroes/beastmaster/beastmaster_beast.vmdl"
+        }
+
+        "OnSpellStart"
+        {
+            "FireSound"
+            {
+                "EffectName"    "Hero_Beastmaster.Call.Boar"
+                "Target"        "CASTER"
+            }
+
+            "SpawnUnit"
+            {
+                "UnitName"          "ranger_beastmaster_bear_Lv2"
+                "Target"
+                {
+                    "Center"                "CASTER"
+                    "ScriptSelectPoints"
+                    {
+                        "ScriptFile"    "race/ranger/call_of_the_wild.lua"
+                        "Function"      "GetFrontPoint"
+                        "Target"        "CASTER"
+                        "Distance"      "%distance"
+                    }
+                }
+
+                "UnitCount"         "1"
+                "Duration"          "%bear_duration"
+
+                // This makes sure units never get stuck
+                "OnSpawn"
+                {
+                    "ApplyModifier"
+                    {
+                        "ModifierName"  "modifier_phased"
+                        "Target"        "TARGET"
+                        "Duration"      "0.03"
+                    }
+
+                    "ApplyModifier"
+                    {
+                        "ModifierName"  "modifier_beastmaster_boar"
+                        "Target"        "TARGET"
+                    }
+
+                    "RunScript"
+                    {
+                        "ScriptFile"    "race/ranger/call_of_the_wild.lua"
+                        "Function"      "SetUnitsMoveForward"
+                    }
+                }
+            }
+        }
+
+        "Modifiers"
+        {
+            "modifier_beastmaster_boar"
+            {
+                "IsHidden"      "1"
+
+                "OnCreated"
+                {
+                    "FireEffect"
+                    {
+                        "Target"            "TARGET"
+                        "EffectName"        "particles/units/heroes/hero_beastmaster/beastmaster_call_boar.vpcf"
+                        "EffectAttachType"  "follow_origin"
+                    }
+                }
+
+                "OnDeath"
+                {
+                    "FireEffect"
+                    {
+                        "Target"            
+                        {
+                            "Center"    "UNIT"
+                            "Flags"     "DOTA_UNIT_TARGET_FLAG_DEAD"
+                        }
+                        "EffectName"        "particles/units/heroes/hero_lone_druid/lone_druid_spirit_bear_death.vpcf"
+                        "EffectAttachType"  "follow_origin"
+                    }
+                    
+                    "FireSound"
+                    {
+                        "Target"            
+                        {
+                            "Center"    "UNIT"
+                            "Flags"     "DOTA_UNIT_TARGET_FLAG_DEAD"
+                        }
+                        "EffectName"    "Hero_Beastmaster_Boar.Death"
+                    }
+                }
+            }
+        }
+    }
+
+    // 召唤熊宝宝Lv3
+    "ranger_call_of_the_wild_bear_Lv3"
+    {
+        // General -------------------------------------------------------------------
+        "BaseClass"                     "ability_datadriven"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+        "AbilityTextureName"            "beastmaster_call_of_the_wild_boar"
+        "MaxLevel"                      "1"
+        
+        // Casting -------------------------------------------------------------------
+        "AbilityCastPoint"              "0.3"
+
+        // Time ----------------------------------------------------------------------
+        "AbilityCooldown"               "40.0"
+
+        // Cost ----------------------------------------------------------------------
+        "AbilityManaCost"               "0"
+
+        // Special -------------------------------------------------------------------
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "hawk_duration"             "60"
+            }
+            "02"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "boar_hp_tooltip"           "200"
+            }
+            "03"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "boar_damage_tooltip"       "15"
+            }
+            "04"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "boar_moveslow_tooltip"     "10"
+            }
+            "05"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "boar_attackslow_tooltip"   "10"
+            }
+            "06"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "poison_duration_tooltip"   "3"
+            }
+            "07"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "bear_duration"             "60"
+            }
+            "08"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "distance"              "150" // The distance in front of the target at which units will be created
+            }
+        }
+
+        "precache"
+        {
+            "particle"  "particles/units/heroes/hero_beastmaster/beastmaster_call_boar.vpcf"
+            "particle"  "particles/units/heroes/hero_lone_druid/lone_druid_spirit_bear_death.vpcf"
+            "particle"  "particles/units/heroes/hero_beastmaster/beastmaster_boar_attack.vpcf"
+            "soundfile" "soundevents/game_sounds_heroes/game_sounds_beastmaster.vsndevts"
+            "model"     "models/heroes/beastmaster/beastmaster_beast.vmdl"
+        }
+
+        "OnSpellStart"
+        {
+            "FireSound"
+            {
+                "EffectName"    "Hero_Beastmaster.Call.Boar"
+                "Target"        "CASTER"
+            }
+
+            "SpawnUnit"
+            {
+                "UnitName"          "ranger_beastmaster_bear_Lv3"
+                "Target"
+                {
+                    "Center"                "CASTER"
+                    "ScriptSelectPoints"
+                    {
+                        "ScriptFile"    "race/ranger/call_of_the_wild.lua"
+                        "Function"      "GetFrontPoint"
+                        "Target"        "CASTER"
+                        "Distance"      "%distance"
+                    }
+                }
+
+                "UnitCount"         "1"
+                "Duration"          "%bear_duration"
+
+                // This makes sure units never get stuck
+                "OnSpawn"
+                {
+                    "ApplyModifier"
+                    {
+                        "ModifierName"  "modifier_phased"
+                        "Target"        "TARGET"
+                        "Duration"      "0.03"
+                    }
+
+                    "ApplyModifier"
+                    {
+                        "ModifierName"  "modifier_beastmaster_boar"
+                        "Target"        "TARGET"
+                    }
+
+                    "RunScript"
+                    {
+                        "ScriptFile"    "race/ranger/call_of_the_wild.lua"
+                        "Function"      "SetUnitsMoveForward"
+                    }
+                }
+            }
+        }
+
+        "Modifiers"
+        {
+            "modifier_beastmaster_boar"
+            {
+                "IsHidden"      "1"
+
+                "OnCreated"
+                {
+                    "FireEffect"
+                    {
+                        "Target"            "TARGET"
+                        "EffectName"        "particles/units/heroes/hero_beastmaster/beastmaster_call_boar.vpcf"
+                        "EffectAttachType"  "follow_origin"
+                    }
+                }
+
+                "OnDeath"
+                {
+                    "FireEffect"
+                    {
+                        "Target"            
+                        {
+                            "Center"    "UNIT"
+                            "Flags"     "DOTA_UNIT_TARGET_FLAG_DEAD"
+                        }
+                        "EffectName"        "particles/units/heroes/hero_lone_druid/lone_druid_spirit_bear_death.vpcf"
+                        "EffectAttachType"  "follow_origin"
+                    }
+                    
+                    "FireSound"
+                    {
+                        "Target"            
+                        {
+                            "Center"    "UNIT"
+                            "Flags"     "DOTA_UNIT_TARGET_FLAG_DEAD"
+                        }
+                        "EffectName"    "Hero_Beastmaster_Boar.Death"
+                    }
+                }
+            }
+        }
+    }
+
+
+    // 召唤熊宝宝Lv4
+    "ranger_call_of_the_wild_bear_Lv4"
+    {
+        // General -------------------------------------------------------------------
+        "BaseClass"                     "ability_datadriven"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+        "AbilityTextureName"            "beastmaster_call_of_the_wild_boar"
+        "MaxLevel"                      "1"
+        
+        // Casting -------------------------------------------------------------------
+        "AbilityCastPoint"              "0.3"
+
+        // Time ----------------------------------------------------------------------
+        "AbilityCooldown"               "40.0"
+
+        // Cost ----------------------------------------------------------------------
+        "AbilityManaCost"               "0"
+
+        // Special -------------------------------------------------------------------
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "hawk_duration"             "60"
+            }
+            "02"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "boar_hp_tooltip"           "200"
+            }
+            "03"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "boar_damage_tooltip"       "15"
+            }
+            "04"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "boar_moveslow_tooltip"     "10"
+            }
+            "05"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "boar_attackslow_tooltip"   "10"
+            }
+            "06"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "poison_duration_tooltip"   "3"
+            }
+            "07"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "bear_duration"             "60"
+            }
+            "08"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "distance"              "150" // The distance in front of the target at which units will be created
+            }
+        }
+
+        "precache"
+        {
+            "particle"  "particles/units/heroes/hero_beastmaster/beastmaster_call_boar.vpcf"
+            "particle"  "particles/units/heroes/hero_lone_druid/lone_druid_spirit_bear_death.vpcf"
+            "particle"  "particles/units/heroes/hero_beastmaster/beastmaster_boar_attack.vpcf"
+            "soundfile" "soundevents/game_sounds_heroes/game_sounds_beastmaster.vsndevts"
+            "model"     "models/heroes/beastmaster/beastmaster_beast.vmdl"
+        }
+
+        "OnSpellStart"
+        {
+            "FireSound"
+            {
+                "EffectName"    "Hero_Beastmaster.Call.Boar"
+                "Target"        "CASTER"
+            }
+
+            "SpawnUnit"
+            {
+                "UnitName"          "ranger_beastmaster_bear_Lv4"
+                "Target"
+                {
+                    "Center"                "CASTER"
+                    "ScriptSelectPoints"
+                    {
+                        "ScriptFile"    "race/ranger/call_of_the_wild.lua"
+                        "Function"      "GetFrontPoint"
+                        "Target"        "CASTER"
+                        "Distance"      "%distance"
+                    }
+                }
+
+                "UnitCount"         "1"
+                "Duration"          "%bear_duration"
+
+                // This makes sure units never get stuck
+                "OnSpawn"
+                {
+                    "ApplyModifier"
+                    {
+                        "ModifierName"  "modifier_phased"
+                        "Target"        "TARGET"
+                        "Duration"      "0.03"
+                    }
+
+                    "ApplyModifier"
+                    {
+                        "ModifierName"  "modifier_beastmaster_boar"
+                        "Target"        "TARGET"
+                    }
+
+                    "RunScript"
+                    {
+                        "ScriptFile"    "race/ranger/call_of_the_wild.lua"
+                        "Function"      "SetUnitsMoveForward"
+                    }
+                }
+            }
+        }
+
+        "Modifiers"
+        {
+            "modifier_beastmaster_boar"
+            {
+                "IsHidden"      "1"
+
+                "OnCreated"
+                {
+                    "FireEffect"
+                    {
+                        "Target"            "TARGET"
+                        "EffectName"        "particles/units/heroes/hero_beastmaster/beastmaster_call_boar.vpcf"
+                        "EffectAttachType"  "follow_origin"
+                    }
+                }
+
+                "OnDeath"
+                {
+                    "FireEffect"
+                    {
+                        "Target"            
+                        {
+                            "Center"    "UNIT"
+                            "Flags"     "DOTA_UNIT_TARGET_FLAG_DEAD"
+                        }
+                        "EffectName"        "particles/units/heroes/hero_lone_druid/lone_druid_spirit_bear_death.vpcf"
+                        "EffectAttachType"  "follow_origin"
+                    }
+                    
+                    "FireSound"
+                    {
+                        "Target"            
+                        {
+                            "Center"    "UNIT"
+                            "Flags"     "DOTA_UNIT_TARGET_FLAG_DEAD"
+                        }
+                        "EffectName"    "Hero_Beastmaster_Boar.Death"
+                    }
+                }
+            }
+        }
+    }
+
+    // 召唤熊宝宝Lv5
+    "ranger_call_of_the_wild_bear_Lv5"
+    {
+        // General -------------------------------------------------------------------
+        "BaseClass"                     "ability_datadriven"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+        "AbilityTextureName"            "beastmaster_call_of_the_wild_boar"
+        "MaxLevel"                      "1"
+        
+        // Casting -------------------------------------------------------------------
+        "AbilityCastPoint"              "0.3"
+
+        // Time ----------------------------------------------------------------------
+        "AbilityCooldown"               "40.0"
+
+        // Cost ----------------------------------------------------------------------
+        "AbilityManaCost"               "0"
+
+        // Special -------------------------------------------------------------------
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "hawk_duration"             "60"
+            }
+            "02"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "boar_hp_tooltip"           "200"
+            }
+            "03"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "boar_damage_tooltip"       "15"
+            }
+            "04"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "boar_moveslow_tooltip"     "10"
+            }
+            "05"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "boar_attackslow_tooltip"   "10"
+            }
+            "06"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "poison_duration_tooltip"   "3"
+            }
+            "07"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "bear_duration"             "60"
+            }
+            "08"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "distance"              "150" // The distance in front of the target at which units will be created
+            }
+        }
+
+        "precache"
+        {
+            "particle"  "particles/units/heroes/hero_beastmaster/beastmaster_call_boar.vpcf"
+            "particle"  "particles/units/heroes/hero_lone_druid/lone_druid_spirit_bear_death.vpcf"
+            "particle"  "particles/units/heroes/hero_beastmaster/beastmaster_boar_attack.vpcf"
+            "soundfile" "soundevents/game_sounds_heroes/game_sounds_beastmaster.vsndevts"
+            "model"     "models/heroes/beastmaster/beastmaster_beast.vmdl"
+        }
+
+        "OnSpellStart"
+        {
+            "FireSound"
+            {
+                "EffectName"    "Hero_Beastmaster.Call.Boar"
+                "Target"        "CASTER"
+            }
+
+            "SpawnUnit"
+            {
+                "UnitName"          "ranger_beastmaster_bear_Lv5"
+                "Target"
+                {
+                    "Center"                "CASTER"
+                    "ScriptSelectPoints"
+                    {
+                        "ScriptFile"    "race/ranger/call_of_the_wild.lua"
+                        "Function"      "GetFrontPoint"
+                        "Target"        "CASTER"
+                        "Distance"      "%distance"
+                    }
+                }
+
+                "UnitCount"         "1"
+                "Duration"          "%bear_duration"
+
+                // This makes sure units never get stuck
+                "OnSpawn"
+                {
+                    "ApplyModifier"
+                    {
+                        "ModifierName"  "modifier_phased"
+                        "Target"        "TARGET"
+                        "Duration"      "0.03"
+                    }
+
+                    "ApplyModifier"
+                    {
+                        "ModifierName"  "modifier_beastmaster_boar"
+                        "Target"        "TARGET"
+                    }
+
+                    "RunScript"
+                    {
+                        "ScriptFile"    "race/ranger/call_of_the_wild.lua"
+                        "Function"      "SetUnitsMoveForward"
+                    }
+                }
+            }
+        }
+
+        "Modifiers"
+        {
+            "modifier_beastmaster_boar"
+            {
+                "IsHidden"      "1"
+
+                "OnCreated"
+                {
+                    "FireEffect"
+                    {
+                        "Target"            "TARGET"
+                        "EffectName"        "particles/units/heroes/hero_beastmaster/beastmaster_call_boar.vpcf"
+                        "EffectAttachType"  "follow_origin"
+                    }
+                }
+
+                "OnDeath"
+                {
+                    "FireEffect"
+                    {
+                        "Target"            
+                        {
+                            "Center"    "UNIT"
+                            "Flags"     "DOTA_UNIT_TARGET_FLAG_DEAD"
+                        }
+                        "EffectName"        "particles/units/heroes/hero_lone_druid/lone_druid_spirit_bear_death.vpcf"
+                        "EffectAttachType"  "follow_origin"
+                    }
+                    
+                    "FireSound"
+                    {
+                        "Target"            
+                        {
+                            "Center"    "UNIT"
+                            "Flags"     "DOTA_UNIT_TARGET_FLAG_DEAD"
+                        }
+                        "EffectName"    "Hero_Beastmaster_Boar.Death"
+                    }
+                }
+            }
+        }
+    }
+
+    //---------------------------------------------------------------------------------------
+    // ranger attack abilities
     // 多重攻击
     "ranger_split_shot"
     {
-        // General
-        //-------------------------------------------------------------------------------------------------------------
+        // General -------------------------------------------------------------------------
         "BaseClass"                        "ability_datadriven"
         "AbilityBehavior"                  "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
         "AbilityUnitTargetTeam"            "DOTA_UNIT_TARGET_TEAM_ENEMY"
@@ -1224,20 +2266,17 @@
         "SpellImmunityType"                "SPELL_IMMUNITY_ENEMIES_YES"
         "AbilityTextureName"               "medusa_split_shot"
 
-        // Precache
-        //-------------------------------------------------------------------------------------------------------------
+        // Precache ------------------------------------------------------------------------
         "precache"
         {
             "soundfile"           "soundevents/game_sounds_heroes/game_sounds_medusa.vsndevts"
             "particle"            "particles/units/heroes/hero_windrunner/windrunner_base_attack.vpcf"
         }
         
-        // Casting
-        //-------------------------------------------------------------------------------------------------------------
+        // Casting -------------------------------------------------------------------------
         "AbilityCastPoint"        "0.4"
 
-        // Special
-        //-------------------------------------------------------------------------------------------------------------
+        // Special -------------------------------------------------------------------------
         "AbilitySpecial"
         {
             "01"
@@ -1309,5 +2348,13 @@
                 }
             }
         }
+    }
+
+    // 熊宝宝的分裂攻击，被禁用的
+    "ranger_cleave_disabled"
+    {
+        "BaseClass"                     "ability_datadriven"
+        "AbilityTextureName"            "sven_great_cleave"
+        "MaxLevel"                      "0"
     }
 }

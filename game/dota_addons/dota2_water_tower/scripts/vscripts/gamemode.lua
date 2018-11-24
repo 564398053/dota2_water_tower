@@ -3,7 +3,13 @@ DEBUG_SPEW = 1
 
 HERO_ABILITY_TABLE_DEFAULT_LV1 = 
 {
-    "compound", "blink", "build_npc_dota_tower_basedef", "build_ranger_first_stage", "build_ranger_middle_stage", "build_ranger_final_stage "
+    "compound",
+    "blink",
+    "build_npc_dota_tower_basedef",
+    "build_ranger_first_stage",
+    "build_ranger_middle_stage",
+    "build_ranger_final_stage",
+    "build_ranger_beastmaster_Lv1",
 }
 
 function CustomGameMode:InitGameMode()
@@ -21,6 +27,7 @@ function CustomGameMode:InitGameMode()
 	ListenToGameEvent('entity_killed', Dynamic_Wrap(CustomGameMode, 'OnEntityKilled'), self)
 	ListenToGameEvent('dota_player_pick_hero', Dynamic_Wrap(CustomGameMode, 'OnPlayerPickHero'), self)
     ListenToGameEvent('player_chat', Dynamic_Wrap(CustomGameMode, 'OnPlayerChat'), self)
+    ListenToGameEvent('player_spawn', Dynamic_Wrap(CustomGameMode, 'OnPlayerSpawn'), self)
     ListenToGameEvent('npc_spawned', Dynamic_Wrap(CustomGameMode, 'OnNpcSpawned'), self)
 
 	-- Filters
@@ -48,7 +55,6 @@ end
 
 -- A player picked a hero
 function CustomGameMode:OnPlayerPickHero(keys)
-
 	local hero = EntIndexToHScript(keys.heroindex)
 	local player = EntIndexToHScript(keys.player)
 	local playerID = hero:GetPlayerID()
@@ -101,26 +107,8 @@ function CustomGameMode:OnPlayerPickHero(keys)
 	table.insert(player.units, hero)
 	hero.state = "idle" --Builder state
 
-	-- Spawn some peasants around the hero
-	local position = hero:GetAbsOrigin()
-	local numBuilders = 5
-	local angle = 360/numBuilders
-	for i=1,5 do
-		local rotate_pos = position + Vector(1,0,0) * 100
-		local builder_pos = RotatePosition(position, QAngle(0, angle*i, 0), rotate_pos)
-
-		local builder = CreateUnitByName("peasant", builder_pos, true, hero, hero, hero:GetTeamNumber())
-		builder:SetOwner(hero)
-		builder:SetControllableByPlayer(playerID, true)
-		table.insert(player.units, builder)
-		builder.state = "idle"
-
-		-- Go through the abilities and upgrade
-		CheckAbilityRequirements( builder, player )
-	end
-
 	-- Give Initial Resources
-	hero:SetGold(5000, false)
+	hero:SetGold(990000, false)
 	ModifyLumber(player, 5000)
 
 	-- Lumber tick
@@ -250,10 +238,14 @@ end
 function CustomGameMode:OnNpcSpawned(keys)
 end
 
+-- on play spawned
+function CustomGameMode:OnPlayerSpawn(event)
+end
+
 function GenerateEnemy()
     for i=1, 16 do
         local entityStart = Entities:FindByName(nil, "player1_path_corner_start")
-        local enemyUnit = CreateUnitByName("bad_guy_lv1", entityStart:GetOrigin(), false, nil, nil, DOTA_TEAM_BADGUYS)
+        local enemyUnit = CreateUnitByName("bad_guy_Lv1", entityStart:GetOrigin(), false, nil, nil, DOTA_TEAM_BADGUYS)
  
         enemyUnit:SetMustReachEachGoalEntity(true)
         enemyUnit:SetInitialGoalEntity(entityStart)

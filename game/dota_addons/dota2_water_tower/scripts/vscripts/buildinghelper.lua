@@ -283,6 +283,7 @@ function BuildingHelper:SetupBuildingTable( abilityName )
     end
     buildingTable:SetVal("AbilityCastRange", castRange)
 
+    print('[BH] Info: create unit', unitName)
     local fMaxScale = buildingTable:GetVal("MaxScale", "float")
     if fMaxScale == nil then
         -- If no MaxScale is defined, check the "ModelScale" KeyValue. Otherwise just default to 1

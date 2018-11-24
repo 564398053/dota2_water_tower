@@ -16,7 +16,7 @@ require('libraries/popups')
 require('libraries/notifications')
 
 
-function Precache( context )
+function Precache(context)
 
     -- Model ghost and grid particles
     PrecacheResource("particle_folder", "particles/buildinghelper", context)
