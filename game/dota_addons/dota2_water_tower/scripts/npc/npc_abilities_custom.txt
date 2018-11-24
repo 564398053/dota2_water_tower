@@ -282,7 +282,7 @@
                     "RunScript"
                     {
                         "ScriptFile"    "buildings/queue.lua"
-                        "Function"        "AdvanceQueue"
+                        "Function"       "AdvanceQueue"
                     }
                 }
             }
@@ -610,8 +610,8 @@
         }
     }
 
-    // 升级驯兽猎手Lv2
-    "ranger_beastmaster_upgrade_to_Lv2"
+    // 升级驯兽猎手Lv2. 技能升级，名称必须为'train_xxx'的格式...坑...调试了好几个小时看源码...
+    "train_ranger_beastmaster_Lv2"
     {
         "BaseClass"                     "ability_datadriven"
         "AbilityTextureName"            "templar_assassin_psionic_trap"
@@ -678,7 +678,7 @@
     }
 
     // 升级驯兽猎手Lv3
-    "ranger_beastmaster_upgrade_to_Lv3"
+    "train_ranger_beastmaster_Lv3"
     {
         "BaseClass"                     "ability_datadriven"
         "AbilityTextureName"            "templar_assassin_psionic_trap"
@@ -744,7 +744,7 @@
     }
 
     // 升级驯兽猎手Lv4
-    "ranger_beastmaster_upgrade_to_Lv4"
+    "train_ranger_beastmaster_Lv4"
     {
         "BaseClass"                     "ability_datadriven"
         "AbilityTextureName"            "templar_assassin_psionic_trap"
@@ -810,7 +810,7 @@
     }
 
     // 升级雷克萨
-    "ranger_beastmaster_upgrade_to_Lv5"
+    "train_ranger_beastmaster_Lv5"
     {
         "BaseClass"                     "ability_datadriven"
         "AbilityTextureName"            "templar_assassin_psionic_trap"

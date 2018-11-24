@@ -324,6 +324,7 @@ function BuildingHelper:PlaceBuilding(player, name, location, blockGridNav, size
     end
 
     -- Spawn the building
+    print('[BH] place building ', name)
     local building = CreateUnitByName(name, location, false, playersHero, player, playersHero:GetTeamNumber())
     building:SetControllableByPlayer(pID, true)
     building:SetOwner(playersHero)

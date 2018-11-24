@@ -83,26 +83,6 @@ function CustomGameMode:OnPlayerPickHero(keys)
 	player.upgrades = {} -- This kees the name of all the upgrades researched
 	player.lumber = 0 -- Secondary resource of the player
 
-    -- Create city center in front of the hero
-    local position = hero:GetAbsOrigin() + hero:GetForwardVector() * 300
-    local city_center_name = "city_center"
-	local building = BuildingHelper:PlaceBuilding(player, city_center_name, position, true, 5) 
-
-	-- Set health to test repair
-	building:SetHealth(building:GetMaxHealth()/3)
-
-	-- These are required for repair to know how many resources the building takes
-	building.GoldCost = 100
-	building.LumberCost = 100
-	building.BuildTime = 15
-
-	-- Add the building to the player structures list
-	player.buildings[city_center_name] = 1
-	table.insert(player.structures, building)
-
-	CheckAbilityRequirements( hero, player )
-	CheckAbilityRequirements( building, player )
-
 	-- Add the hero to the player units list
 	table.insert(player.units, hero)
 	hero.state = "idle" --Builder state
@@ -118,8 +98,8 @@ function CustomGameMode:OnPlayerPickHero(keys)
 	end)
 
 	-- Give a building ability
-	local item = CreateItem("item_build_wall", hero, hero)
-	hero:AddItem(item)
+	--local item = CreateItem("item_build_wall", hero, hero)
+	--hero:AddItem(item)
 end
 
 -- An entity died

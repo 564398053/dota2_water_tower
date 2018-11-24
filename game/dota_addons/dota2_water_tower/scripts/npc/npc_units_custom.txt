@@ -1024,11 +1024,14 @@
         // Abilities -----------------------------------------------------
         "AbilityLayout"               "6"
         "Ability1"                    "ranger_call_of_the_wild_bear_Lv1"
-        "Ability2"                    "ranger_beastmaster_upgrade_to_Lv2"
+        "Ability2"                    "train_ranger_beastmaster_Lv2"
         "Ability3"                    ""
         "Ability4"                    ""
         "Ability5"                    ""
         "Ability6"                    ""
+        // abilities required for [BH] upgrade
+        "Ability10"                 "ability_building"
+        "Ability11"                 "ability_building_queue"
 
         // Attack --------------------------------------------------------
         "AttackCapabilities"         "DOTA_UNIT_CAP_RANGED_ATTACK"
@@ -1087,11 +1090,14 @@
         // Abilities -----------------------------------------------------
         "AbilityLayout"               "6"
         "Ability1"                    "ranger_call_of_the_wild_bear_Lv2"
-        "Ability2"                    "ranger_beastmaster_upgrade_to_Lv3"
+        "Ability2"                    "train_ranger_beastmaster_Lv3"
         "Ability3"                    ""
         "Ability4"                    ""
         "Ability5"                    ""
         "Ability6"                    ""
+        // abilities required for [BH] upgrade
+        "Ability10"                 "ability_building"
+        "Ability11"                 "ability_building_queue"
 
         // Attack --------------------------------------------------------
         "AttackCapabilities"         "DOTA_UNIT_CAP_RANGED_ATTACK"
@@ -1150,11 +1156,14 @@
         // Abilities -----------------------------------------------------
         "AbilityLayout"               "6"
         "Ability1"                    "ranger_call_of_the_wild_bear_Lv3"
-        "Ability2"                    "ranger_beastmaster_upgrade_to_Lv4"
+        "Ability2"                    "train_ranger_beastmaster_Lv4"
         "Ability3"                    ""
         "Ability4"                    ""
         "Ability5"                    ""
         "Ability6"                    ""
+        // abilities required for [BH] upgrade
+        "Ability10"                 "ability_building"
+        "Ability11"                 "ability_building_queue"
 
         // Attack --------------------------------------------------------
         "AttackCapabilities"         "DOTA_UNIT_CAP_RANGED_ATTACK"
@@ -1213,11 +1222,14 @@
         // Abilities -----------------------------------------------------
         "AbilityLayout"               "6"
         "Ability1"                    "ranger_call_of_the_wild_bear_Lv4"
-        "Ability2"                    "ranger_beastmaster_upgrade_to_Lv5"
+        "Ability2"                    "train_ranger_beastmaster_Lv5"
         "Ability3"                    ""
         "Ability4"                    ""
         "Ability5"                    ""
         "Ability6"                    ""
+        // abilities required for [BH] upgrade
+        "Ability10"                 "ability_building"
+        "Ability11"                 "ability_building_queue"
 
         // Attack --------------------------------------------------------
         "AttackCapabilities"         "DOTA_UNIT_CAP_RANGED_ATTACK"

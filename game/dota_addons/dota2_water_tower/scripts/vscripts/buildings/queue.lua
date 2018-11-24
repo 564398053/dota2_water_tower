@@ -50,7 +50,7 @@ function DequeueUnit( event )
 	local train_ability = caster:FindAbilityByName(train_ability_name)
 	local gold_cost = train_ability:GetGoldCost( train_ability:GetLevel() )
 
-	print("Start dequeue")
+	print("Start dequeue, ability name", train_ability_name)
 
 	for itemSlot = 0, 5, 1 do
        	local item = caster:GetItemInSlot( itemSlot )
