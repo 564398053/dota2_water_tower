@@ -159,6 +159,8 @@
 	}
 }
 
+
+// [BH] upgrade required step [5]. define the item in item queue.
 "item_train_ranger_beastmaster_Lv2"
 {
 	{

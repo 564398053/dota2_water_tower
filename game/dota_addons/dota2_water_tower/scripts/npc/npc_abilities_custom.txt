@@ -611,6 +611,7 @@
     }
 
     // 升级驯兽猎手Lv2. 技能升级，名称必须为'train_xxx'的格式...坑...调试了好几个小时看源码...
+    // [BH] upgrade required step [3]. define the skill to upgrade
     "train_ranger_beastmaster_Lv2"
     {
         "BaseClass"                     "ability_datadriven"

@@ -1024,11 +1024,14 @@
         // Abilities -----------------------------------------------------
         "AbilityLayout"               "6"
         "Ability1"                    "ranger_call_of_the_wild_bear_Lv1"
+        // [BH] upgrade required step [1]. ability name must start with 'train_'!
         "Ability2"                    "train_ranger_beastmaster_Lv2"
         "Ability3"                    ""
         "Ability4"                    ""
         "Ability5"                    ""
         "Ability6"                    ""
+        
+        // [BH] upgrade required step [2].
         // abilities required for [BH] upgrade
         "Ability10"                 "ability_building"
         "Ability11"                 "ability_building_queue"
