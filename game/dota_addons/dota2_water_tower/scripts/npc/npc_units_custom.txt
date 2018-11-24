@@ -1332,6 +1332,7 @@
         "ModelScale"                    "0.8"
         "Level"                         "1"
         "HealthBarOffset"               "140"
+        "ConsideredHero"                "1"
         "SelectionGroup"                "ranger_beastmaster_bear"
         "UnitLabel"                     "ranger_beastmaster_bear_Lv1"
         "PathfindingSearchDepthScale"   "0.5"
@@ -1352,8 +1353,8 @@
         "AttackDamageType"           "DAMAGE_TYPE_ArmorPhysical"
         "AttackRate"                 "2"
         "AttackAnimationPoint"       "0.433"
-        "AttackAcquisitionRange"     "500"
-        "AttackRange"                "90"
+        "AttackAcquisitionRange"     "2000"
+        "AttackRange"                "200"
 
         // Bounds ---------------------------------------------------------
         "BoundsHullName"            "DOTA_HULL_SIZE_SMALL"
@@ -1389,6 +1390,7 @@
         "Model"                         "models/heroes/lone_druid/spirit_bear.vmdl"
         "ModelScale"                    "0.8"
         "Level"                         "1"
+        "ConsideredHero"                "1"
         "HealthBarOffset"               "140"
         "SelectionGroup"                "ranger_beastmaster_bear"
         "UnitLabel"                     "ranger_beastmaster_bear_Lv2"
@@ -1410,8 +1412,8 @@
         "AttackDamageType"           "DAMAGE_TYPE_ArmorPhysical"
         "AttackRate"                 "2"
         "AttackAnimationPoint"       "0.433"
-        "AttackAcquisitionRange"     "500"
-        "AttackRange"                "90"
+        "AttackAcquisitionRange"     "2000"
+        "AttackRange"                "200"
 
         // Bounds ---------------------------------------------------------
         "BoundsHullName"            "DOTA_HULL_SIZE_SMALL"
@@ -1468,8 +1470,8 @@
         "AttackDamageType"           "DAMAGE_TYPE_ArmorPhysical"
         "AttackRate"                 "2"
         "AttackAnimationPoint"       "0.433"
-        "AttackAcquisitionRange"     "500"
-        "AttackRange"                "90"
+        "AttackAcquisitionRange"     "2000"
+        "AttackRange"                "200"
 
         // Bounds ---------------------------------------------------------
         "BoundsHullName"            "DOTA_HULL_SIZE_SMALL"
@@ -1526,8 +1528,8 @@
         "AttackDamageType"           "DAMAGE_TYPE_ArmorPhysical"
         "AttackRate"                 "2"
         "AttackAnimationPoint"       "0.433"
-        "AttackAcquisitionRange"     "500"
-        "AttackRange"                "90"
+        "AttackAcquisitionRange"     "2000"
+        "AttackRange"                "200"
 
         // Bounds ---------------------------------------------------------
         "BoundsHullName"            "DOTA_HULL_SIZE_SMALL"
@@ -1584,8 +1586,8 @@
         "AttackDamageType"           "DAMAGE_TYPE_ArmorPhysical"
         "AttackRate"                 "2"
         "AttackAnimationPoint"       "0.433"
-        "AttackAcquisitionRange"     "500"
-        "AttackRange"                "90"
+        "AttackAcquisitionRange"     "2000"
+        "AttackRange"                "200"
 
         // Bounds ---------------------------------------------------------
         "BoundsHullName"            "DOTA_HULL_SIZE_SMALL"
