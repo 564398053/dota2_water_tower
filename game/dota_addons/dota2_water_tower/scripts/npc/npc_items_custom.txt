@@ -286,7 +286,7 @@
         "ItemDroppable"                   "0"
         "ItemPurchasable"                 "0"
         "ItemSellable"                    "0"
-        
+
         "OnSpellStart"
         {
             "RunScript"
@@ -306,6 +306,25 @@
             {
                 "ModifierName"    "modifier_building_particle"
                 "Target"          "CASTER"
+            }
+        }
+
+        "Modifiers"
+        {
+            "modifier_building_queue"
+            {
+                "Passive"            "1"
+                "IsHidden"            "1"
+        
+                "ThinkInterval"  "0.03"
+                "OnIntervalThink"
+                {
+                    "RunScript"
+                    {
+                        "ScriptFile"    "buildings/queue.lua"
+                        "Function"       "AdvanceQueue"
+                    }
+                }
             }
         }
     }

@@ -53,6 +53,7 @@
 "DOTA_Tooltip_Ability_ability_building_queue" "建造队列"
 "DOTA_Tooltip_Ability_ability_building" "建造"
 "DOTA_Tooltip_ability_item_building_cancel" "取消建造"
+"DOTA_Tooltip_Ability_item_train_cancel" "取消升级"
 "DOTA_Tooltip_ability_item_building_cancel_Description" ""
 "DOTA_Tooltip_Ability_build_ranger_sniper_Lv1" "建造狙击猎手Lv1"
 "DOTA_Tooltip_Ability_train_ranger_sniper_Lv2" "升级狙击猎手Lv2"

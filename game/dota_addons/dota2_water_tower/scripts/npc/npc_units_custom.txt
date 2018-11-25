@@ -22,9 +22,7 @@
         "Ability2"                    "research_ultimate_ability"
         "Ability3"                    ""
         "Ability4"                    ""
-        "Ability10"                    "ability_building"
-        "Ability11"                    "ability_building_queue"
-        
+
         // Armor
         //----------------------------------------------------------------
         "ArmorPhysical"                "5"
@@ -95,7 +93,6 @@
         "Ability2"                    ""
         "Ability3"                    ""
         "Ability4"                    ""
-        "Ability10"                    "ability_building"
         
         // Armor
         //----------------------------------------------------------------
@@ -566,11 +563,6 @@
         "Ability4"                    ""
         "Ability5"                    ""
         "Ability6"                    ""
-        
-        // [BH] upgrade required step [2].
-        // abilities required for [BH] upgrade
-        "Ability10"                 "ability_building"
-        "Ability11"                 "ability_building_queue"
 
         // Attack --------------------------------------------------------
         "AttackCapabilities"         "DOTA_UNIT_CAP_RANGED_ATTACK"
@@ -634,9 +626,6 @@
         "Ability4"                    ""
         "Ability5"                    ""
         "Ability6"                    ""
-        // abilities required for [BH] upgrade
-        "Ability10"                 "ability_building"
-        "Ability11"                 "ability_building_queue"
 
         // Attack --------------------------------------------------------
         "AttackCapabilities"         "DOTA_UNIT_CAP_RANGED_ATTACK"
@@ -700,9 +689,6 @@
         "Ability4"                    ""
         "Ability5"                    ""
         "Ability6"                    ""
-        // abilities required for [BH] upgrade
-        "Ability10"                 "ability_building"
-        "Ability11"                 "ability_building_queue"
 
         // Attack --------------------------------------------------------
         "AttackCapabilities"         "DOTA_UNIT_CAP_RANGED_ATTACK"
@@ -766,9 +752,6 @@
         "Ability4"                    ""
         "Ability5"                    ""
         "Ability6"                    ""
-        // abilities required for [BH] upgrade
-        "Ability10"                 "ability_building"
-        "Ability11"                 "ability_building_queue"
 
         // Attack --------------------------------------------------------
         "AttackCapabilities"         "DOTA_UNIT_CAP_RANGED_ATTACK"
@@ -1187,10 +1170,6 @@
         "Ability5"                    ""
         "Ability6"                    "train_ranger_sniper_Lv2"
 
-        // abilities required for [BH] upgrade
-        "Ability10"                 "ability_building"
-        "Ability11"                 "ability_building_queue"
-
         // Attack --------------------------------------------------------
         "AttackCapabilities"         "DOTA_UNIT_CAP_RANGED_ATTACK"
         "AttackDamageType"           "DAMAGE_TYPE_ArmorPhysical"
@@ -1252,10 +1231,6 @@
         "Ability4"                    ""
         "Ability5"                    ""
         "Ability6"                    ""
-
-        // abilities required for [BH] upgrade
-        "Ability10"                 "ability_building"
-        "Ability11"                 "ability_building_queue"
 
         // Attack --------------------------------------------------------
         "AttackCapabilities"         "DOTA_UNIT_CAP_RANGED_ATTACK"
@@ -1319,10 +1294,6 @@
         "Ability5"                    ""
         "Ability6"                    ""
 
-        // abilities required for [BH] upgrade
-        "Ability10"                 "ability_building"
-        "Ability11"                 "ability_building_queue"
-
         // Attack --------------------------------------------------------
         "AttackCapabilities"         "DOTA_UNIT_CAP_RANGED_ATTACK"
         "AttackDamageType"           "DAMAGE_TYPE_ArmorPhysical"
@@ -1384,10 +1355,6 @@
         "Ability4"                    ""
         "Ability5"                    ""
         "Ability6"                    ""
-
-        // abilities required for [BH] upgrade
-        "Ability10"                 "ability_building"
-        "Ability11"                 "ability_building_queue"
 
         // Attack --------------------------------------------------------
         "AttackCapabilities"         "DOTA_UNIT_CAP_RANGED_ATTACK"
@@ -1451,10 +1418,6 @@
         "Ability5"                    ""
         "Ability6"                    ""
 
-        // abilities required for [BH] upgrade
-        "Ability10"                 "ability_building"
-        "Ability11"                 "ability_building_queue"
-
         // Attack --------------------------------------------------------
         "AttackCapabilities"         "DOTA_UNIT_CAP_RANGED_ATTACK"
         "AttackDamageType"           "DAMAGE_TYPE_ArmorPhysical"
@@ -1516,10 +1479,6 @@
         "Ability4"                    ""
         "Ability5"                    ""
         "Ability6"                    ""
-
-        // abilities required for [BH] upgrade
-        "Ability10"                 "ability_building"
-        "Ability11"                 "ability_building_queue"
 
         // Attack --------------------------------------------------------
         "AttackCapabilities"         "DOTA_UNIT_CAP_RANGED_ATTACK"
@@ -1584,10 +1543,6 @@
         "Ability5"                    ""
         "Ability6"                    ""
 
-        // abilities required for [BH] upgrade
-        "Ability10"                 "ability_building"
-        "Ability11"                 "ability_building_queue"
-
         // Attack --------------------------------------------------------
         "AttackCapabilities"         "DOTA_UNIT_CAP_RANGED_ATTACK"
         "AttackDamageType"           "DAMAGE_TYPE_ArmorPhysical"
@@ -1649,10 +1604,6 @@
         "Ability4"                    ""
         "Ability5"                    ""
         "Ability6"                    ""
-
-        // abilities required for [BH] upgrade
-        "Ability10"                 "ability_building"
-        "Ability11"                 "ability_building_queue"
 
         // Attack --------------------------------------------------------
         "AttackCapabilities"         "DOTA_UNIT_CAP_RANGED_ATTACK"
@@ -1716,10 +1667,6 @@
         "Ability5"                    ""
         "Ability6"                    ""
 
-        // abilities required for [BH] upgrade
-        "Ability10"                 "ability_building"
-        "Ability11"                 "ability_building_queue"
-
         // Attack --------------------------------------------------------
         "AttackCapabilities"         "DOTA_UNIT_CAP_RANGED_ATTACK"
         "AttackDamageType"           "DAMAGE_TYPE_ArmorPhysical"
@@ -1781,9 +1728,6 @@
         "Ability4"                    ""
         "Ability5"                    ""
         "Ability6"                    ""
-
-        // abilities required for [BH] upgrade
-        "Ability10"                 "ability_building"
 
         // Attack --------------------------------------------------------
         "AttackCapabilities"         "DOTA_UNIT_CAP_RANGED_ATTACK"
