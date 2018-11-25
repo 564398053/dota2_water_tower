@@ -5,11 +5,6 @@ HERO_ABILITY_TABLE_DEFAULT_LV1 =
 {
     "compound",
     "blink",
-    "build_npc_dota_tower_basedef",
-    "build_ranger_first_stage",
-    "build_ranger_middle_stage",
-    "build_ranger_final_stage",
-    "build_ranger_beastmaster_Lv1",
 }
 
 function CustomGameMode:InitGameMode()
@@ -67,7 +62,7 @@ function CustomGameMode:OnPlayerPickHero(keys)
         if ability then
             local abilityName = ability:GetName()
             for k, v in pairs( HERO_ABILITY_TABLE_DEFAULT_LV1 ) do
-                if abilityName == v then
+                if abilityName == v or StringStartsWith(abilityName, "build_") then
                     ability:SetLevel( 1 )
                 end
             end
