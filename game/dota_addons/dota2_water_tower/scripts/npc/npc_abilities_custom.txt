@@ -2455,7 +2455,7 @@
         
         // Stats
         //-------------------------------------------------------------------------------------------------------------
-        "AbilityCastRange"              "1200"
+        "AbilityCastRange"              "700"
         "AbilityCastPoint"              "0.3 0.3 0.3"
         "AbilityCooldown"               "4.0"
         "AbilityManaCost"               "0"
@@ -2472,22 +2472,22 @@
             "02"
             {
                 "var_type"              "FIELD_INTEGER"
-                "bonus_move_speed_pct"  "20 20 20"
+                "bonus_move_speed_pct"  "0 0 0"
             }
             "03"
             {
                 "var_type"              "FIELD_INTEGER"
-                "bonus_gold_radius"     "925 925 925"
+                "bonus_gold_radius"     "0 0 0"
             }
             "04"
             {
                 "var_type"              "FIELD_INTEGER"
-                "bonus_gold_self"       "200 275 350"
+                "bonus_gold_self"       "0 0 0"
             }
             "05"
             {
                 "var_type"              "FIELD_INTEGER"
-                "bonus_gold"            "50 100 150"
+                "bonus_gold"            "0 0 0"
             }
             "06"
             {
@@ -2502,7 +2502,7 @@
             "08"
             {
                 "var_type"              "FIELD_FLOAT"
-                "gold_steal"            "0.2 0.3 0.4"
+                "gold_steal"            "0 0 0"
             }
         }
 
@@ -2542,10 +2542,31 @@
 
         "Modifiers"
         {
+            "modifier_autocast"
+            {
+                "Passive"             "1"
+                "IsHidden"            "1"
+                "IsDebuff"            "0"
+
+                "OnAttack"
+                {
+                    "RunScript"
+                    {
+                        "ScriptFile"               "common_ability/autocast.lua"
+                        "Function"                 "AutocastOnAttack"
+                    }
+                }
+            }
+
             "modifier_track_aura_datadriven"
             {
                 "Duration"  "%duration"
                 "IsDebuff"  "1"
+
+                "Properties"
+                {
+                    "MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"        "-9999"
+                }
 
                 "OnCreated"
                 {
@@ -2608,7 +2629,7 @@
                 {
                     "RunScript"
                     {
-                        "ScriptFile"    "scripts/vscripts/heroes/hero_bounty_hunter/track.lua"
+                        "ScriptFile"    "scripts/vscripts//track.lua"
                         "Function"      "Track"
                         "Target"
                         {

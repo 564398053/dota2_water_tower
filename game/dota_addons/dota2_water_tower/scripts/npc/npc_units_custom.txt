@@ -1593,7 +1593,7 @@
     
         // Armor
         //----------------------------------------------------------------
-        "ArmorPhysical"                "9999"
+        "ArmorPhysical"                "0"
         "MagicalResistance"            "0"
 
         // Bounty
