@@ -14,9 +14,11 @@ function EnqueueUnit( event )
 	-- Queue up to 6 units max
 	if #caster.queue < 6 then
 		local ability_name = ability:GetAbilityName()
-		local item_name = "item_"..ability_name
+
+		local item_name = "item_train_cancel"
 		local item = CreateItem(item_name, caster, caster)
 		caster:AddItem(item)
+		caster.ability_name_to_cancel = ability_name
 
 		-- RemakeQueue
 		caster.queue = {}
@@ -43,10 +45,8 @@ function DequeueUnit( event )
 	local pID = player:GetPlayerID()
 
 	local item_ability = EntIndexToHScript(item:GetEntityIndex())
-	local item_ability_name = item_ability:GetAbilityName()
-
 	-- Get tied ability
-	local train_ability_name = string.gsub(item_ability_name, "item_", "")
+	local train_ability_name = caster.ability_name_to_cancel
 	local train_ability = caster:FindAbilityByName(train_ability_name)
 	local gold_cost = train_ability:GetGoldCost( train_ability:GetLevel() )
 
@@ -104,10 +104,8 @@ function NextQueue( event )
 	for itemSlot = 0, 5, 1 do
        	local item = caster:GetItemInSlot( itemSlot )
         if item ~= nil then
-        	local item_name = tostring(item:GetAbilityName())
-
         	-- Remove the "item_" to compare
-        	local train_ability_name = string.gsub(item_name, "item_", "")
+        	local train_ability_name = caster.ability_name_to_cancel
 
         	if train_ability_name == hAbility:GetAbilityName() then
 
@@ -160,7 +158,7 @@ function AdvanceQueue( event )
 						-- Find the name of the tied ability-item: 
 						--	ability = human_train_footman
 						-- 	item = item_human_train_footman
-						local train_ability_name = string.gsub(item_name, "item_", "")
+						local train_ability_name = caster.ability_name_to_cancel
 
 						local ability_to_channel = caster:FindAbilityByName(train_ability_name)
 
