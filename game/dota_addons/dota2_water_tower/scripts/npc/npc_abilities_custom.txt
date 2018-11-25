@@ -1507,6 +1507,22 @@
 
         "Modifiers"
         {
+            "modifier_autocast"
+            {
+                "Passive"             "1"
+                "IsHidden"            "1"
+                "IsDebuff"            "0"
+        
+                "OnAttack"
+                {
+                    "RunScript"
+                    {
+                        "ScriptFile"               "common_ability/autocast.lua"
+                        "Function"                 "AutocastOnAttack"
+                    }
+                }
+            }
+
             "modifier_beastmaster_boar"
             {
                 "IsHidden"      "1"
@@ -1673,6 +1689,21 @@
 
         "Modifiers"
         {
+            "modifier_autocast"
+            {
+                "Passive"             "1"
+                "IsHidden"            "1"
+                "IsDebuff"            "0"
+        
+                "OnAttack"
+                {
+                    "RunScript"
+                    {
+                        "ScriptFile"               "common_ability/autocast.lua"
+                        "Function"                 "AutocastOnAttack"
+                    }
+                }
+            }
             "modifier_beastmaster_boar"
             {
                 "IsHidden"      "1"
@@ -1840,6 +1871,22 @@
 
         "Modifiers"
         {
+            "modifier_autocast"
+            {
+                "Passive"             "1"
+                "IsHidden"            "1"
+                "IsDebuff"            "0"
+        
+                "OnAttack"
+                {
+                    "RunScript"
+                    {
+                        "ScriptFile"               "common_ability/autocast.lua"
+                        "Function"                 "AutocastOnAttack"
+                    }
+                }
+            }
+
             "modifier_beastmaster_boar"
             {
                 "IsHidden"      "1"
@@ -2006,6 +2053,22 @@
 
         "Modifiers"
         {
+            "modifier_autocast"
+            {
+                "Passive"             "1"
+                "IsHidden"            "1"
+                "IsDebuff"            "0"
+        
+                "OnAttack"
+                {
+                    "RunScript"
+                    {
+                        "ScriptFile"               "common_ability/autocast.lua"
+                        "Function"                 "AutocastOnAttack"
+                    }
+                }
+            }
+
             "modifier_beastmaster_boar"
             {
                 "IsHidden"      "1"
