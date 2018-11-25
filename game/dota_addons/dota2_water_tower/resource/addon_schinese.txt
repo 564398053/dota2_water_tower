@@ -26,6 +26,11 @@
 "ranger_sniper_Lv5"  "赫米特·奈辛瓦里" // Hemet Nesingwary
 "ranger_death_track" "标记猎手"
 "ranger_sniper_coup_de_grace" "爆头"
+"ranger_venomancer_Lv1" "毒蛇猎手Lv1"
+"ranger_venomancer_Lv2" "毒蛇猎手Lv2"
+"ranger_venomancer_Lv3" "毒蛇猎手Lv3"
+"ranger_venomancer_Lv4" "毒蛇猎手Lv4"
+"ranger_venomancer_Lv5" "毒蛇猎手Lv5"
 
 "DOTA_Tooltip_Ability_compound"	"合成"
 "DOTA_Tooltip_Ability_build_ranger_first_stage"  "建造初阶猎手"
@@ -62,6 +67,15 @@
 "DOTA_Tooltip_Ability_ranger_death_track" "标记猎手"
 "DOTA_Tooltip_Ability_toggle_autocast" "开启/关闭自动施法"
 "DOTA_Tooltip_Ability_build_ranger_death_track" "建造标记猎手"
-
+"DOTA_Tooltip_Ability_build_ranger_venomancer_Lv1" "建造毒蛇猎手Lv1"
+"DOTA_Tooltip_Ability_build_train_ranger_venomancer_Lv2" "升级毒蛇猎手Lv2"
+"DOTA_Tooltip_Ability_build_train_ranger_venomancer_Lv3" "升级毒蛇猎手Lv3"
+"DOTA_Tooltip_Ability_build_train_ranger_venomancer_Lv4" "升级毒蛇猎手Lv4"
+"DOTA_Tooltip_Ability_build_train_ranger_venomancer_Lv5" "升级毒蛇猎手Lv5"
+"DOTA_Tooltip_Ability_ranger_venomancer_poison_sting_Lv1" "毒蛇刺钉Lv1"
+"DOTA_Tooltip_Ability_ranger_venomancer_poison_sting_Lv2" "毒蛇刺钉Lv2"
+"DOTA_Tooltip_Ability_ranger_venomancer_poison_sting_Lv3" "毒蛇刺钉Lv3"
+"DOTA_Tooltip_Ability_ranger_venomancer_poison_sting_Lv4" "毒蛇刺钉Lv4"
+"DOTA_Tooltip_Ability_ranger_venomancer_poison_sting_Lv5" "毒蛇刺钉Lv5"
 }
 }
