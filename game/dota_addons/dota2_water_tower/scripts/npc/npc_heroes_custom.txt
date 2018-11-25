@@ -11,7 +11,7 @@
         "Ability1"                     "blink"
         "Ability2"                     "compound"
         "Ability3"                     "build_ranger_sniper_Lv1"
-        "Ability4"                     "build_ranger_middle_stage"
+        "Ability4"                     "build_ranger_bounty_hunter"
         "Ability5"                     "build_ranger_final_stage"
         "Ability6"                     "build_ranger_beastmaster_Lv1"
         

@@ -218,7 +218,7 @@ function CustomGameMode:OnPlayerSpawn(event)
 end
 
 function GenerateEnemy()
-    for i=1, 16 do
+    for i=1, 1 do
         local entityStart = Entities:FindByName(nil, "player1_path_corner_start")
         local enemyUnit = CreateUnitByName("bad_guy_Lv1", entityStart:GetOrigin(), false, nil, nil, DOTA_TEAM_BADGUYS)
  
