@@ -880,7 +880,7 @@
         // General -------------------------------------------------------
         "BaseClass"                     "npc_dota_creature"
         "Model"                         "models/heroes/lone_druid/spirit_bear.vmdl"
-        "ModelScale"                    "0.8"
+        "ModelScale"                    "0.5"
         "Level"                         "1"
         "HealthBarOffset"               "140"
         "ConsideredHero"                "1"
@@ -939,7 +939,7 @@
         // General -------------------------------------------------------
         "BaseClass"                     "npc_dota_creature"
         "Model"                         "models/heroes/lone_druid/spirit_bear.vmdl"
-        "ModelScale"                    "0.8"
+        "ModelScale"                    "0.5"
         "Level"                         "1"
         "ConsideredHero"                "1"
         "HealthBarOffset"               "140"
@@ -998,7 +998,7 @@
         // General -------------------------------------------------------
         "BaseClass"                     "npc_dota_creature"
         "Model"                         "models/heroes/lone_druid/spirit_bear.vmdl"
-        "ModelScale"                    "0.8"
+        "ModelScale"                    "0.5"
         "Level"                         "1"
         "HealthBarOffset"               "140"
         "SelectionGroup"                "ranger_beastmaster_bear"
@@ -1056,7 +1056,7 @@
         // General -------------------------------------------------------
         "BaseClass"                     "npc_dota_creature"
         "Model"                         "models/heroes/lone_druid/spirit_bear.vmdl"
-        "ModelScale"                    "0.8"
+        "ModelScale"                    "0.5"
         "Level"                         "1"
         "HealthBarOffset"               "140"
         "SelectionGroup"                "ranger_beastmaster_bear"
@@ -1114,7 +1114,7 @@
         // General -------------------------------------------------------
         "BaseClass"                     "npc_dota_creature"
         "Model"                         "models/items/lone_druid/viciouskraitpanda/viciouskrait_panda.vmdl"
-        "ModelScale"                    "1"
+        "ModelScale"                    "0.5"
         "Level"                         "1"
         "HealthBarOffset"               "140"
         "SelectionGroup"                "ranger_beastmaster_bear"
