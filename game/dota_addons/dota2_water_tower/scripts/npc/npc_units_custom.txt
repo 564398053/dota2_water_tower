@@ -1498,7 +1498,7 @@
     }
 
     // 标记猎手
-    "ranger_bounty_hunter"
+    "ranger_death_track"
     {
       // General -------------------------------------------------------
         "BaseClass"                     "npc_dota_creature"
@@ -1512,7 +1512,7 @@
         // Abilities -----------------------------------------------------
         "AbilityLayout"               "6"
         "Ability1"                    "ranger_death_track"
-        "Ability3"                    ""
+        "Ability3"                    "toggle_autocast"
         "Ability4"                    ""
         "Ability5"                    ""
         "Ability6"                    ""

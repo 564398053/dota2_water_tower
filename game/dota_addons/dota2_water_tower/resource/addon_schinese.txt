@@ -24,8 +24,10 @@
 "ranger_sniper_Lv3"  "狙击猎手Lv3"
 "ranger_sniper_Lv4"  "狙击猎手Lv4"
 "ranger_sniper_Lv5"  "赫米特·奈辛瓦里" // Hemet Nesingwary
+"ranger_death_track" "标记猎手"
 "ranger_sniper_coup_de_grace" "爆头"
 
+"DOTA_Tooltip_Ability_compound"	"合成"
 "DOTA_Tooltip_Ability_build_ranger_first_stage"  "建造初阶猎手"
 "DOTA_Tooltip_Ability_build_ranger_middle_stage" "建造熟练猎手"
 "DOTA_Tooltip_Ability_build_ranger_final_stage"  "建造高阶猎手"
@@ -57,7 +59,9 @@
 "DOTA_Tooltip_Ability_train_ranger_sniper_Lv4" "升级狙击猎手Lv4"
 "DOTA_Tooltip_Ability_train_ranger_sniper_Lv5" "赫米特·奈辛瓦里"
 "DOTA_Tooltip_Ability_ranger_sniper_coup_de_grace" "爆头"
-
+"DOTA_Tooltip_Ability_ranger_death_track" "标记猎手"
+"DOTA_Tooltip_Ability_toggle_autocast" "开启/关闭自动施法"
+"DOTA_Tooltip_Ability_build_ranger_death_track" "建造标记猎手"
 
 }
 }

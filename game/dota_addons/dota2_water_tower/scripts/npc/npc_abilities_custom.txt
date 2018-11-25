@@ -22,6 +22,101 @@
         "MaxLevel"                          "1"
         "AbilityBehavior"                   "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
     }
+
+    // 开启/关闭自动施法
+    "toggle_autocast"
+    {
+        // General ----------------------------------------------
+        "BaseClass"                         "ability_datadriven"
+        "AbilityTextureName"                "puck_illusory_orb"
+        "MaxLevel"                          "1"
+        "AbilityBehavior"                   "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_TOGGLE | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+        
+        "precache"
+        {
+            "soundfile"         "soundevents/game_sounds_heroes/game_sounds_medusa.vsndevts"
+            "particle"          "particles/units/heroes/hero_medusa/medusa_mana_shield.vpcf"
+            "particle"          "particles/units/heroes/hero_medusa/medusa_mana_shield_cast.vpcf"
+            "particle"          "particles/units/heroes/hero_medusa/medusa_mana_shield_end.vpcf"
+            "particle"          "particles/units/heroes/hero_medusa/medusa_mana_shield_impact.vpcf"
+        }
+
+        // Casting -----------------------------------------------
+        "AbilityCastPoint"              "0.4"
+
+        "OnToggleOn"
+        {
+            "FireSound"
+            {
+                "EffectName"    "Hero_Medusa.ManaShield.On" 
+                "Target"        "CASTER"
+            }
+
+            "FireEffect"
+            {
+                "EffectName"        "particles/units/heroes/hero_medusa/medusa_mana_shield_cast.vpcf"
+                "EffectAttachType"  "follow_origin"
+                "Target"            "CASTER"
+            }
+
+            //"ApplyModifier"
+            //{
+            //    "ModifierName"  "modifier_mana_shield_datadriven"
+            //    "Target"        "CASTER"
+            //}
+
+            "RunScript"
+            {
+                "ScriptFile"    "common_ability/autocast.lua"
+                "Function"      "ToggleAutocast"
+            }
+        }
+
+        "OnToggleOff"
+        {
+            "FireSound"
+            {
+                "EffectName"    "Hero_Medusa.ManaShield.Off"
+                "Target"        "CASTER"
+            }
+
+            "FireEffect"
+            {
+                "EffectName"        "particles/units/heroes/hero_medusa/medusa_mana_shield_end.vpcf"
+                "EffectAttachType"  "follow_origin"
+                "Target"            "CASTER"
+            }
+
+            "RemoveModifier"
+            {
+                "ModifierName"  "modifier_mana_shield_datadriven"
+                "Target"
+                {
+                    "Center"    "CASTER"
+                    "Flags"     "DOTA_UNIT_TARGET_FLAG_DEAD"
+                }
+            }
+
+            "RunScript"
+            {
+                "ScriptFile"    "common_ability/autocast.lua"
+                "Function"      "ToggleAutocast"
+            }
+        }
+
+        "Modifiers"
+        {
+            "modifier_mana_shield_datadriven"
+            {
+                "Passive"           "0"
+                "IsHidden"          "0"
+                "IsDebuff"          "0"
+        
+                "EffectName"        "particles/units/heroes/hero_medusa/medusa_mana_shield.vpcf"
+                "EffectAttachType"  "follow_origin"
+            }
+        }
+    }
     
     //======================================================================================================================================================
     // passive abilities
@@ -1201,7 +1296,7 @@
     }
 
     // 建造标记猎手
-    "build_ranger_bounty_hunter"
+    "build_ranger_death_track"
     {
         "BaseClass"                      "ability_datadriven"
         "AbilityTextureName"             "build_ranger_bounty_hunter"
@@ -1219,7 +1314,7 @@
         "Scale"                           "0" //bool
         "PlayerCanControl"                "1" //bool
 
-        "UnitName"                       "ranger_bounty_hunter"
+        "UnitName"                       "ranger_death_track"
         "AbilityCooldown"                "0"
         "AbilityGoldCost"                "0"
         // End of BuildingHelper info
@@ -2629,8 +2724,8 @@
                 {
                     "RunScript"
                     {
-                        "ScriptFile"    "scripts/vscripts//track.lua"
-                        "Function"      "Track"
+                        "ScriptFile"    "race/ranger/death_track.lua"
+                        "Function"      "DeathTrack"
                         "Target"
                         {
                             "Center"    "TARGET"

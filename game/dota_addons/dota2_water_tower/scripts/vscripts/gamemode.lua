@@ -209,8 +209,18 @@ function CustomGameMode:OnPlayerChat(keys)
     end
 end
 
--- on npc spawned
-function CustomGameMode:OnNpcSpawned(keys)
+-- NPC出生，有启用自动施法的，默认开启自动施法.
+function CustomGameMode:OnNpcSpawned(event)
+	local hEntity = EntIndexToHScript(event.entindex)
+	if hEntity then
+		local abilityCount = hEntity:GetAbilityCount()
+		for i = 0, abilityCount-1 do
+			local ability = hEntity:GetAbilityByIndex(i)
+			if ability and ability:GetName() == "toggle_autocast" then
+				ToggleOn(ability)
+			end
+		end
+	end
 end
 
 -- on play spawned
