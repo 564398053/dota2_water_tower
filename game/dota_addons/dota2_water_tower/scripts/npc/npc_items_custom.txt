@@ -8,7 +8,7 @@
         "BaseClass"                      "item_datadriven"
         // The item model
         "Model"                          "models/items/abaddon/sword_iceshard/sword_iceshard.vmdl"
-        
+
         // 图标文件路径 resource\flash3\images\items
         "AbilityTextureName"             "warglaive_of_azzinoth_right"
 
@@ -65,7 +65,7 @@
                 }
             }
         }
-        // Special    
+        // Special
         //---------------------------------------------------------------------------------------------------------
         "AbilitySpecial"
         {
@@ -76,17 +76,17 @@
             }
         }
     }
-    
+
     "item_apply_modifiers"
     {
         "AbilityBehavior"                "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
         "BaseClass"                       "item_datadriven"
-    
+
         "precache"
         {
             "particle"  "particles/econ/events/ti5/radiant_fountain_regen_lvl2_ti5.vpcf"
         }
-    
+
         "Modifiers"
         {
             "modifier_construction"
@@ -106,11 +106,11 @@
                     }
                 }
             }
-            
+
             "modifier_builder_hidden"
             {
-                "IsHidden"                "1"  
-    
+                "IsHidden"                "1"
+
                 "States"
                 {
                     "MODIFIER_STATE_NO_UNIT_COLLISION"    "MODIFIER_STATE_VALUE_ENABLED"
@@ -123,7 +123,7 @@
                     //"MODIFIER_STATE_UNSELECTABLE"    "MODIFIER_STATE_VALUE_ENABLED" //Builder is selectable while inside the building
                 }
             }
-    
+
             "modifier_onfire"
             {
                 "IsHidden"            "1"
@@ -141,7 +141,7 @@
                     }
                 }
             }
-        }        
+        }
     }
     "item_building_cancel"
     {
@@ -149,11 +149,11 @@
         "AbilityTextureName"            "item_cancel"
         "AbilityBehavior"                "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE"
         "AbilityCastPoint"                "0"
-    
+
         "ItemDroppable"                 "0"
         "ItemPurchasable"                 "0"
         "ItemSellable"                    "0"
-        
+
         "OnSpellStart"
         {
             "RunScript"
@@ -168,26 +168,26 @@
         "BaseClass"                     "item_datadriven"
         "AbilityTextureName"            "item_build_wall"
         "MaxLevel"                         "1"
-    
+
         "AbilityBehavior"                "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
-    
+
         "ItemDroppable"                 "0"
         "ItemPurchasable"                 "0"
-    
+
         // BuildingHelper info
         "Building"                        "1" //bool
-        "BuildingSize"                    "2" 
+        "BuildingSize"                    "2"
         "BuildTime"                        "10.0"
         "AbilityCastRange"                "200"
         "UpdateHealth"                    "1" //bool
         "Scale"                            "0" //bool
         "PlayerCanControl"                "1" //bool
-    
+
         "UnitName"                        "wall"
         "AbilityCooldown"                "0"
         "AbilityGoldCost"                "10"
         // End of BuildingHelper info
-    
+
         "AbilitySpecial"
         {
             "01"
@@ -206,7 +206,7 @@
                 "lumber_cost"            "10"
             }
         }
-    
+
         "OnSpellStart"
         {
             "RunScript"
@@ -225,11 +225,11 @@
         "AbilityTextureName"            "item_research_dark_tower"
         "AbilityBehavior"                "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE"
         "AbilityCastPoint"                "0"
-    
+
         "ItemDroppable"                 "0"
         "ItemPurchasable"                 "0"
         "ItemSellable"                    "0"
-        
+
         "OnSpellStart"
         {
             "RunScript"
@@ -237,7 +237,7 @@
                 "ScriptFile"    "buildings/queue.lua"
                 "Function"        "DequeueUnit"
             }
-    
+
             // Re-enable research ability
             "RunScript"
             {
@@ -246,18 +246,18 @@
             }
         }
     }
-    
+
     "item_research_ultimate_ability"
     {
         "BaseClass"                     "item_datadriven"
         "AbilityTextureName"            "item_research_ultimate_ability"
         "AbilityBehavior"                "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE"
         "AbilityCastPoint"                "0"
-    
+
         "ItemDroppable"                 "0"
         "ItemPurchasable"                 "0"
         "ItemSellable"                    "0"
-        
+
         "OnSpellStart"
         {
             "RunScript"
@@ -265,7 +265,7 @@
                 "ScriptFile"    "buildings/queue.lua"
                 "Function"        "DequeueUnit"
             }
-    
+
             // Re-enable research ability
             "RunScript"
             {
@@ -274,7 +274,7 @@
             }
         }
     }
-    
+
     // 取消升级
     "item_train_cancel"
     {
@@ -315,7 +315,7 @@
             {
                 "Passive"            "1"
                 "IsHidden"            "1"
-        
+
                 "ThinkInterval"  "0.03"
                 "OnIntervalThink"
                 {

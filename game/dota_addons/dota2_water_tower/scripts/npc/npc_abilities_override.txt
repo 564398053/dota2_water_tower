@@ -3,12 +3,12 @@
 "DOTAAbilities"
 {
 	"Version"		"1"
-	
-  
+
+
   // -----------------------------------------------------------
   // - UNCOMMENT ANY ITEM YOU DON'T WANT TO APPEAR IN THE SHOP -
   // -----------------------------------------------------------
-  
+
 	//"item_blink"			"REMOVE"
 	//"item_blades_of_attack"			"REMOVE"
 	//"item_broadsword"			"REMOVE"
@@ -223,8 +223,8 @@
 	//"item_recipe_tranquil_boots"			"REMOVE"
 	//"item_tranquil_boots"			"REMOVE"
 	//"item_shadow_amulet"			"REMOVE"
-	
-  
+
+
   //"item_halloween_candy_corn"			"REMOVE"
 	//"item_mystery_hook"			"REMOVE"
 	//"item_mystery_arrow"			"REMOVE"
@@ -246,5 +246,5 @@
 	//"item_winter_greevil_treat"			"REMOVE"
 	//"item_winter_greevil_garbage"			"REMOVE"
 	//"item_winter_greevil_chewy"			"REMOVE"
-	
+
 }

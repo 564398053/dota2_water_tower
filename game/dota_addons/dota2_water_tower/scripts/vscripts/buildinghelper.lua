@@ -112,7 +112,7 @@ function BuildingHelper:AddBuilding(keys)
 
     local ability = keys.ability
     local abilName = ability:GetAbilityName()
-    local buildingTable = BuildingHelper:SetupBuildingTable(abilName) 
+    local buildingTable = BuildingHelper:SetupBuildingTable(abilName)
 
     buildingTable:SetVal("AbilityHandle", ability)
 
@@ -124,7 +124,7 @@ function BuildingHelper:AddBuilding(keys)
     -- Prepare the builder, if it hasn't already been done. Since this would need to be done for every builder in some games, might as well do it here.
     local builder = keys.caster
 
-    if builder.buildingQueue == nil or Timers.timers[builder.workTimer] == nil then    
+    if builder.buildingQueue == nil or Timers.timers[builder.workTimer] == nil then
         BuildingHelper:InitializeBuilder(builder)
     end
 
@@ -142,7 +142,7 @@ function BuildingHelper:AddBuilding(keys)
 
     -- Get the local player, this assumes the player is only placing one building at a time
     local player = PlayerResource:GetPlayer(builder:GetMainControllingPlayer())
-  
+
     player.buildingPosChosen = false
     player.activeBuilder = builder
     player.activeBuilding = unitName
@@ -158,7 +158,7 @@ function BuildingHelper:AddBuilding(keys)
 
     -- Position is CP0, model attach is CP1, color is CP2, alpha is CP3.x, scale is CP4.x
     player.activeBuildingTable.modelParticle = ParticleManager:CreateParticleForPlayer("particles/buildinghelper/ghost_model.vpcf", PATTACH_ABSORIGIN, player.activeBuildingTable.mgd, player)
-    ParticleManager:SetParticleControlEnt(player.activeBuildingTable.modelParticle, 1, player.activeBuildingTable.mgd, 1, "follow_origin", player.activeBuildingTable.mgd:GetAbsOrigin(), true)            
+    ParticleManager:SetParticleControlEnt(player.activeBuildingTable.modelParticle, 1, player.activeBuildingTable.mgd, 1, "follow_origin", player.activeBuildingTable.mgd:GetAbsOrigin(), true)
     ParticleManager:SetParticleControl(player.activeBuildingTable.modelParticle, 3, Vector(MODEL_ALPHA,0,0))
     ParticleManager:SetParticleControl(player.activeBuildingTable.modelParticle, 4, Vector(fMaxScale,0,0))
 
@@ -168,7 +168,7 @@ function BuildingHelper:AddBuilding(keys)
     end
     ParticleManager:SetParticleControl(player.activeBuildingTable.modelParticle, 2, color)
 
-    local paramsTable = { state = "active", size = size, scale = fMaxScale, 
+    local paramsTable = { state = "active", size = size, scale = fMaxScale,
                           grid_alpha = GRID_ALPHA, model_alpha = MODEL_ALPHA, recolor_ghost = RECOLOR_GHOST_MODEL,
                           entindex = player.activeBuildingTable.mgd:GetEntityIndex(), builderIndex = builder:GetEntityIndex()
                         }
@@ -240,7 +240,7 @@ function BuildingHelper:SetupBuildingTable( abilityName )
                 return nil
             end
         end
-        
+
         -- Handle empty values
         local sVal = tostring(val)
         if sVal == "" then
@@ -307,17 +307,17 @@ end
 
 --[[
     PlaceBuilding
-    * Places a new building on full health and returns the handle. 
+    * Places a new building on full health and returns the handle.
     * Places grid nav blockers
     * Skips the construction phase and doesn't require a builder, this is most important to place the "base" buildings for the players when the game starts.
     * Make sure the position is valid before calling this in code.
 ]]--
 function BuildingHelper:PlaceBuilding(player, name, location, blockGridNav, size, angle)
-  
+
     local pID = player:GetPlayerID()
     local playersHero = player:GetAssignedHero()
     DebugPrint("[BH] PlaceBuilding for playerID ".. pID)
-  
+
     local gridNavBlockers
     if blockGridNav then
         gridNavBlockers = BuildingHelper:BlockGridNavSquare(size, location)
@@ -347,8 +347,8 @@ end
     * Removes a building, removing its gridnav blockers, with an optional parameter to kill it
 ]]--
 function BuildingHelper:RemoveBuilding( building, bForcedKill )
-    if not building.blockers then 
-        return 
+    if not building.blockers then
+        return
     end
 
     for k, v in pairs(building.blockers) do
@@ -379,7 +379,7 @@ function BuildingHelper:StartBuilding( keys )
 
     -- Check gridnav and cancel if invalid
     if not BuildingHelper:ValidPosition(size, location, callbacks) then
-        
+
         -- Remove the model particle and Advance Queue
         BuildingHelper:AdvanceQueue(builder)
         ParticleManager:DestroyParticle(work.particleIndex, true)
@@ -402,9 +402,9 @@ function BuildingHelper:StartBuilding( keys )
     building.state = "building"
 
     Timers:CreateTimer(
-        function() 
+        function()
             building:SetAbsOrigin(location)
-            
+
             -- Remove ghost model
             UTIL_Remove(buildingTable.mgd)
         end)
@@ -474,7 +474,7 @@ function BuildingHelper:StartBuilding( keys )
     -- start the building at the initial model scale
     local fCurrentScale = fInitialModelScale
     local bScaling = false -- Keep tracking if we're currently model scaling.
-    
+
     building:SetHealth(nInitialHealth)
     building.bUpdatingHealth = true
 
@@ -488,7 +488,7 @@ function BuildingHelper:StartBuilding( keys )
     if bBuilderInside then
         ApplyModifier(builder, "modifier_builder_hidden")
         builder.entrance_to_build = builder:GetAbsOrigin()
-        
+
         local location_builder = Vector(location.x, location.y, location.z - 200)
         building.builder_inside = builder
         builder:AddNoDraw()
@@ -544,26 +544,26 @@ function BuildingHelper:StartBuilding( keys )
                         building.builder = builder
                         callbacks.onConstructionCompleted(building)
                     end
-                    
+
                     DebugPrint("[BH] HP was off by:", fMaxHealth - fAddedHealth)
 
                     -- Eject Builder
                     if bBuilderInside then
-                    
+
                         -- Consume Builder
                         if bConsumesBuilder then
                             builder:ForceKill(true)
                         else
-                        
+
                             builder:RemoveModifierByName("modifier_builder_hidden")
                             builder:SetAbsOrigin(builder.entrance_to_build)
                             builder:RemoveNoDraw()
                         end
 
                         -- Advance Queue
-                        BuildingHelper:AdvanceQueue(builder)           
+                        BuildingHelper:AdvanceQueue(builder)
                     end
-                
+
                     return
                 end
             else
@@ -582,7 +582,7 @@ function BuildingHelper:StartBuilding( keys )
             end
             return fserverFrameRate
         end)
-    
+
     elseif not bRequiresRepair then
 
         if not bBuilderInside then
@@ -612,21 +612,21 @@ function BuildingHelper:StartBuilding( keys )
 
                     -- Eject Builder
                     if bBuilderInside then
-                    
+
                         -- Consume Builder
                         if bConsumesBuilder then
                             builder:ForceKill(true)
                         else
-                        
+
                             builder:RemoveModifierByName("modifier_builder_hidden")
                             builder:SetAbsOrigin(builder.entrance_to_build)
                             builder:RemoveNoDraw()
                         end
 
                         -- Advance Queue
-                        BuildingHelper:AdvanceQueue(builder)           
+                        BuildingHelper:AdvanceQueue(builder)
                     end
-                    
+
                     return
                 end
             else
@@ -647,7 +647,7 @@ function BuildingHelper:StartBuilding( keys )
             -- Update health every frame
             return fUpdateHealthInterval
         end)
-    
+
     else
 
         -- The building will have to be assisted through a repair ability
@@ -658,7 +658,7 @@ function BuildingHelper:StartBuilding( keys )
             return
         end
 
-        --[[ExecuteOrderFromTable({ UnitIndex = builder:GetEntityIndex(), OrderType = DOTA_UNIT_ORDER_CAST_TARGET, 
+        --[[ExecuteOrderFromTable({ UnitIndex = builder:GetEntityIndex(), OrderType = DOTA_UNIT_ORDER_CAST_TARGET,
                         TargetIndex = building:GetEntityIndex(), AbilityIndex = repair_ability:GetEntityIndex(), Queue = false }) ]]
         builder:CastAbilityOnTarget(building, repair_ability, pID)
 
@@ -697,7 +697,7 @@ function BuildingHelper:StartBuilding( keys )
                         end
                     end
                 else
-                    
+
                     DebugPrint("[BH] Scale was off by:", fMaxScale - fCurrentScale)
                     building:SetModelScale(fMaxScale)
                     return
@@ -706,7 +706,7 @@ function BuildingHelper:StartBuilding( keys )
                 -- not valid ent
                 return
             end
-            
+
             return fserverFrameRate
         end)
     end
@@ -719,7 +719,7 @@ function BuildingHelper:StartBuilding( keys )
                 if callbacks.fireEffect then
                     building:AddNewModifier(building, nil, callbacks.fireEffect, nil)
                 end
-            
+
                 callbacks.onBelowHalfHealth(building)
                 building.onBelowHalfHealthProc = true
             elseif building:GetHealth() >= fMaxHealth/2.0 and building.onBelowHalfHealthProc and not building.bUpdatingHealth then
@@ -767,7 +767,7 @@ function BuildingHelper:CancelBuilding(keys)
 
     -- Eject builder
     local builder = building.builder_inside
-    if builder then   
+    if builder then
         builder:SetAbsOrigin(building:GetAbsOrigin())
     end
 
@@ -784,7 +784,7 @@ function BuildingHelper:CancelBuilding(keys)
                 BuildingHelper:AdvanceQueue(builder)
 
                 local ability = builder:FindAbilityByName("human_gather")
-                if ability then 
+                if ability then
                     ToggleOff(ability)
                 end
             end
@@ -798,7 +798,7 @@ function BuildingHelper:CancelBuilding(keys)
             if item:GetAbilityName() == "item_building_cancel" then
                 item:RemoveSelf()
             else
-                Timers:CreateTimer(i*1/30, function() 
+                Timers:CreateTimer(i*1/30, function()
                     building:CastAbilityImmediately(item, building:GetPlayerOwnerID())
                 end)
             end
@@ -816,7 +816,7 @@ function BuildingHelper:CancelBuilding(keys)
     end
 
     building.state = "canceled"
-    Timers:CreateTimer(1/5, function() 
+    Timers:CreateTimer(1/5, function()
         BuildingHelper:RemoveBuilding(building, true)
     end)
 end
@@ -866,8 +866,8 @@ end
 function BuildingHelper:ValidPosition(size, location, callbacks)
 
     local halfSide = (size/2)*64
-    local boundingRect = {  leftBorderX = location.x-halfSide, 
-                            rightBorderX = location.x+halfSide, 
+    local boundingRect = {  leftBorderX = location.x-halfSide,
+                            rightBorderX = location.x+halfSide,
                             topBorderY = location.y+halfSide,
                             bottomBorderY = location.y-halfSide }
 
@@ -924,14 +924,14 @@ function BuildingHelper:AddToQueue( builder, location, bQueued )
 
     local modelParticle = ParticleManager:CreateParticleForPlayer("particles/buildinghelper/ghost_model.vpcf", PATTACH_ABSORIGIN, mgd, player)
     ParticleManager:SetParticleControl(modelParticle, 0, location)
-    ParticleManager:SetParticleControlEnt(modelParticle, 1, mgd, 1, "follow_origin", mgd:GetAbsOrigin(), true) -- Model attach          
+    ParticleManager:SetParticleControlEnt(modelParticle, 1, mgd, 1, "follow_origin", mgd:GetAbsOrigin(), true) -- Model attach
     ParticleManager:SetParticleControl(modelParticle, 3, Vector(MODEL_ALPHA,0,0)) -- Alpha
     ParticleManager:SetParticleControl(modelParticle, 4, Vector(fMaxScale,0,0)) -- Scale
 
     -- Adjust the Model Orientation
     local yaw = buildingTable:GetVal("ModelRotation", "float")
     mgd:SetAngles(0, -yaw, 0)
-    
+
     local color = Vector(255,255,255)
     if RECOLOR_BUILDING_PLACED then
         color = Vector(0,255,0)
@@ -1007,7 +1007,7 @@ function BuildingHelper:AdvanceQueue(builder)
 
             DebugPrint("[BH] AdvanceQueue - "..builder:GetUnitName().." "..builder:GetEntityIndex().." moving to build "..work.name.." at "..VectorString(location))
         end)
-    
+
     else
         -- Set the builder work to nil to accept next work directly
         DebugPrint("[BH] Builder "..builder:GetUnitName().." "..builder:GetEntityIndex().." finished its building Queue")
@@ -1033,7 +1033,7 @@ function BuildingHelper:ClearQueue(builder)
 
     DebugPrint("[BH] ClearQueue "..builder:GetUnitName().." "..builder:GetEntityIndex())
 
-    -- Main work  
+    -- Main work
     if work then
         ParticleManager:DestroyParticle(work.particleIndex, true)
 

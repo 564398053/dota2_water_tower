@@ -30,7 +30,7 @@ function CheckAbilityRequirements( unit, player )
 				-- Exists and isn't hidden, check its requirements
 				if IsValidEntity(ability) then
 					local disabled = false
-				
+
 					-- By default, all abilities that have a requirement start as _disabled
 					-- This is to prevent applying passive modifier effects that have to be removed later
 					-- The disabled ability is just a dummy for tooltip, precache and level 0.
@@ -79,12 +79,12 @@ function CheckAbilityRequirements( unit, player )
 						if player_has_requirements then
 							--print("Ability Still ENABLED "..ability_name)
 							--ability:SetLevel(1)
-						else	
+						else
 							-- Disable the ability, swap to a _disabled
 							--print("FAIL, DISABLED "..ability_name)
 
 							local disabled_ability_name = ability_name.."_disabled"
-							unit:AddAbility(disabled_ability_name)					
+							unit:AddAbility(disabled_ability_name)
 							unit:SwapAbilities(ability_name, disabled_ability_name, false, true)
 							unit:RemoveAbility(ability_name)
 
@@ -93,15 +93,15 @@ function CheckAbilityRequirements( unit, player )
 							local disabled_ability = unit:FindAbilityByName(disabled_ability_name)
 							disabled_ability:SetLevel(0)
 						end
-					end				
+					end
 				else
-					--print("->Ability is hidden or invalid")	
+					--print("->Ability is hidden or invalid")
 				end
 			end
 		end
 	else
 		print("Not a Valid Entity!, there's currently ",#player.units,"units and",#player.structures,"structures in the table")
-	end	
+	end
 end
 
 -- In addition and run just before CheckAbilityRequirements, when a building starts construction
@@ -117,7 +117,7 @@ function CheckResearchRequirements( unit, player )
 					if PlayerHasResearch(player, ability_name) then
 						-- Player already has the research, remove it
 						ability:SetHidden(true)
-						unit:RemoveAbility(ability_name)						
+						unit:RemoveAbility(ability_name)
 					else
 						ability:SetHidden(false)
 					end

@@ -87,7 +87,7 @@ end
 function Timers:start()
   Timers = self
   self.timers = {}
-  
+
   local ent = Entities:CreateByClassname("info_target") -- Entities:FindByClassname(nil, 'CWorld')
   ent:SetThink("Think", self, "timers", TIMERS_THINK)
 end
@@ -123,7 +123,7 @@ function Timers:Think()
     if now >= v.endTime then
       -- Remove from timers list
       Timers.timers[k] = nil
-      
+
       -- Run the callback
       local status, nextCall
       if v.context then
@@ -215,7 +215,7 @@ function Timers:CreateTimer(name, args, context)
 
   args.context = context
 
-  Timers.timers[name] = args 
+  Timers.timers[name] = args
 
   return name
 end

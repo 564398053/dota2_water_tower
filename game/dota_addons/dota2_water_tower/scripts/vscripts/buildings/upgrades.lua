@@ -30,7 +30,7 @@ function UpgradeBuilding( event )
 	if IsValidEntity(caster) then
 		local buildingIndex = getIndex(player.structures, caster)
         table.remove(player.structures, buildingIndex)
-		
+
 		-- Remove old building entity
 		caster:RemoveSelf()
     end
@@ -63,7 +63,7 @@ end
 	Disable any queue-able ability that the building could have, because the caster will be removed when the channel ends
 	A modifier from the ability can also be passed here to attach particle effects
 ]]--
-function StartUpgrade( event )	
+function StartUpgrade( event )
 	local caster = event.caster
 	local ability = event.ability
 	local modifier_name = event.ModifierName
@@ -89,7 +89,7 @@ function StartUpgrade( event )
 		caster.disabled_abilities = abilities
 
 		for k,disable_ability in pairs(abilities) do
-			disable_ability:SetHidden(true)		
+			disable_ability:SetHidden(true)
 		end
 
 		-- Pass a modifier with particle(s) of choice to show that the building is upgrading. Remove it on CancelUpgrade
@@ -109,12 +109,12 @@ end
 	Replaces the building to the upgraded unit name
 ]]--
 function CancelUpgrade( event )
-	
+
 	local caster = event.caster
 	local abilities = caster.disabled_abilities
 
 	for k,ability in pairs(abilities) do
-		ability:SetHidden(false)		
+		ability:SetHidden(false)
 	end
 
 	local upgrade_modifier = caster.upgrade_modifier
@@ -131,6 +131,6 @@ end
 function SetLevel0( event )
 	local ability = event.ability
 	if ability:GetLevel() == 1 then
-		ability:SetLevel(0)	
+		ability:SetLevel(0)
 	end
 end

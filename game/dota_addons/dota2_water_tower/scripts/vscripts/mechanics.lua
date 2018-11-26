@@ -249,10 +249,10 @@ end
 
 -- Goes through every ability and item, checking for any ability being channelled
 function IsChanneling ( hero )
-	
+
 	for abilitySlot=0,15 do
 		local ability = hero:GetAbilityByIndex(abilitySlot)
-		if ability ~= nil and ability:IsChanneling() then 
+		if ability ~= nil and ability:IsChanneling() then
 			return true
 		end
 	end

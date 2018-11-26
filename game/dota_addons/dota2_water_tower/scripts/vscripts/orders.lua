@@ -45,14 +45,14 @@ function CustomGameMode:FilterExecuteOrder( filterTable )
     if abilityIndex and abilityIndex ~= 0 and IsMultiOrderAbility(EntIndexToHScript(abilityIndex)) then
         print("Multi Order Ability")
 
-        local ability = EntIndexToHScript(abilityIndex) 
+        local ability = EntIndexToHScript(abilityIndex)
         local abilityName = ability:GetAbilityName()
         local entityList = GetSelectedEntities(unit:GetPlayerOwnerID())
         for _,entityIndex in pairs(entityList) do
             local caster = EntIndexToHScript(entityIndex)
             -- Make sure the original caster unit doesn't cast twice
             if caster and caster ~= unit and caster:HasAbility(abilityName) then
-                
+
                 local abil = caster:FindAbilityByName(abilityName)
                 if abil and abil:IsFullyCastable() then
 
@@ -76,7 +76,7 @@ function CustomGameMode:FilterExecuteOrder( filterTable )
     ------------------------------------------------
     -- Cancel queue on Stop and Hold
     elseif order_type == DOTA_UNIT_ORDER_STOP or order_type == DOTA_UNIT_ORDER_HOLD_POSITION then
-        for n, unit_index in pairs(units) do 
+        for n, unit_index in pairs(units) do
             local unit = EntIndexToHScript(unit_index)
             if IsBuilder(unit) then
                 BuildingHelper:ClearQueue(unit)

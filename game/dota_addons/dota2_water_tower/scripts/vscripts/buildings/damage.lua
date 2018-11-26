@@ -26,5 +26,5 @@ function DoBuildingDamage( event )
 				target:SetHealth( newHP)
 			end
 		end
-	end	
+	end
 end

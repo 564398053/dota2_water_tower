@@ -20,5 +20,5 @@ function BuildingAutocast( event )
 				print("Autocasting ",ability:GetAbilityName())
 			end
 		end
-	end	
+	end
 end

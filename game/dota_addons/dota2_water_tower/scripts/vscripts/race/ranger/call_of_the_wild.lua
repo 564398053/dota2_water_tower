@@ -4,7 +4,7 @@ function GetFrontPoint( event )
 	local fv = caster:GetForwardVector()
 	local origin = caster:GetAbsOrigin()
 	local distance = event.Distance
-	
+
 	local front_position = origin + fv * distance
 	local result = {}
 	table.insert(result, front_position)
