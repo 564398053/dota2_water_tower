@@ -2894,6 +2894,59 @@
         }
     }
 
+    // 建造震荡猎手Lv1
+    "build_ranger_concussive_hunter_Lv1"
+    {
+        "BaseClass"                      "ability_datadriven"
+        "AbilityTextureName"             "build_ranger_concussive_hunter_Lv1"
+        "MaxLevel"                       "1"
+
+        "AbilityBehavior"                "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+        "AbilityCastPoint"                "0"
+
+        // BuildingHelper info
+        "Building"                        "1" //bool
+        "BuildingSize"                    "2"
+        "BuildTime"                       "5.0"
+        "AbilityCastRange"                "200"
+        "UpdateHealth"                    "1" //bool
+        "Scale"                           "0" //bool
+        "PlayerCanControl"                "1" //bool
+
+        "UnitName"                       "ranger_concussive_hunter_Lv1"
+        "AbilityCooldown"                "0"
+        "AbilityGoldCost"                "400"
+        // End of BuildingHelper info
+
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                "FIELD_FLOAT"
+                "build_time"              "5.0"
+            }
+            "02"
+            {
+                "var_type"                "FIELD_INTEGER"
+                "gold_cost"               "400"
+            }
+            "03"
+            {
+                "var_type"                "FIELD_INTEGER"
+                "lumber_cost"             "0"
+            }
+        }
+
+        "OnSpellStart"
+        {
+            "RunScript"
+            {
+                "ScriptFile"      "builder.lua"
+                "Function"        "Build"
+            }
+        }
+    }
+
     //---------------------------------------------------------------------------------------
     // ranger attack abilities
     // 多重攻击
@@ -3390,6 +3443,69 @@
                 "States"
                 {
                     "MODIFIER_STATE_INVISIBLE"          "MODIFIER_STATE_VALUE_DISABLED"
+                }
+            }
+        }
+    }
+
+    // 震荡攻击Lv1
+    "ranger_concussive_shot_Lv1"
+    {
+        // General
+        //-------------------------------------------------------------------------------------------------------------
+        "BaseClass"                     "ability_datadriven"
+        "AbilityType"                   "DOTA_ABILITY_TYPE_BASIC"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+        "AbilityUnitDamageType"         "DAMAGE_TYPE_MAGICAL"
+        "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_YES"
+        "AbilityTextureName"            "venomancer_poison_sting"
+
+        // Special
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"              "FIELD_FLOAT"
+                "duration"              "5 5"
+            }
+            "02"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "damage"                    "0"
+            }
+            "03"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "movement_speed"            "-50 -80"
+            }
+        }
+
+        "Modifiers"
+        {
+            "modifier_poison_sting_datadriven"
+            {
+                "Passive"   "1"
+                "IsHidden"  "1"
+
+                "OnAttackLanded"
+                {
+                    "ApplyModifier"
+                    {
+                        "ModifierName"  "modifier_poison_sting_debuff_datadriven"
+                        "Target"        "TARGET"
+                    }
+                }
+            }
+
+            "modifier_poison_sting_debuff_datadriven"
+            {
+                "IsDebuff"  "1"
+                "Duration"  "%duration"
+
+                "Properties"
+                {
+                    "MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE"      "%movement_speed"
                 }
             }
         }

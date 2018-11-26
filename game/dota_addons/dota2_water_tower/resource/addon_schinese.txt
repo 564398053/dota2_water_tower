@@ -36,6 +36,7 @@
 "ranger_luna_Lv3" "弹射猎手Lv3"
 "ranger_luna_Lv4" "弹射猎手Lv4"
 "ranger_luna_Lv5" "弹射猎手Lv5"
+"ranger_concussive_hunter_Lv1" "震荡猎手"
 
 "bad_guy_Lv1" "小鸡小鸡咯咯哒"
 
