@@ -10,7 +10,7 @@
         "MaxLevel"                          "1"
         "HotKeyOverride"                    "C"
     }
-    
+
     // 合成装备
     "compound"
     {
@@ -31,7 +31,7 @@
         "AbilityTextureName"                "puck_illusory_orb"
         "MaxLevel"                          "1"
         "AbilityBehavior"                   "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_TOGGLE | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
-        
+
         "precache"
         {
             "soundfile"         "soundevents/game_sounds_heroes/game_sounds_medusa.vsndevts"
@@ -48,7 +48,7 @@
         {
             "FireSound"
             {
-                "EffectName"    "Hero_Medusa.ManaShield.On" 
+                "EffectName"    "Hero_Medusa.ManaShield.On"
                 "Target"        "CASTER"
             }
 
@@ -111,13 +111,13 @@
                 "Passive"           "0"
                 "IsHidden"          "0"
                 "IsDebuff"          "0"
-        
+
                 "EffectName"        "particles/units/heroes/hero_medusa/medusa_mana_shield.vpcf"
                 "EffectAttachType"  "follow_origin"
             }
         }
     }
-    
+
     //======================================================================================================================================================
     // passive abilities
     //======================================================================================================================================================
@@ -166,12 +166,12 @@
         "BaseClass"                     "ability_datadriven"
         "AbilityTextureName"            "research_dark_tower"
         "MaxLevel"                         "1"
-    
+
         "AbilityBehavior"                "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE"
-    
+
         "AbilityGoldCost"                "50"
         "AbilityChannelTime"            "10"
-        
+
         "AbilitySpecial"
         {
             "01"
@@ -190,7 +190,7 @@
                 "lumber_cost"            "25"
             }
         }
-    
+
         "OnSpellStart"
         {
             "RunScript"
@@ -198,14 +198,14 @@
                 "ScriptFile"    "buildings/queue.lua"
                 "Function"        "EnqueueUnit"
             }
-    
+
             "RunScript"
             {
                 "ScriptFile"    "buildings/research.lua"
                 "Function"        "DisableResearch"
             }
         }
-    
+
         "OnChannelSucceeded"
         {
             "RunScript"
@@ -213,7 +213,7 @@
                 "ScriptFile"       "buildings/queue.lua"
                 "Function"      "NextQueue"
             }
-    
+
             "RunScript"
             {
                 "ScriptFile"    "buildings/research.lua"
@@ -221,18 +221,18 @@
             }
         }
     }
-    
+
     "research_ultimate_ability"
     {
         "BaseClass"                     "ability_datadriven"
         "AbilityTextureName"            "research_ultimate_ability"
         "MaxLevel"                         "1"
-    
+
         "AbilityBehavior"                "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE"
-    
+
         "AbilityGoldCost"                "50"
         "AbilityChannelTime"            "10"
-        
+
         "AbilitySpecial"
         {
             "01"
@@ -251,7 +251,7 @@
                 "lumber_cost"            "25"
             }
         }
-    
+
         "OnSpellStart"
         {
             "RunScript"
@@ -259,14 +259,14 @@
                 "ScriptFile"    "buildings/queue.lua"
                 "Function"        "EnqueueUnit"
             }
-    
+
             "RunScript"
             {
                 "ScriptFile"    "buildings/research.lua"
                 "Function"        "DisableResearch"
             }
         }
-    
+
         "OnChannelSucceeded"
         {
             "RunScript"
@@ -274,7 +274,7 @@
                 "ScriptFile"       "buildings/queue.lua"
                 "Function"      "NextQueue"
             }
-    
+
             "RunScript"
             {
                 "ScriptFile"    "buildings/research.lua"
@@ -289,25 +289,25 @@
         "BaseClass"                     "ability_datadriven"
         "AbilityTextureName"            "research_ultimate_ability"
         "MaxLevel"                         "1"
-    
+
         "AbilityBehavior"                "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
         "AbilityCastPoint"                "0"
     }
-    
+
     "ability_building"
     {
         "BaseClass"                     "ability_datadriven"
         "MaxLevel"                         "1"
-    
+
         "AbilityBehavior"                "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
-    
+
         "Modifiers"
         {
             "modifier_building"
             {
                 "Passive"            "1"
                 "IsHidden"            "1"
-                "Attributes"        "MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE | MODIFIER_ATTRIBUTE_PERMANENT"    
+                "Attributes"        "MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE | MODIFIER_ATTRIBUTE_PERMANENT"
                 "States"
                 {
                     "MODIFIER_STATE_MAGIC_IMMUNE" "MODIFIER_STATE_VALUE_ENABLED" // Makes most abilities don't affect this. Use custom damage
@@ -323,23 +323,23 @@
                     "MODIFIER_PROPERTY_MOVESPEED_ABSOLUTE"    "0.1"
                 }
             }
-        }        
+        }
     }
-    
+
     "ability_tower"
     {
         "BaseClass"                     "ability_datadriven"
         "MaxLevel"                         "1"
-    
+
         "AbilityBehavior"                "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
-    
+
         "Modifiers"
         {
             "modifier_tower"
             {
                 "Passive"            "1"
                 "IsHidden"            "1"
-                "Attributes"        "MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE | MODIFIER_ATTRIBUTE_PERMANENT"    
+                "Attributes"        "MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE | MODIFIER_ATTRIBUTE_PERMANENT"
                 "States"
                 {
                     "MODIFIER_STATE_MAGIC_IMMUNE" "MODIFIER_STATE_VALUE_ENABLED" // Makes most abilities don't affect this. Use custom damage
@@ -355,22 +355,22 @@
                     "MODIFIER_PROPERTY_MOVESPEED_ABSOLUTE"    "0.1"
                 }
             }
-        }        
+        }
     }
     "ability_building_queue"
     {
         "BaseClass"                     "ability_datadriven"
         "MaxLevel"                         "1"
-    
+
         "AbilityBehavior"                "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
-    
+
         "Modifiers"
         {
             "modifier_building_queue"
             {
                 "Passive"            "1"
                 "IsHidden"            "1"
-        
+
                 "ThinkInterval"  "0.03"
                 "OnIntervalThink"
                 {
@@ -391,9 +391,9 @@
         "AbilityCooldown"                "0"
         "AbilityCastRange"                "100"
         "MaxLevel"                        "1"
-    
+
         "AbilityManaCost"                "0"
-    
+
         "OnSpellStart"
         {
             "RunScript"
@@ -404,7 +404,7 @@
             }
         }
     }
-    
+
     "move_to_point_150"
     {
         "AbilityBehavior"                "DOTA_ABILITY_BEHAVIOR_POINT"
@@ -413,9 +413,9 @@
         "AbilityCooldown"                "0"
         "AbilityCastRange"                "150"
         "MaxLevel"                        "1"
-    
+
         "AbilityManaCost"                "0"
-    
+
         "OnSpellStart"
         {
             "RunScript"
@@ -426,7 +426,7 @@
             }
         }
     }
-    
+
     "move_to_point_200"
     {
         "AbilityBehavior"                "DOTA_ABILITY_BEHAVIOR_POINT"
@@ -435,9 +435,9 @@
         "AbilityCooldown"                "0"
         "AbilityCastRange"                "200"
         "MaxLevel"                        "1"
-    
+
         "AbilityManaCost"                "0"
-    
+
         "OnSpellStart"
         {
             "RunScript"
@@ -448,7 +448,7 @@
             }
         }
     }
-    
+
     "move_to_point_250"
     {
         "AbilityBehavior"                "DOTA_ABILITY_BEHAVIOR_POINT"
@@ -457,9 +457,9 @@
         "AbilityCooldown"                "0"
         "AbilityCastRange"                "250"
         "MaxLevel"                        "1"
-    
+
         "AbilityManaCost"                "0"
-    
+
         "OnSpellStart"
         {
             "RunScript"
@@ -470,7 +470,7 @@
             }
         }
     }
-    
+
     "move_to_point_300"
     {
         "AbilityBehavior"                "DOTA_ABILITY_BEHAVIOR_POINT"
@@ -479,9 +479,9 @@
         "AbilityCooldown"                "0"
         "AbilityCastRange"                "300"
         "MaxLevel"                        "1"
-    
+
         "AbilityManaCost"                "0"
-    
+
         "OnSpellStart"
         {
             "RunScript"
@@ -502,10 +502,10 @@
         "BaseClass"                      "ability_datadriven"
         "AbilityTextureName"             "build_ranger_first_stage"
         "MaxLevel"                       "1"
-    
+
         "AbilityBehavior"                "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
         "AbilityCastPoint"                "0"
-    
+
         // BuildingHelper info
         "Building"                        "1" //bool
         "BuildingSize"                    "2"
@@ -548,17 +548,17 @@
             }
         }
     }
-    
+
     // 建造熟练猎手
     "build_ranger_middle_stage"
     {
         "BaseClass"                      "ability_datadriven"
         "AbilityTextureName"             "ranger_middle_stage"
         "MaxLevel"                       "1"
-    
+
         "AbilityBehavior"                "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
         "AbilityCastPoint"                "0"
-    
+
         // BuildingHelper info
         "Building"                        "1" //bool
         "BuildingSize"                    "2"
@@ -601,17 +601,17 @@
             }
         }
     }
-    
+
     // 建造高阶猎手
     "build_ranger_final_stage"
     {
         "BaseClass"                      "ability_datadriven"
         "AbilityTextureName"             "ranger_final_stage"
         "MaxLevel"                       "1"
-    
+
         "AbilityBehavior"                "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
         "AbilityCastPoint"               "0"
-    
+
         // BuildingHelper info
         "Building"                        "1" //bool
         "BuildingSize"                    "2"
@@ -661,10 +661,10 @@
         "BaseClass"                      "ability_datadriven"
         "AbilityTextureName"             "build_ranger_beastmaster"
         "MaxLevel"                       "1"
-    
+
         "AbilityBehavior"                "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
         "AbilityCastPoint"                "0"
-    
+
         // BuildingHelper info
         "Building"                        "1" //bool
         "BuildingSize"                    "2"
@@ -715,20 +715,20 @@
         "BaseClass"                     "ability_datadriven"
         "AbilityTextureName"            "templar_assassin_psionic_trap"
         "MaxLevel"                      "1"
-    
+
         "AbilityBehavior"                "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE"
-    
+
         "AbilityGoldCost"                "2400"
         "AbilityChannelTime"             "5"
-    
+
         "AbilityMultiOrder"                "1"
-    
+
         "AbilitySpecial"
         {
             "01"
             {
                 "var_type"                "FIELD_FLOAT"
-                "build_time"            "5.0" 
+                "build_time"            "5.0"
             }
             "02"
             {
@@ -741,7 +741,7 @@
                 "lumber_cost"            "0"
             }
         }
-    
+
         "OnSpellStart"
         {
             "RunScript"
@@ -749,7 +749,7 @@
                 "ScriptFile"    "buildings/queue.lua"
                 "Function"        "EnqueueUnit"
             }
-    
+
             "RunScript"
             {
                 "ScriptFile"    "buildings/upgrades.lua"
@@ -757,7 +757,7 @@
                 "ModifierName"    "modifier_building_particle"
             }
         }
-    
+
         "OnChannelSucceeded"
         {
             // Consume the first item in the queue
@@ -766,13 +766,13 @@
                 "ScriptFile"       "buildings/queue.lua"
                 "Function"      "NextQueue"
             }
-    
+
             "RunScript"
             {
                 "ScriptFile"    "buildings/upgrades.lua"
                 "Function"        "UpgradeBuilding"
                 "UnitName"        "ranger_beastmaster_Lv2"
-            }        
+            }
         }
     }
 
@@ -783,18 +783,18 @@
         "AbilityTextureName"            "templar_assassin_psionic_trap"
         "MaxLevel"                      "1"
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE"
-    
+
         "AbilityGoldCost"               "7200"
         "AbilityChannelTime"            "5"
-    
+
         "AbilityMultiOrder"              "1"
-    
+
         "AbilitySpecial"
         {
             "01"
             {
                 "var_type"              "FIELD_FLOAT"
-                "build_time"            "5.0" 
+                "build_time"            "5.0"
             }
             "02"
             {
@@ -807,7 +807,7 @@
                 "lumber_cost"            "0"
             }
         }
-    
+
         "OnSpellStart"
         {
             "RunScript"
@@ -815,7 +815,7 @@
                 "ScriptFile"     "buildings/queue.lua"
                 "Function"       "EnqueueUnit"
             }
-    
+
             "RunScript"
             {
                 "ScriptFile"      "buildings/upgrades.lua"
@@ -823,7 +823,7 @@
                 "ModifierName"    "modifier_building_particle"
             }
         }
-    
+
         "OnChannelSucceeded"
         {
             // Consume the first item in the queue
@@ -832,13 +832,13 @@
                 "ScriptFile"    "buildings/queue.lua"
                 "Function"      "NextQueue"
             }
-    
+
             "RunScript"
             {
                 "ScriptFile"      "buildings/upgrades.lua"
                 "Function"        "UpgradeBuilding"
                 "UnitName"        "ranger_beastmaster_Lv3"
-            }        
+            }
         }
     }
 
@@ -849,18 +849,18 @@
         "AbilityTextureName"            "templar_assassin_psionic_trap"
         "MaxLevel"                      "1"
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE"
-    
+
         "AbilityGoldCost"               "21600"
         "AbilityChannelTime"            "5"
-    
+
         "AbilityMultiOrder"              "1"
-    
+
         "AbilitySpecial"
         {
             "01"
             {
                 "var_type"              "FIELD_FLOAT"
-                "build_time"            "5.0" 
+                "build_time"            "5.0"
             }
             "02"
             {
@@ -873,7 +873,7 @@
                 "lumber_cost"            "0"
             }
         }
-    
+
         "OnSpellStart"
         {
             "RunScript"
@@ -881,7 +881,7 @@
                 "ScriptFile"     "buildings/queue.lua"
                 "Function"       "EnqueueUnit"
             }
-    
+
             "RunScript"
             {
                 "ScriptFile"      "buildings/upgrades.lua"
@@ -889,7 +889,7 @@
                 "ModifierName"    "modifier_building_particle"
             }
         }
-    
+
         "OnChannelSucceeded"
         {
             // Consume the first item in the queue
@@ -898,13 +898,13 @@
                 "ScriptFile"    "buildings/queue.lua"
                 "Function"      "NextQueue"
             }
-    
+
             "RunScript"
             {
                 "ScriptFile"      "buildings/upgrades.lua"
                 "Function"        "UpgradeBuilding"
                 "UnitName"        "ranger_beastmaster_Lv4"
-            }        
+            }
         }
     }
 
@@ -915,18 +915,18 @@
         "AbilityTextureName"            "templar_assassin_psionic_trap"
         "MaxLevel"                      "1"
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE"
-    
+
         "AbilityGoldCost"               "64800"
         "AbilityChannelTime"            "5"
-    
+
         "AbilityMultiOrder"             "1"
-    
+
         "AbilitySpecial"
         {
             "01"
             {
                 "var_type"              "FIELD_FLOAT"
-                "build_time"            "5.0" 
+                "build_time"            "5.0"
             }
             "02"
             {
@@ -939,7 +939,7 @@
                 "lumber_cost"            "0"
             }
         }
-    
+
         "OnSpellStart"
         {
             "RunScript"
@@ -947,7 +947,7 @@
                 "ScriptFile"     "buildings/queue.lua"
                 "Function"       "EnqueueUnit"
             }
-    
+
             "RunScript"
             {
                 "ScriptFile"      "buildings/upgrades.lua"
@@ -955,7 +955,7 @@
                 "ModifierName"    "modifier_building_particle"
             }
         }
-    
+
         "OnChannelSucceeded"
         {
             // Consume the first item in the queue
@@ -964,13 +964,13 @@
                 "ScriptFile"    "buildings/queue.lua"
                 "Function"      "NextQueue"
             }
-    
+
             "RunScript"
             {
                 "ScriptFile"      "buildings/upgrades.lua"
                 "Function"        "UpgradeBuilding"
                 "UnitName"        "ranger_beastmaster_Lv5"
-            }        
+            }
         }
     }
 
@@ -980,10 +980,10 @@
         "BaseClass"                      "ability_datadriven"
         "AbilityTextureName"             "build_ranger_sniper_Lv1"
         "MaxLevel"                       "1"
-    
+
         "AbilityBehavior"                "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
         "AbilityCastPoint"                "0"
-    
+
         // BuildingHelper info
         "Building"                        "1" //bool
         "BuildingSize"                    "2"
@@ -1033,20 +1033,20 @@
         "BaseClass"                     "ability_datadriven"
         "AbilityTextureName"            "templar_assassin_psionic_trap"
         "MaxLevel"                      "1"
-    
+
         "AbilityBehavior"                "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE"
-    
+
         "AbilityGoldCost"                "6000"
         "AbilityChannelTime"             "5"
-    
+
         "AbilityMultiOrder"                "1"
-    
+
         "AbilitySpecial"
         {
             "01"
             {
                 "var_type"                "FIELD_FLOAT"
-                "build_time"            "5.0" 
+                "build_time"            "5.0"
             }
             "02"
             {
@@ -1059,7 +1059,7 @@
                 "lumber_cost"            "0"
             }
         }
-    
+
         "OnSpellStart"
         {
             "RunScript"
@@ -1067,7 +1067,7 @@
                 "ScriptFile"    "buildings/queue.lua"
                 "Function"        "EnqueueUnit"
             }
-    
+
             "RunScript"
             {
                 "ScriptFile"    "buildings/upgrades.lua"
@@ -1075,7 +1075,7 @@
                 "ModifierName"    "modifier_building_particle"
             }
         }
-    
+
         "OnChannelSucceeded"
         {
             // Consume the first item in the queue
@@ -1084,13 +1084,13 @@
                 "ScriptFile"       "buildings/queue.lua"
                 "Function"      "NextQueue"
             }
-    
+
             "RunScript"
             {
                 "ScriptFile"    "buildings/upgrades.lua"
                 "Function"        "UpgradeBuilding"
                 "UnitName"        "ranger_sniper_Lv2"
-            }        
+            }
         }
     }
 
@@ -1100,20 +1100,20 @@
         "BaseClass"                     "ability_datadriven"
         "AbilityTextureName"            "templar_assassin_psionic_trap"
         "MaxLevel"                      "1"
-    
+
         "AbilityBehavior"                "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE"
-    
+
         "AbilityGoldCost"                "16000"
         "AbilityChannelTime"             "5"
-    
+
         "AbilityMultiOrder"                "1"
-    
+
         "AbilitySpecial"
         {
             "01"
             {
                 "var_type"                "FIELD_FLOAT"
-                "build_time"            "5.0" 
+                "build_time"            "5.0"
             }
             "02"
             {
@@ -1126,7 +1126,7 @@
                 "lumber_cost"            "0"
             }
         }
-    
+
         "OnSpellStart"
         {
             "RunScript"
@@ -1134,7 +1134,7 @@
                 "ScriptFile"    "buildings/queue.lua"
                 "Function"        "EnqueueUnit"
             }
-    
+
             "RunScript"
             {
                 "ScriptFile"    "buildings/upgrades.lua"
@@ -1142,7 +1142,7 @@
                 "ModifierName"    "modifier_building_particle"
             }
         }
-    
+
         "OnChannelSucceeded"
         {
             // Consume the first item in the queue
@@ -1151,13 +1151,13 @@
                 "ScriptFile"       "buildings/queue.lua"
                 "Function"      "NextQueue"
             }
-    
+
             "RunScript"
             {
                 "ScriptFile"    "buildings/upgrades.lua"
                 "Function"        "UpgradeBuilding"
                 "UnitName"        "ranger_sniper_Lv3"
-            }        
+            }
         }
     }
 
@@ -1167,20 +1167,20 @@
         "BaseClass"                     "ability_datadriven"
         "AbilityTextureName"            "templar_assassin_psionic_trap"
         "MaxLevel"                      "1"
-    
+
         "AbilityBehavior"                "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE"
-    
+
         "AbilityGoldCost"                "48000"
         "AbilityChannelTime"             "5"
-    
+
         "AbilityMultiOrder"                "1"
-    
+
         "AbilitySpecial"
         {
             "01"
             {
                 "var_type"                "FIELD_FLOAT"
-                "build_time"            "5.0" 
+                "build_time"            "5.0"
             }
             "02"
             {
@@ -1193,7 +1193,7 @@
                 "lumber_cost"            "0"
             }
         }
-    
+
         "OnSpellStart"
         {
             "RunScript"
@@ -1201,7 +1201,7 @@
                 "ScriptFile"    "buildings/queue.lua"
                 "Function"        "EnqueueUnit"
             }
-    
+
             "RunScript"
             {
                 "ScriptFile"    "buildings/upgrades.lua"
@@ -1209,7 +1209,7 @@
                 "ModifierName"    "modifier_building_particle"
             }
         }
-    
+
         "OnChannelSucceeded"
         {
             // Consume the first item in the queue
@@ -1218,13 +1218,13 @@
                 "ScriptFile"       "buildings/queue.lua"
                 "Function"      "NextQueue"
             }
-    
+
             "RunScript"
             {
                 "ScriptFile"    "buildings/upgrades.lua"
                 "Function"        "UpgradeBuilding"
                 "UnitName"        "ranger_sniper_Lv4"
-            }        
+            }
         }
     }
 
@@ -1234,20 +1234,20 @@
         "BaseClass"                     "ability_datadriven"
         "AbilityTextureName"            "templar_assassin_psionic_trap"
         "MaxLevel"                      "1"
-    
+
         "AbilityBehavior"                "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE"
-    
+
         "AbilityGoldCost"                "28000"
         "AbilityChannelTime"             "5"
-    
+
         "AbilityMultiOrder"                "1"
-    
+
         "AbilitySpecial"
         {
             "01"
             {
                 "var_type"                "FIELD_FLOAT"
-                "build_time"            "5.0" 
+                "build_time"            "5.0"
             }
             "02"
             {
@@ -1260,7 +1260,7 @@
                 "lumber_cost"            "0"
             }
         }
-    
+
         "OnSpellStart"
         {
             "RunScript"
@@ -1268,7 +1268,7 @@
                 "ScriptFile"    "buildings/queue.lua"
                 "Function"        "EnqueueUnit"
             }
-    
+
             "RunScript"
             {
                 "ScriptFile"    "buildings/upgrades.lua"
@@ -1276,7 +1276,7 @@
                 "ModifierName"    "modifier_building_particle"
             }
         }
-    
+
         "OnChannelSucceeded"
         {
             // Consume the first item in the queue
@@ -1285,13 +1285,331 @@
                 "ScriptFile"       "buildings/queue.lua"
                 "Function"      "NextQueue"
             }
-    
+
             "RunScript"
             {
                 "ScriptFile"    "buildings/upgrades.lua"
                 "Function"        "UpgradeBuilding"
                 "UnitName"        "ranger_sniper_Lv5"
-            }        
+            }
+        }
+    }
+
+    // 建造弹射猎手Lv1
+    "build_ranger_luna_Lv1"
+    {
+        "BaseClass"                      "ability_datadriven"
+        "AbilityTextureName"             "build_ranger_beastmaster"
+        "MaxLevel"                       "1"
+
+        "AbilityBehavior"                "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+        "AbilityCastPoint"                "0"
+
+        // BuildingHelper info
+        "Building"                        "1" //bool
+        "BuildingSize"                    "2"
+        "BuildTime"                       "5.0"
+        "AbilityCastRange"                "200"
+        "UpdateHealth"                    "1" //bool
+        "Scale"                           "0" //bool
+        "PlayerCanControl"                "1" //bool
+
+        "UnitName"                       "ranger_luna_Lv1"
+        "AbilityCooldown"                "0"
+        "AbilityGoldCost"                "0"
+        // End of BuildingHelper info
+
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                "FIELD_FLOAT"
+                "build_time"              "5.0"
+            }
+            "02"
+            {
+                "var_type"                "FIELD_INTEGER"
+                "gold_cost"               "0"
+            }
+            "03"
+            {
+                "var_type"                "FIELD_INTEGER"
+                "lumber_cost"             "0"
+            }
+        }
+
+        "OnSpellStart"
+        {
+            "RunScript"
+            {
+                "ScriptFile"      "builder.lua"
+                "Function"        "Build"
+            }
+        }
+    }
+
+    // 升级弹射猎手Lv2.
+    "train_ranger_luna_Lv2"
+    {
+        "BaseClass"                     "ability_datadriven"
+        "AbilityTextureName"            "templar_assassin_psionic_trap"
+        "MaxLevel"                      "1"
+
+        "AbilityBehavior"                "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE"
+
+        "AbilityGoldCost"                "2400"
+        "AbilityChannelTime"             "5"
+
+        "AbilityMultiOrder"                "1"
+
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                "FIELD_FLOAT"
+                "build_time"            "5.0"
+            }
+            "02"
+            {
+                "var_type"                "FIELD_INTEGER"
+                "gold_cost"                "2400"
+            }
+            "03"
+            {
+                "var_type"                "FIELD_INTEGER"
+                "lumber_cost"            "0"
+            }
+        }
+
+        "OnSpellStart"
+        {
+            "RunScript"
+            {
+                "ScriptFile"    "buildings/queue.lua"
+                "Function"        "EnqueueUnit"
+            }
+
+            "RunScript"
+            {
+                "ScriptFile"    "buildings/upgrades.lua"
+                "Function"        "StartUpgrade"
+                "ModifierName"    "modifier_building_particle"
+            }
+        }
+
+        "OnChannelSucceeded"
+        {
+            // Consume the first item in the queue
+            "RunScript"
+            {
+                "ScriptFile"       "buildings/queue.lua"
+                "Function"      "NextQueue"
+            }
+
+            "RunScript"
+            {
+                "ScriptFile"    "buildings/upgrades.lua"
+                "Function"        "UpgradeBuilding"
+                "UnitName"        "ranger_luna_Lv2"
+            }
+        }
+    }
+
+    // 升级弹射猎手Lv3
+    "train_ranger_luna_Lv3"
+    {
+        "BaseClass"                     "ability_datadriven"
+        "AbilityTextureName"            "templar_assassin_psionic_trap"
+        "MaxLevel"                      "1"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE"
+
+        "AbilityGoldCost"               "7200"
+        "AbilityChannelTime"            "5"
+
+        "AbilityMultiOrder"              "1"
+
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"              "FIELD_FLOAT"
+                "build_time"            "5.0"
+            }
+            "02"
+            {
+                "var_type"               "FIELD_INTEGER"
+                "gold_cost"              "7200"
+            }
+            "03"
+            {
+                "var_type"               "FIELD_INTEGER"
+                "lumber_cost"            "0"
+            }
+        }
+
+        "OnSpellStart"
+        {
+            "RunScript"
+            {
+                "ScriptFile"     "buildings/queue.lua"
+                "Function"       "EnqueueUnit"
+            }
+
+            "RunScript"
+            {
+                "ScriptFile"      "buildings/upgrades.lua"
+                "Function"        "StartUpgrade"
+                "ModifierName"    "modifier_building_particle"
+            }
+        }
+
+        "OnChannelSucceeded"
+        {
+            // Consume the first item in the queue
+            "RunScript"
+            {
+                "ScriptFile"    "buildings/queue.lua"
+                "Function"      "NextQueue"
+            }
+
+            "RunScript"
+            {
+                "ScriptFile"      "buildings/upgrades.lua"
+                "Function"        "UpgradeBuilding"
+                "UnitName"        "ranger_luna_Lv3"
+            }
+        }
+    }
+
+    // 升级弹射猎手Lv4
+    "train_ranger_luna_Lv4"
+    {
+        "BaseClass"                     "ability_datadriven"
+        "AbilityTextureName"            "templar_assassin_psionic_trap"
+        "MaxLevel"                      "1"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE"
+
+        "AbilityGoldCost"               "21600"
+        "AbilityChannelTime"            "5"
+
+        "AbilityMultiOrder"              "1"
+
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"              "FIELD_FLOAT"
+                "build_time"            "5.0"
+            }
+            "02"
+            {
+                "var_type"               "FIELD_INTEGER"
+                "gold_cost"              "21600"
+            }
+            "03"
+            {
+                "var_type"               "FIELD_INTEGER"
+                "lumber_cost"            "0"
+            }
+        }
+
+        "OnSpellStart"
+        {
+            "RunScript"
+            {
+                "ScriptFile"     "buildings/queue.lua"
+                "Function"       "EnqueueUnit"
+            }
+
+            "RunScript"
+            {
+                "ScriptFile"      "buildings/upgrades.lua"
+                "Function"        "StartUpgrade"
+                "ModifierName"    "modifier_building_particle"
+            }
+        }
+
+        "OnChannelSucceeded"
+        {
+            // Consume the first item in the queue
+            "RunScript"
+            {
+                "ScriptFile"    "buildings/queue.lua"
+                "Function"      "NextQueue"
+            }
+
+            "RunScript"
+            {
+                "ScriptFile"      "buildings/upgrades.lua"
+                "Function"        "UpgradeBuilding"
+                "UnitName"        "ranger_luna_Lv4"
+            }
+        }
+    }
+
+    // 升级弹射猎手Lv5
+    "train_ranger_luna_Lv5"
+    {
+        "BaseClass"                     "ability_datadriven"
+        "AbilityTextureName"            "templar_assassin_psionic_trap"
+        "MaxLevel"                      "1"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE"
+
+        "AbilityGoldCost"               "64800"
+        "AbilityChannelTime"            "5"
+
+        "AbilityMultiOrder"             "1"
+
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"              "FIELD_FLOAT"
+                "build_time"            "5.0"
+            }
+            "02"
+            {
+                "var_type"               "FIELD_INTEGER"
+                "gold_cost"              "64800"
+            }
+            "03"
+            {
+                "var_type"               "FIELD_INTEGER"
+                "lumber_cost"            "0"
+            }
+        }
+
+        "OnSpellStart"
+        {
+            "RunScript"
+            {
+                "ScriptFile"     "buildings/queue.lua"
+                "Function"       "EnqueueUnit"
+            }
+
+            "RunScript"
+            {
+                "ScriptFile"      "buildings/upgrades.lua"
+                "Function"        "StartUpgrade"
+                "ModifierName"    "modifier_building_particle"
+            }
+        }
+
+        "OnChannelSucceeded"
+        {
+            // Consume the first item in the queue
+            "RunScript"
+            {
+                "ScriptFile"    "buildings/queue.lua"
+                "Function"      "NextQueue"
+            }
+
+            "RunScript"
+            {
+                "ScriptFile"      "buildings/upgrades.lua"
+                "Function"        "UpgradeBuilding"
+                "UnitName"        "ranger_luna_Lv5"
+            }
         }
     }
 
@@ -1301,10 +1619,10 @@
         "BaseClass"                      "ability_datadriven"
         "AbilityTextureName"             "build_ranger_bounty_hunter"
         "MaxLevel"                       "1"
-    
+
         "AbilityBehavior"                "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
         "AbilityCastPoint"                "0"
-    
+
         // BuildingHelper info
         "Building"                        "1" //bool
         "BuildingSize"                    "2"
@@ -1354,10 +1672,10 @@
         "BaseClass"                      "ability_datadriven"
         "AbilityTextureName"             "build_ranger_venomancer"
         "MaxLevel"                       "1"
-    
+
         "AbilityBehavior"                "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
         "AbilityCastPoint"                "0"
-    
+
         // BuildingHelper info
         "Building"                        "1" //bool
         "BuildingSize"                    "2"
@@ -1407,20 +1725,20 @@
         "BaseClass"                     "ability_datadriven"
         "AbilityTextureName"            "templar_assassin_psionic_trap"
         "MaxLevel"                      "1"
-    
+
         "AbilityBehavior"                "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE"
-    
+
         "AbilityGoldCost"                "600"
         "AbilityChannelTime"             "5"
-    
+
         "AbilityMultiOrder"                "1"
-    
+
         "AbilitySpecial"
         {
             "01"
             {
                 "var_type"                "FIELD_FLOAT"
-                "build_time"            "5.0" 
+                "build_time"            "5.0"
             }
             "02"
             {
@@ -1433,7 +1751,7 @@
                 "lumber_cost"            "0"
             }
         }
-    
+
         "OnSpellStart"
         {
             "RunScript"
@@ -1441,7 +1759,7 @@
                 "ScriptFile"    "buildings/queue.lua"
                 "Function"        "EnqueueUnit"
             }
-    
+
             "RunScript"
             {
                 "ScriptFile"    "buildings/upgrades.lua"
@@ -1449,7 +1767,7 @@
                 "ModifierName"    "modifier_building_particle"
             }
         }
-    
+
         "OnChannelSucceeded"
         {
             // Consume the first item in the queue
@@ -1458,13 +1776,13 @@
                 "ScriptFile"       "buildings/queue.lua"
                 "Function"      "NextQueue"
             }
-    
+
             "RunScript"
             {
                 "ScriptFile"    "buildings/upgrades.lua"
                 "Function"        "UpgradeBuilding"
                 "UnitName"        "ranger_venomancer_Lv2"
-            }        
+            }
         }
     }
 
@@ -1475,18 +1793,18 @@
         "AbilityTextureName"            "templar_assassin_psionic_trap"
         "MaxLevel"                      "1"
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE"
-    
+
         "AbilityGoldCost"               "2400"
         "AbilityChannelTime"            "5"
-    
+
         "AbilityMultiOrder"              "1"
-    
+
         "AbilitySpecial"
         {
             "01"
             {
                 "var_type"              "FIELD_FLOAT"
-                "build_time"            "5.0" 
+                "build_time"            "5.0"
             }
             "02"
             {
@@ -1499,7 +1817,7 @@
                 "lumber_cost"            "0"
             }
         }
-    
+
         "OnSpellStart"
         {
             "RunScript"
@@ -1507,7 +1825,7 @@
                 "ScriptFile"     "buildings/queue.lua"
                 "Function"       "EnqueueUnit"
             }
-    
+
             "RunScript"
             {
                 "ScriptFile"      "buildings/upgrades.lua"
@@ -1515,7 +1833,7 @@
                 "ModifierName"    "modifier_building_particle"
             }
         }
-    
+
         "OnChannelSucceeded"
         {
             // Consume the first item in the queue
@@ -1524,13 +1842,13 @@
                 "ScriptFile"    "buildings/queue.lua"
                 "Function"      "NextQueue"
             }
-    
+
             "RunScript"
             {
                 "ScriptFile"      "buildings/upgrades.lua"
                 "Function"        "UpgradeBuilding"
                 "UnitName"        "ranger_venomancer_Lv3"
-            }        
+            }
         }
     }
 
@@ -1541,18 +1859,18 @@
         "AbilityTextureName"            "templar_assassin_psionic_trap"
         "MaxLevel"                      "1"
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE"
-    
+
         "AbilityGoldCost"               "9600"
         "AbilityChannelTime"            "5"
-    
+
         "AbilityMultiOrder"              "1"
-    
+
         "AbilitySpecial"
         {
             "01"
             {
                 "var_type"              "FIELD_FLOAT"
-                "build_time"            "5.0" 
+                "build_time"            "5.0"
             }
             "02"
             {
@@ -1565,7 +1883,7 @@
                 "lumber_cost"            "0"
             }
         }
-    
+
         "OnSpellStart"
         {
             "RunScript"
@@ -1573,7 +1891,7 @@
                 "ScriptFile"     "buildings/queue.lua"
                 "Function"       "EnqueueUnit"
             }
-    
+
             "RunScript"
             {
                 "ScriptFile"      "buildings/upgrades.lua"
@@ -1581,7 +1899,7 @@
                 "ModifierName"    "modifier_building_particle"
             }
         }
-    
+
         "OnChannelSucceeded"
         {
             // Consume the first item in the queue
@@ -1590,13 +1908,13 @@
                 "ScriptFile"    "buildings/queue.lua"
                 "Function"      "NextQueue"
             }
-    
+
             "RunScript"
             {
                 "ScriptFile"      "buildings/upgrades.lua"
                 "Function"        "UpgradeBuilding"
                 "UnitName"        "ranger_venomancer_Lv4"
-            }        
+            }
         }
     }
 
@@ -1607,18 +1925,18 @@
         "AbilityTextureName"            "templar_assassin_psionic_trap"
         "MaxLevel"                      "1"
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE"
-    
+
         "AbilityGoldCost"               "38400"
         "AbilityChannelTime"            "5"
-    
+
         "AbilityMultiOrder"             "1"
-    
+
         "AbilitySpecial"
         {
             "01"
             {
                 "var_type"              "FIELD_FLOAT"
-                "build_time"            "5.0" 
+                "build_time"            "5.0"
             }
             "02"
             {
@@ -1631,7 +1949,7 @@
                 "lumber_cost"            "0"
             }
         }
-    
+
         "OnSpellStart"
         {
             "RunScript"
@@ -1639,7 +1957,7 @@
                 "ScriptFile"     "buildings/queue.lua"
                 "Function"       "EnqueueUnit"
             }
-    
+
             "RunScript"
             {
                 "ScriptFile"      "buildings/upgrades.lua"
@@ -1647,7 +1965,7 @@
                 "ModifierName"    "modifier_building_particle"
             }
         }
-    
+
         "OnChannelSucceeded"
         {
             // Consume the first item in the queue
@@ -1656,13 +1974,13 @@
                 "ScriptFile"    "buildings/queue.lua"
                 "Function"      "NextQueue"
             }
-    
+
             "RunScript"
             {
                 "ScriptFile"      "buildings/upgrades.lua"
                 "Function"        "UpgradeBuilding"
                 "UnitName"        "ranger_venomancer_Lv5"
-            }        
+            }
         }
     }
 
@@ -1674,7 +1992,7 @@
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
         "AbilityTextureName"            "beastmaster_call_of_the_wild_boar"
         "MaxLevel"                      "1"
-        
+
         // Casting -------------------------------------------------------------------
         "AbilityCastPoint"              "0.3"
 
@@ -1796,7 +2114,7 @@
                 "Passive"             "1"
                 "IsHidden"            "1"
                 "IsDebuff"            "0"
-        
+
                 "OnAttack"
                 {
                     "RunScript"
@@ -1806,7 +2124,7 @@
                     }
                 }
             }
- 
+
             "modifier_beastmaster_boar"
             {
                 "IsHidden"      "1"
@@ -1825,7 +2143,7 @@
                 {
                     "FireEffect"
                     {
-                        "Target"            
+                        "Target"
                         {
                             "Center"    "UNIT"
                             "Flags"     "DOTA_UNIT_TARGET_FLAG_DEAD"
@@ -1833,10 +2151,10 @@
                         "EffectName"        "particles/units/heroes/hero_lone_druid/lone_druid_spirit_bear_death.vpcf"
                         "EffectAttachType"  "follow_origin"
                     }
-                    
+
                     "FireSound"
                     {
-                        "Target"            
+                        "Target"
                         {
                             "Center"    "UNIT"
                             "Flags"     "DOTA_UNIT_TARGET_FLAG_DEAD"
@@ -1856,7 +2174,7 @@
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
         "AbilityTextureName"            "beastmaster_call_of_the_wild_boar"
         "MaxLevel"                      "1"
-        
+
         // Casting -------------------------------------------------------------------
         "AbilityCastPoint"              "0.3"
 
@@ -1978,7 +2296,7 @@
                 "Passive"             "1"
                 "IsHidden"            "1"
                 "IsDebuff"            "0"
-        
+
                 "OnAttack"
                 {
                     "RunScript"
@@ -2007,7 +2325,7 @@
                 {
                     "FireEffect"
                     {
-                        "Target"            
+                        "Target"
                         {
                             "Center"    "UNIT"
                             "Flags"     "DOTA_UNIT_TARGET_FLAG_DEAD"
@@ -2015,10 +2333,10 @@
                         "EffectName"        "particles/units/heroes/hero_lone_druid/lone_druid_spirit_bear_death.vpcf"
                         "EffectAttachType"  "follow_origin"
                     }
-                    
+
                     "FireSound"
                     {
-                        "Target"            
+                        "Target"
                         {
                             "Center"    "UNIT"
                             "Flags"     "DOTA_UNIT_TARGET_FLAG_DEAD"
@@ -2038,7 +2356,7 @@
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
         "AbilityTextureName"            "beastmaster_call_of_the_wild_boar"
         "MaxLevel"                      "1"
-        
+
         // Casting -------------------------------------------------------------------
         "AbilityCastPoint"              "0.3"
 
@@ -2160,7 +2478,7 @@
                 "Passive"             "1"
                 "IsHidden"            "1"
                 "IsDebuff"            "0"
-        
+
                 "OnAttack"
                 {
                     "RunScript"
@@ -2188,7 +2506,7 @@
                 {
                     "FireEffect"
                     {
-                        "Target"            
+                        "Target"
                         {
                             "Center"    "UNIT"
                             "Flags"     "DOTA_UNIT_TARGET_FLAG_DEAD"
@@ -2196,10 +2514,10 @@
                         "EffectName"        "particles/units/heroes/hero_lone_druid/lone_druid_spirit_bear_death.vpcf"
                         "EffectAttachType"  "follow_origin"
                     }
-                    
+
                     "FireSound"
                     {
-                        "Target"            
+                        "Target"
                         {
                             "Center"    "UNIT"
                             "Flags"     "DOTA_UNIT_TARGET_FLAG_DEAD"
@@ -2220,7 +2538,7 @@
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
         "AbilityTextureName"            "beastmaster_call_of_the_wild_boar"
         "MaxLevel"                      "1"
-        
+
         // Casting -------------------------------------------------------------------
         "AbilityCastPoint"              "0.3"
 
@@ -2342,7 +2660,7 @@
                 "Passive"             "1"
                 "IsHidden"            "1"
                 "IsDebuff"            "0"
-        
+
                 "OnAttack"
                 {
                     "RunScript"
@@ -2371,7 +2689,7 @@
                 {
                     "FireEffect"
                     {
-                        "Target"            
+                        "Target"
                         {
                             "Center"    "UNIT"
                             "Flags"     "DOTA_UNIT_TARGET_FLAG_DEAD"
@@ -2379,10 +2697,10 @@
                         "EffectName"        "particles/units/heroes/hero_lone_druid/lone_druid_spirit_bear_death.vpcf"
                         "EffectAttachType"  "follow_origin"
                     }
-                    
+
                     "FireSound"
                     {
-                        "Target"            
+                        "Target"
                         {
                             "Center"    "UNIT"
                             "Flags"     "DOTA_UNIT_TARGET_FLAG_DEAD"
@@ -2402,7 +2720,7 @@
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
         "AbilityTextureName"            "beastmaster_call_of_the_wild_boar"
         "MaxLevel"                      "1"
-        
+
         // Casting -------------------------------------------------------------------
         "AbilityCastPoint"              "0.3"
 
@@ -2524,7 +2842,7 @@
                 "Passive"             "1"
                 "IsHidden"            "1"
                 "IsDebuff"            "0"
-        
+
                 "OnAttack"
                 {
                     "RunScript"
@@ -2553,7 +2871,7 @@
                 {
                     "FireEffect"
                     {
-                        "Target"            
+                        "Target"
                         {
                             "Center"    "UNIT"
                             "Flags"     "DOTA_UNIT_TARGET_FLAG_DEAD"
@@ -2561,10 +2879,10 @@
                         "EffectName"        "particles/units/heroes/hero_lone_druid/lone_druid_spirit_bear_death.vpcf"
                         "EffectAttachType"  "follow_origin"
                     }
-                    
+
                     "FireSound"
                     {
-                        "Target"            
+                        "Target"
                         {
                             "Center"    "UNIT"
                             "Flags"     "DOTA_UNIT_TARGET_FLAG_DEAD"
@@ -2597,7 +2915,7 @@
             "soundfile"           "soundevents/game_sounds_heroes/game_sounds_medusa.vsndevts"
             "particle"            "particles/units/heroes/hero_windrunner/windrunner_base_attack.vpcf"
         }
-        
+
         // Casting -------------------------------------------------------------------------
         "AbilityCastPoint"        "0.4"
 
@@ -2615,7 +2933,7 @@
                 "damage_modifier_tooltip"      "100"
             }
             "03"
-            {    
+            {
                 "var_type"                    "FIELD_INTEGER"
                 "arrow_count"                 "3 6 9 12 15"  // extra arrow count
             }
@@ -2635,7 +2953,7 @@
         "OnProjectileHitUnit"
         {
             "DeleteOnHit"    "1"
-            
+
             "FireSound"
             {
                 "EffectName"     "Hero_Medusa.AttackSplit"
@@ -2656,7 +2974,7 @@
                 "Passive"             "1"
                 "IsHidden"            "1"
                 "IsDebuff"            "0"
-        
+
                 "OnAttack"
                 {
                     "RunScript"
@@ -2669,7 +2987,7 @@
 
                 "Properties"
                 {
-                    "MODIFIER_PROPERTY_DAMAGEOUTGOING_PERCENTAGE" "%damage_modifier" 
+                    "MODIFIER_PROPERTY_DAMAGEOUTGOING_PERCENTAGE" "%damage_modifier"
                 }
             }
         }
@@ -2766,7 +3084,7 @@
             }
         }
 
-        
+
         "Modifiers"
         {
             "modifier_coup_de_grace_datadriven"
@@ -2820,7 +3138,7 @@
                     {
                         "EffectName"    "particles/units/heroes/hero_phantom_assassin/phantom_assassin_crit_impact.vpcf"
                         "EffectAttachType"  "start_at_customorigin"
-                        
+
                         "ControlPointEntities"
                         {
                             "TARGET"    "follow_origin"
@@ -2860,19 +3178,19 @@
             "particle"      "particles/units/heroes/hero_bounty_hunter/bounty_hunter_track_haste.vpcf"
             "particle"      "particles/units/heroes/hero_bounty_hunter/bounty_hunter_track_shield.vpcf"
         }
-        
+
         // Unit Targeting
         //-------------------------------------------------------------------------------------------------------------
         "AbilityUnitTargetTeam"         "DOTA_UNIT_TARGET_TEAM_ENEMY"
         "AbilityUnitTargetType"         "DOTA_UNIT_TARGET_ALL"
-        
+
         // Stats
         //-------------------------------------------------------------------------------------------------------------
         "AbilityCastRange"              "700"
         "AbilityCastPoint"              "0.3 0.3 0.3"
         "AbilityCooldown"               "4.0"
         "AbilityManaCost"               "0"
-            
+
         // Special
         //-------------------------------------------------------------------------------------------------------------
         "AbilitySpecial"
@@ -2945,7 +3263,7 @@
                 }
 
             }
-            
+
             "FireSound"
             {
                 "EffectName"    "Hero_BountyHunter.Target"
@@ -3085,10 +3403,10 @@
         "BaseClass"                     "ability_datadriven"
         "AbilityType"                   "DOTA_ABILITY_TYPE_BASIC"
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
-        "AbilityUnitDamageType"         "DAMAGE_TYPE_MAGICAL"   
+        "AbilityUnitDamageType"         "DAMAGE_TYPE_MAGICAL"
         "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_YES"
         "AbilityTextureName"            "venomancer_poison_sting"
-        
+
         // Special
         //-------------------------------------------------------------------------------------------------------------
         "AbilitySpecial"
@@ -3107,7 +3425,7 @@
             {
                 "var_type"                  "FIELD_INTEGER"
                 "movement_speed"            "-0"
-            }           
+            }
         }
 
         "Modifiers"
@@ -3152,14 +3470,14 @@
                         "Type"      "DAMAGE_TYPE_MAGICAL"
                         "Damage"    "%damage"
                     }
-                    
+
                     "RunScript"
                     {
                         "ScriptFile"        "race/ranger/poison_sting.lua"
                         "Function"          "modifier_poison_sting_debuff_datadriven_on_created"
                     }
                 }
-                
+
                 "OnDestroy"
                 {
                     "RunScript"
@@ -3168,7 +3486,7 @@
                         "Function"          "modifier_poison_sting_debuff_datadriven_on_destroy"
                     }
                 }
-                
+
                 "Properties"
                 {
                     "MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE"      "%movement_speed"
@@ -3185,10 +3503,10 @@
         "BaseClass"                     "ability_datadriven"
         "AbilityType"                   "DOTA_ABILITY_TYPE_BASIC"
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
-        "AbilityUnitDamageType"         "DAMAGE_TYPE_MAGICAL"   
+        "AbilityUnitDamageType"         "DAMAGE_TYPE_MAGICAL"
         "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_YES"
         "AbilityTextureName"            "venomancer_poison_sting"
-        
+
         // Special
         //-------------------------------------------------------------------------------------------------------------
         "AbilitySpecial"
@@ -3207,7 +3525,7 @@
             {
                 "var_type"                  "FIELD_INTEGER"
                 "movement_speed"            "-0"
-            }           
+            }
         }
 
         "Modifiers"
@@ -3252,14 +3570,14 @@
                         "Type"      "DAMAGE_TYPE_MAGICAL"
                         "Damage"    "%damage"
                     }
-                    
+
                     "RunScript"
                     {
                         "ScriptFile"        "race/ranger/poison_sting.lua"
                         "Function"          "modifier_poison_sting_debuff_datadriven_on_created"
                     }
                 }
-                
+
                 "OnDestroy"
                 {
                     "RunScript"
@@ -3268,7 +3586,7 @@
                         "Function"          "modifier_poison_sting_debuff_datadriven_on_destroy"
                     }
                 }
-                
+
                 "Properties"
                 {
                     "MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE"      "%movement_speed"
@@ -3285,10 +3603,10 @@
         "BaseClass"                     "ability_datadriven"
         "AbilityType"                   "DOTA_ABILITY_TYPE_BASIC"
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
-        "AbilityUnitDamageType"         "DAMAGE_TYPE_MAGICAL"   
+        "AbilityUnitDamageType"         "DAMAGE_TYPE_MAGICAL"
         "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_YES"
         "AbilityTextureName"            "venomancer_poison_sting"
-        
+
         // Special
         //-------------------------------------------------------------------------------------------------------------
         "AbilitySpecial"
@@ -3307,7 +3625,7 @@
             {
                 "var_type"                  "FIELD_INTEGER"
                 "movement_speed"            "-0"
-            }           
+            }
         }
 
         "Modifiers"
@@ -3352,14 +3670,14 @@
                         "Type"      "DAMAGE_TYPE_MAGICAL"
                         "Damage"    "%damage"
                     }
-                    
+
                     "RunScript"
                     {
                         "ScriptFile"        "race/ranger/poison_sting.lua"
                         "Function"          "modifier_poison_sting_debuff_datadriven_on_created"
                     }
                 }
-                
+
                 "OnDestroy"
                 {
                     "RunScript"
@@ -3368,7 +3686,7 @@
                         "Function"          "modifier_poison_sting_debuff_datadriven_on_destroy"
                     }
                 }
-                
+
                 "Properties"
                 {
                     "MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE"      "%movement_speed"
@@ -3385,10 +3703,10 @@
         "BaseClass"                     "ability_datadriven"
         "AbilityType"                   "DOTA_ABILITY_TYPE_BASIC"
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
-        "AbilityUnitDamageType"         "DAMAGE_TYPE_MAGICAL"   
+        "AbilityUnitDamageType"         "DAMAGE_TYPE_MAGICAL"
         "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_YES"
         "AbilityTextureName"            "venomancer_poison_sting"
-        
+
         // Special
         //-------------------------------------------------------------------------------------------------------------
         "AbilitySpecial"
@@ -3407,7 +3725,7 @@
             {
                 "var_type"                  "FIELD_INTEGER"
                 "movement_speed"            "-0"
-            }           
+            }
         }
 
         "Modifiers"
@@ -3452,14 +3770,14 @@
                         "Type"      "DAMAGE_TYPE_MAGICAL"
                         "Damage"    "%damage"
                     }
-                    
+
                     "RunScript"
                     {
                         "ScriptFile"        "race/ranger/poison_sting.lua"
                         "Function"          "modifier_poison_sting_debuff_datadriven_on_created"
                     }
                 }
-                
+
                 "OnDestroy"
                 {
                     "RunScript"
@@ -3468,7 +3786,7 @@
                         "Function"          "modifier_poison_sting_debuff_datadriven_on_destroy"
                     }
                 }
-                
+
                 "Properties"
                 {
                     "MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE"      "%movement_speed"
@@ -3485,10 +3803,10 @@
         "BaseClass"                     "ability_datadriven"
         "AbilityType"                   "DOTA_ABILITY_TYPE_BASIC"
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
-        "AbilityUnitDamageType"         "DAMAGE_TYPE_MAGICAL"   
+        "AbilityUnitDamageType"         "DAMAGE_TYPE_MAGICAL"
         "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_YES"
         "AbilityTextureName"            "venomancer_poison_sting"
-        
+
         // Special
         //-------------------------------------------------------------------------------------------------------------
         "AbilitySpecial"
@@ -3507,7 +3825,7 @@
             {
                 "var_type"                  "FIELD_INTEGER"
                 "movement_speed"            "-0"
-            }           
+            }
         }
 
         "Modifiers"
@@ -3552,14 +3870,14 @@
                         "Type"      "DAMAGE_TYPE_MAGICAL"
                         "Damage"    "%damage"
                     }
-                    
+
                     "RunScript"
                     {
                         "ScriptFile"        "race/ranger/poison_sting.lua"
                         "Function"          "modifier_poison_sting_debuff_datadriven_on_created"
                     }
                 }
-                
+
                 "OnDestroy"
                 {
                     "RunScript"
@@ -3568,10 +3886,110 @@
                         "Function"          "modifier_poison_sting_debuff_datadriven_on_destroy"
                     }
                 }
-                
+
                 "Properties"
                 {
                     "MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE"      "%movement_speed"
+                }
+            }
+        }
+    }
+
+    // 弹射猎手-月刃
+    "ranger_luna_moon_glaive"
+    {
+        // General -------------------------------------------------------
+        "BaseClass"             "ability_datadriven"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+        "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_YES"
+        "AbilityUnitDamageType"         "DAMAGE_TYPE_PHYSICAL"
+        "AbilityTextureName"            "luna_moon_glaive"
+        "AbilityUnitTargetType"         "DOTA_UNIT_TARGET_TEAM_ENEMY"
+        "AbilityUnitTargetTeam"         "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC | DOTA_UNIT_TARGET_BUILDING"
+
+        "precache"
+        {
+            "soundfile"         "soundevents/game_sounds_heroes/game_sounds_luna.vsndevts"
+            "particle"          "particles/units/heroes/hero_luna/luna_base_attack.vpcf"
+        }
+
+        // Special --------------------------------------------------------
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "range"                     "500 500 500 500"
+            }
+            "02"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "bounces"                   "20 20 20 20"
+            }
+            "03"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "damage_reduction_percent"  "20 15 10 5"
+            }
+        }
+
+        "Modifiers"
+        {
+            "modifier_moon_glaive"
+            {
+                "Passive"   "1"
+                "IsHidden"  "1"
+
+                "OnAttackLanded"
+                {
+                    "RunScript"
+                    {
+                        "ScriptFile"    "race/ranger/moon_glaive.lua"
+                        "Function"      "moon_glaive_start_create_dummy"
+                    }
+                }
+            }
+        }
+    }
+
+    "luna_moon_glaive_dummy_datadriven"
+    {
+        // General
+        //-------------------------------------------------------------------------------------------------------------
+        "BaseClass"             "ability_datadriven"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+        "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_YES"
+
+        "OnProjectileHitUnit"
+        {
+            "DeleteOnHit"   "1"
+
+            "FireSound"
+            {
+                "EffectName"    "Hero_Luna.MoonGlaive.Impact"
+                "Target"        "TARGET"
+            }
+
+            "RunScript"
+            {
+                "ScriptFile"    "race/ranger/moon_glaive.lua"
+                "Function"      "moon_glaive_bounce"
+            }
+
+        }
+
+        "Modifiers"
+        {
+            "modifier_moon_glaive_dummy_unit"
+            {
+                "States"
+                {
+                    "MODIFIER_STATE_INVULNERABLE"                   "MODIFIER_STATE_VALUE_ENABLED"
+                    "MODIFIER_STATE_NO_HEALTH_BAR"                  "MODIFIER_STATE_VALUE_ENABLED"
+                    "MODIFIER_STATE_NO_UNIT_COLLISION"              "MODIFIER_STATE_VALUE_ENABLED"
+                    "MODIFIER_STATE_NOT_ON_MINIMAP"                 "MODIFIER_STATE_VALUE_ENABLED"
+                    "MODIFIER_STATE_UNSELECTABLE"                   "MODIFIER_STATE_VALUE_ENABLED"
+                    "MODIFIER_STATE_FLYING"                         "MODIFIER_STATE_VALUE_ENABLED"
                 }
             }
         }

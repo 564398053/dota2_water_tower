@@ -1,7 +1,7 @@
 
 DEBUG_SPEW = 1
 
-HERO_ABILITY_TABLE_DEFAULT_LV1 = 
+HERO_ABILITY_TABLE_DEFAULT_LV1 =
 {
     "compound",
     "blink",
@@ -17,7 +17,7 @@ function CustomGameMode:InitGameMode()
 
 	-- DebugPrint
 	Convars:RegisterConvar('debug_spew', tostring(DEBUG_SPEW), 'Set to 1 to start spewing debug info. Set to 0 to disable.', 0)
-	
+
 	-- Event Hooks
 	ListenToGameEvent('entity_killed', Dynamic_Wrap(CustomGameMode, 'OnEntityKilled'), self)
 	ListenToGameEvent('dota_player_pick_hero', Dynamic_Wrap(CustomGameMode, 'OnPlayerPickHero'), self)
@@ -30,10 +30,10 @@ function CustomGameMode:InitGameMode()
 
     -- Register Listener
     CustomGameEventManager:RegisterListener( "update_selected_entities", Dynamic_Wrap(CustomGameMode, 'OnPlayerSelectedEntities'))
-   	CustomGameEventManager:RegisterListener( "repair_order", Dynamic_Wrap(CustomGameMode, "RepairOrder"))  	
+   	CustomGameEventManager:RegisterListener( "repair_order", Dynamic_Wrap(CustomGameMode, "RepairOrder"))
     CustomGameEventManager:RegisterListener( "building_helper_build_command", Dynamic_Wrap(BuildingHelper, "BuildCommand"))
 	CustomGameEventManager:RegisterListener( "building_helper_cancel_command", Dynamic_Wrap(BuildingHelper, "CancelCommand"))
-	
+
 	-- Full units file to get the custom values
 	GameRules.AbilityKV = LoadKeyValues("scripts/npc/npc_abilities_custom.txt")
   	GameRules.UnitKV = LoadKeyValues("scripts/npc/npc_units_custom.txt")
@@ -53,7 +53,7 @@ function CustomGameMode:OnPlayerPickHero(keys)
 	local hero = EntIndexToHScript(keys.heroindex)
 	local player = EntIndexToHScript(keys.player)
 	local playerID = hero:GetPlayerID()
-    
+
     -- set the initial skill of hero
     local abilityCount = hero:GetAbilityCount()
     local i = 0;
@@ -67,7 +67,7 @@ function CustomGameMode:OnPlayerPickHero(keys)
                 end
             end
         end
-        
+
         i = i + 1
     end
 
@@ -124,7 +124,7 @@ function CustomGameMode:OnEntityKilled( event )
 
 		-- Check units for downgrades
 		local building_name = killedUnit:GetUnitName()
-				
+
 		-- Substract 1 to the player building tracking table for that name
 		if player.buildings[building_name] then
 			player.buildings[building_name] = player.buildings[building_name] - 1
@@ -157,14 +157,14 @@ function CustomGameMode:OnEntityKilled( event )
 			end
 		end
 		player.structures = table_structures
-		
+
 		local table_units = {}
 		for _,unit in pairs(player.units) do
 			if unit and IsValidEntity(unit) then
 				table.insert(table_units, unit)
 			end
 		end
-		player.units = table_units		
+		player.units = table_units
 	end
 end
 
@@ -189,7 +189,7 @@ function CreateDrop (itemName, pos)
    CreateItemOnPositionSync(pos, newItem)
    newItem:LaunchLoot(false, 300, 0.75, pos + RandomVector(RandomFloat(50, 350)))
  end
- 
+
 -- on player chart
 function CustomGameMode:OnPlayerChat(keys)
     print("player chart")
@@ -200,8 +200,8 @@ function CustomGameMode:OnPlayerChat(keys)
     local player = PlayerResource:GetPlayer(playerid)
     local hero = player:GetAssignedHero()
     local position = hero:GetAbsOrigin()
-    
-    if keys.text == "m" then 
+
+    if keys.text == "m" then
         CreateDrop("item_glimmer_cape", position)
         CreateDrop("item_gem", position)
     elseif keys.text == "e" then
@@ -228,10 +228,10 @@ function CustomGameMode:OnPlayerSpawn(event)
 end
 
 function GenerateEnemy()
-    for i=1, 1 do
+    for i=1, 16 do
         local entityStart = Entities:FindByName(nil, "player1_path_corner_start")
         local enemyUnit = CreateUnitByName("bad_guy_Lv1", entityStart:GetOrigin(), false, nil, nil, DOTA_TEAM_BADGUYS)
- 
+
         enemyUnit:SetMustReachEachGoalEntity(true)
         enemyUnit:SetInitialGoalEntity(entityStart)
         enemyUnit:AddNewModifier(nil, nil, "modifier_phased", {duration=0.1})
