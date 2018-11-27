@@ -1,0 +1,13 @@
+.build-panel {
+    width: 400px;
+    height: 400px;
+    margin-left:76%;
+    margin-top: 76%;
+    vertical-align: top;
+}
+
+.button-size {
+    width: 58px;
+    height: 58px;
+    vertical-align: center;
+}
