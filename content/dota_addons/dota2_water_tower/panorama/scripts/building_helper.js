@@ -27,7 +27,7 @@ function StartBuildingHelper( params )
         builderIndex = params.builderIndex;
         var scale = params.scale;
         var entindex = params.entindex;
-        
+
         // If we chose to not recolor the ghost model, set it white
         var ghost_color = [0, 255, 0]
         if (!recolor_ghost)
@@ -71,16 +71,16 @@ function StartBuildingHelper( params )
             Particles.SetParticleControl(particle, 3, [0,0,0])
             overlayParticles.push(particle)
         }
-    } 
-    
+    }
+
     if (state == 'active')
-    {   
+    {
         $.Schedule(1/60, StartBuildingHelper);
 
         var mPos = GameUI.GetCursorPosition();
         var GamePos = Game.ScreenXYToWorld(mPos[0], mPos[1]);
 
-        if ( GamePos !== null ) 
+        if ( GamePos !== null )
         {
             SnapToGrid(GamePos, size)
 
@@ -106,15 +106,15 @@ function StartBuildingHelper( params )
                         return
 
                     var gridParticle = gridParticles[part]
-                    Particles.SetParticleControl(gridParticle, 0, pos)     
-                    part++; 
+                    Particles.SetParticleControl(gridParticle, 0, pos)
+                    part++;
 
                     // Grid color turns red when over invalid positions
                     // Until we get a good way perform clientside FindUnitsInRadius & Gridnav Check, the prevention will stay serverside
                     var screenX = Game.WorldToScreenX( pos[0], pos[1], pos[2] );
                     var screenY = Game.WorldToScreenY( pos[0], pos[1], pos[2] );
                     var mouseEntities = GameUI.FindScreenEntities( [screenX,screenY] );
-     
+
                     if (mouseEntities.length > 0)
                     {
                         color = [255,0,0]
@@ -125,7 +125,7 @@ function StartBuildingHelper( params )
                         color = [0,255,0]
                     }
 
-                    Particles.SetParticleControl(gridParticle, 2, color)            
+                    Particles.SetParticleControl(gridParticle, 2, color)
                 }
             }
 
@@ -151,7 +151,7 @@ function StartBuildingHelper( params )
                         return
 
                     var overlayParticle = overlayParticles[part2]
-                    Particles.SetParticleControl(overlayParticle, 0, pos2)     
+                    Particles.SetParticleControl(overlayParticle, 0, pos2)
                     part2++;
 
                     // Grid color turns red when over invalid positions
@@ -159,13 +159,13 @@ function StartBuildingHelper( params )
                     var screenX2 = Game.WorldToScreenX( pos2[0], pos2[1], pos2[2] );
                     var screenY2 = Game.WorldToScreenY( pos2[0], pos2[1], pos2[2] );
                     var mouseEntities2 = GameUI.FindScreenEntities( [screenX2,screenY2] );
-     
+
                     if (mouseEntities2.length > 0)
                         color = [255,0,0]
                     else
                         color = [255,255,255] //White on empty positions
 
-                    Particles.SetParticleControl(overlayParticle, 2, color)        
+                    Particles.SetParticleControl(overlayParticle, 2, color)
                     Particles.SetParticleControl(overlayParticle, 3, [overlay_alpha,0,0])
                 }
             }
@@ -237,12 +237,12 @@ function SendCancelCommand( params )
 
 function SnapToGrid(vec, size) {
     // Buildings are centered differently when the size is odd.
-    if (size % 2 != 0) 
+    if (size % 2 != 0)
     {
         vec[0] = SnapToGrid32(vec[0])
         vec[1] = SnapToGrid32(vec[1])
-    } 
-    else 
+    }
+    else
     {
         vec[0] = SnapToGrid64(vec[0])
         vec[1] = SnapToGrid64(vec[1])

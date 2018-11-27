@@ -1,0 +1,72 @@
+// enemies
+"DOTAUnits"
+{
+    "enemy_Lv1"
+    {
+        // General
+        //----------------------------------------------------------------
+        "BaseClass"                    "npc_dota_creature"
+        "Model"                        "models\items\courier\mighty_chicken\mighty_chicken.vmdl"
+        "ModelScale"                   "0.8"
+        "Level"                        "1"
+        "HealthBarOffset"              "140"
+        "SelectionGroup"               "bad_guy_Lv1"
+        "SoundSet"                     "Hero_Kunkka"
+        "UnitLabel"                    "bad_guy_Lv1"
+
+        "precache"
+        {
+            "soundfile" "soundevents/game_sounds_heroes/game_sounds_kunkka.vsndevts"
+        }
+
+        "PathfindingSearchDepthScale" "1"
+
+        // Abilities
+        //----------------------------------------------------------------
+        "AbilityLayout"                "4"
+        "Ability1"                     ""
+        "Ability2"                     ""
+        "Ability3"                     ""
+        "Ability4"                     ""
+
+        // Armor
+        //----------------------------------------------------------------
+        "ArmorPhysical"                "0"
+        "MagicalResistance"            "0"
+
+        // Bounty
+        //----------------------------------------------------------------
+        "BountyGoldMin"                "1.0"
+        "BountyGoldMax"                "4.0"
+
+        // Bounds
+        //----------------------------------------------------------------
+        "BoundsHullName"                "DOTA_HULL_SIZE_SMALL"
+        "RingRadius"                    "36"
+        "CollisionSize"                 "1"
+
+        // Movement
+        //----------------------------------------------------------------
+        "MovementCapabilities"         "DOTA_UNIT_CAP_MOVE_GROUND"
+        "MovementSpeed"                "550"
+        "MovementTurnRate"             "4"
+
+        // Status
+        //----------------------------------------------------------------
+        "StatusHealth"                "199999"
+        "StatusHealthRegen"           "0"
+        "StatusMana"                  "0"
+        "StatusManaRegen"             "0"
+
+        // Vision
+        //----------------------------------------------------------------
+        "VisionDaytimeRange"         "800"
+        "VisionNighttimeRange"       "600"
+
+        // Team
+        //----------------------------------------------------------------
+        "TeamName"                    "DOTA_TEAM_BAD_GUYS"
+        "CombatClassAttack"           "DOTA_COMBAT_CLASS_ATTACK_BASIC"
+        "CombatClassDefend"           "DOTA_COMBAT_CLASS_DEFEND_BASIC"
+    }
+}

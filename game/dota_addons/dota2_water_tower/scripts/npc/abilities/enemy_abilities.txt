@@ -1,0 +1,5 @@
+// enemies' abilities
+"DOTAAbilities"
+{
+
+}

@@ -10,8 +10,8 @@
         "AbilityLayout"                "6"
         "Ability1"                     "blink"
         "Ability2"                     "compound"
-        "Ability3"                     "build_ranger_luna_Lv1"
-        "Ability4"                     "build_ranger_concussive_hunter_Lv1"
+        "Ability3"                     "build_ranger_first_stage"
+        "Ability4"                     "build_ranger_final_stage"
         "Ability5"                     "build_ranger_venomancer_Lv1"
         "Ability6"                     "build_ranger_beastmaster_Lv1"
 

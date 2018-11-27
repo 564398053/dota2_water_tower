@@ -230,7 +230,7 @@ end
 function GenerateEnemy()
     for i=1, 16 do
         local entityStart = Entities:FindByName(nil, "player1_path_corner_start")
-        local enemyUnit = CreateUnitByName("bad_guy_Lv1", entityStart:GetOrigin(), false, nil, nil, DOTA_TEAM_BADGUYS)
+        local enemyUnit = CreateUnitByName("enemy_Lv1", entityStart:GetOrigin(), false, nil, nil, DOTA_TEAM_BADGUYS)
 
         enemyUnit:SetMustReachEachGoalEntity(true)
         enemyUnit:SetInitialGoalEntity(entityStart)
