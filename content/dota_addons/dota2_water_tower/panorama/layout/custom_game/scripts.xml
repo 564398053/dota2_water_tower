@@ -1,38 +1,17 @@
 <root>
 	<styles>
     	<include src="s2r://panorama/styles/dotastyles.vcss_c" />
-    	<include src="file://{resources}/styles/custom_game/builder_panel.css" />
   	</styles>
 	<scripts>
 		<include src="file://{resources}/scripts/unit_selection.js" />
 		<include src="file://{resources}/scripts/clicks.js" />
 		<include src="file://{resources}/scripts/building_helper.js" />
-		<include src="file://{resources}/scripts/custom_game/builder_panel.js" />
 	</scripts>
 	<script>
 		$.Msg( "Compiled Panorama Scripts!" );
-		$("#build_button_1").SetPanelEvent(
-			"onmouseover",
-  			function(){
-				$.Msg( "Panorama onmouseover!" );
-    			$.DispatchEvent("DOTAShowTextTooltip", $("#build_button_1"), "This is my tooltip!");
-  			}
-		);
-		$("#build_button_1").SetPanelEvent(
-			"onmouseout",
-  			function(){
-				$.Msg( "Panorama onmouseout!" );
-    			$.DispatchEvent("DOTAHideTextTooltip");
-  			}
-		);
 	</script>
 	<Panel>
 		<!-- (Panel hierarchy goes here.) -->
 		<Label text="#DOTA_Tooltip_Ability_build_ranger_first_stage" />
-		<Panel id="build_panel" class="build-panel" style="border: 1px solid red;">
-			<Button class="button-size">
-				<DOTAHeroImage id="build_button_1" heroimagestyle="portrait" heroname="npc_dota_hero_windrunner" onmouseactivate="BuildUnit('ranger_first_stage')" />
-			</Button>
-		</Panel>
 	</Panel>
 </root>

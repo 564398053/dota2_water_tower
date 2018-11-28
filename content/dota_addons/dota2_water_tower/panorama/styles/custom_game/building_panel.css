@@ -1,0 +1,17 @@
+.building-panel {
+    width: 20%;
+    height: 20%;
+    margin-left: 90%;
+    margin-top: 80%;
+    border: 1px solid red;
+}
+
+.button-size {
+    width: 58px;
+    height: 58px;
+    vertical-align: center;
+}
+
+.building-panel--hide {
+    visibility: collapse;
+}
