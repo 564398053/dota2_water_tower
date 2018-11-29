@@ -7,63 +7,58 @@
         <include src="file://{resources}/scripts/custom_game/building_panel.js" />
     </scripts>
     <script>
-        // sadly dota2 do not support let keyword. we need a wrapper function to limit the variable scope.
-        (function () {
-            // set tooltips
-            unitNames = new Array("ranger_first_stage", "ranger_middle_stage", "ranger_final_stage",
-                            "unset", "unset", "unset",
-                            "unset", "unset", "ranger_first_stage");
-            for(i = 0; i < 9; ++i) {
-                btn = $("#button_" + i);
-                unitName = unitNames[i];
-                tooltip = "#tooltip_build_" + unitName;
-                $("#button_" + i).SetPanelEvent(
-                    "onmouseover",
-                    function() { $.DispatchEvent("DOTAShowTextTooltip", btn, tooltip); }
-                );
-                $("#button_" + i).SetPanelEvent(
-                    "onmouseout",
-                    function() { $.DispatchEvent("DOTAHideTextTooltip"); }
-                );
-                $("#button_" + i).SetPanelEvent(
-                    "onmouseactivate",
-                    function() { BuildUnit(unitName); }
-                );
-            }
-        })();
+        // sadly js in dota2 do not support 'let' keyword yet.
+        //   seems hard to define the right local variable.
+        //   all the local variable in loop with same name refers to the last defined one.
+        $.Msg("building panel loaded");
     </script>
     <Panel>
         <Panel id="building_panel_container" class="building-panel-container">
             <Panel class="building-panel-row">
-                <Button id="button_0" class="ability-button">
+                <Button id="btn1" class="ability-button"
+                    onmouseout="$.DispatchEvent('DOTAHideTextTooltip')"
+                    onmouseover="$.DispatchEvent('DOTAShowTextTooltip', $('#btn1'), 'build_ranger_first_stage')"
+                    onmouseactivate="Cast('build_ranger_first_stage')">
+                    <DOTAHeroImage heroname="nevermore"/>
+                </Button>
+                <Button id="btn2" class="ability-button"
+                    onmouseout="$.DispatchEvent('DOTAHideTextTooltip')"
+                    onmouseover="$.DispatchEvent('DOTAShowTextTooltip', $('#btn1'), 'build_ranger_middle_stage')"
+                    onmouseactivate="Cast('ranger_middle_stage')">
                     <DOTAHeroImage heroname="npc_dota_hero_nevermore"/>
                 </Button>
-                <Button id="button_1" class="ability-button">
-                    <DOTAHeroImage heroname="npc_dota_hero_nevermore"/>
-                </Button>
-                <Button id="button_2" class="ability-button">
+                <Button id="btn3" class="ability-button"
+                    onmouseout="$.DispatchEvent('DOTAHideTextTooltip')"
+                    onmouseover="$.DispatchEvent('DOTAShowTextTooltip', $('#btn1'), 'build_ranger_final_stage')"
+                    onmouseactivate="Cast('ranger_final_stage')">
                     <DOTAHeroImage heroname="npc_dota_hero_nevermore"/>
                 </Button>
             </Panel>
             <Panel class="building-panel-row">
-                <Button id="button_3" class="ability-button">
+                <Button id="btn4" class="ability-button"
+                    onmouseout="$.DispatchEvent('DOTAHideTextTooltip')"
+                    onmouseover="$.DispatchEvent('DOTAShowTextTooltip', $('#btn4'), 'build_ranger_middle_stage')"
+                    onmouseactivate="Cast('build_ranger_middle_stage')">
                     <DOTAHeroImage heroname="npc_dota_hero_nevermore"/>
                 </Button>
-                <Button id="button_4" class="ability-button">
+                <Button id="btn5" class="ability-button">
                     <DOTAHeroImage heroname="npc_dota_hero_nevermore"/>
                 </Button>
-                <Button id="button_5" class="ability-button">
+                <Button id="btn6" class="ability-button">
                     <DOTAHeroImage heroname="npc_dota_hero_nevermore"/>
                 </Button>
             </Panel>
             <Panel class="building-panel-row">
-                <Button id="button_6" class="ability-button">
+                <Button id="btn7" class="ability-button"
+                    onmouseout="$.DispatchEvent('DOTAHideTextTooltip')"
+                    onmouseover="$.DispatchEvent('DOTAShowTextTooltip', $('#btn7'), 'build_ranger_final_stage')"
+                    onmouseactivate="Cast('build_ranger_final_stage')">
+                    <DOTAHeroImage heroname="mirana"/>
+                </Button>
+                <Button id="btn8" class="ability-button">
                     <DOTAHeroImage heroname="npc_dota_hero_nevermore"/>
                 </Button>
-                <Button id="button_7" class="ability-button">
-                    <DOTAHeroImage heroname="npc_dota_hero_nevermore"/>
-                </Button>
-                <Button id="button_8" class="ability-button">
+                <Button id="btn9" class="ability-button">
                     <DOTAHeroImage heroname="npc_dota_hero_nevermore"/>
                 </Button>
             </Panel>

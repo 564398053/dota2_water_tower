@@ -9,6 +9,7 @@
         "BaseClass"                      "ability_datadriven"
         "AbilityTextureName"             "build_ranger_first_stage"
         "MaxLevel"                       "1"
+        "IsHidden"                       "1"
 
         "AbilityBehavior"                "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
         "AbilityCastPoint"                "0"
@@ -62,6 +63,7 @@
         "BaseClass"                      "ability_datadriven"
         "AbilityTextureName"             "ranger_middle_stage"
         "MaxLevel"                       "1"
+        "IsHidden"          "1"
 
         "AbilityBehavior"                "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
         "AbilityCastPoint"                "0"
@@ -115,6 +117,7 @@
         "BaseClass"                      "ability_datadriven"
         "AbilityTextureName"             "ranger_final_stage"
         "MaxLevel"                       "1"
+        "IsHidden"                       "1"
 
         "AbilityBehavior"                "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
         "AbilityCastPoint"               "0"

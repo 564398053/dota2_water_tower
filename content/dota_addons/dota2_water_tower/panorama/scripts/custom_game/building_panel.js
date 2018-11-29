@@ -1,16 +1,14 @@
-"use strict";
+'use strict';
 
-$.Msg("load building_panel.js start");;
-
-function BuildUnit(unitName) {
-    $.Msg( "In function BuildUnit():", unitName );
+function Cast( abilityName ) {
+    $.Msg( '[PUI] Cast ability: ', abilityName );
 
     // TODO: 取消当前的技能准备.
-    $.DispatchEvent("DOTAHideAbilityTooltip");
-    $("#building_panel").ToggleClass("building-panel--hide");
+    $.DispatchEvent( 'DOTAHideAbilityTooltip' );
+    $( '#building_panel_container' ).ToggleClass( 'hide' );
 
     var order = {
-        AbilityIndex : Entities.GetAbility( Players.GetPlayerHeroEntityIndex( Players.GetLocalPlayer() ), 2 ),
+        AbilityIndex : Entities.GetAbilityByName( Players.GetPlayerHeroEntityIndex( Players.GetLocalPlayer() ), abilityName ),
         QueueBehavior : OrderQueueBehavior_t.DOTA_ORDER_QUEUE_NEVER,
         ShowEffects : false,
         OrderType : dotaunitorder_t.DOTA_UNIT_ORDER_CAST_NO_TARGET
@@ -19,7 +17,8 @@ function BuildUnit(unitName) {
     if ( abilityBehavior & DOTA_ABILITY_BEHAVIOR.DOTA_ABILITY_BEHAVIOR_POINT )
     {
         order.OrderType = dotaunitorder_t.DOTA_UNIT_ORDER_CAST_POSITION;
-        order.Position = GetMouseCastPosition( order.AbilityIndex );
+        order.Position = GameUI.GetCursorPosition()
+        $.Msg( 'order.Position', order.Position );
     }
 
     Game.PrepareUnitOrders( order );
@@ -28,29 +27,14 @@ function BuildUnit(unitName) {
 // JS directly interact with elements in game.
 function OnExecuteAbility1ButtonPressed( cmdName )
 {
-    $.Msg( "ExecuteAbility1 as " + cmdName );
-    // toggle panel
-    $("#building_panel_container").ToggleClass("hide");
-
-    // var order = {
-    //     AbilityIndex : Entities.GetAbility( Players.GetPlayerHeroEntityIndex( Players.GetLocalPlayer() ), 1 ),
-    //     QueueBehavior : OrderQueueBehavior_t.DOTA_ORDER_QUEUE_NEVER,
-    //     ShowEffects : false,
-    //     OrderType : dotaunitorder_t.DOTA_UNIT_ORDER_CAST_NO_TARGET
-    // };
-    // var abilityBehavior = Abilities.GetBehavior( order.AbilityIndex );
-    // if ( abilityBehavior & DOTA_ABILITY_BEHAVIOR.DOTA_ABILITY_BEHAVIOR_POINT )
-    // {
-    //     order.OrderType = dotaunitorder_t.DOTA_UNIT_ORDER_CAST_POSITION;
-    //     order.Position = GetMouseCastPosition( order.AbilityIndex );
-    // }
-
-    // Game.PrepareUnitOrders( order );
+    $.Msg( 'ExecuteAbility1 as ' + cmdName );
+    // toggle panel visible
+    $( '#building_panel_container' ).ToggleClass( 'hide' );
 }
 
 (function () {
-    Game.AddCommand( "+ToggleBuildingPanel", OnExecuteAbility1ButtonPressed, "", 0 );
+    Game.AddCommand( '+ToggleBuildingPanel', OnExecuteAbility1ButtonPressed, '', 0 );
 })();
 
 
-$.Msg("load building_panel.js complete");
+$.Msg( '[PUI] load building_panel.js complete' );
