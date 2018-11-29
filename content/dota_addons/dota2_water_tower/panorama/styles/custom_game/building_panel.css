@@ -1,17 +1,28 @@
-.building-panel {
-    width: 20%;
-    height: 20%;
-    margin-left: 90%;
-    margin-top: 80%;
-    border: 1px solid red;
+.building-panel-container {
+    margin-left: 860px;
+    margin-top: 600px;
+    width: fit-children;
+    padding: 4px;
+    background-color: #1B1E21;
+    box-shadow: inset 0px -2px 2px #212121;
+    opacity: 1;
+    flow-children: down;
 }
 
-.button-size {
-    width: 58px;
-    height: 58px;
-    vertical-align: center;
+.building-panel-row {
+    flow-children: right;
 }
 
-.building-panel--hide {
+.hide {
     visibility: collapse;
+}
+
+.ability-button {
+    height: 40px;
+    width: 50px;
+    transition-property: transform;
+    transition-duration: 0.1s;
+    margin: 4px;
+    border-radius: 4px;
+    box-shadow: fill #000000 0px 0px 8px 0px;
 }

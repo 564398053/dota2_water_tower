@@ -5,6 +5,7 @@ $.Msg("load building_panel.js start");;
 function BuildUnit(unitName) {
     $.Msg( "In function BuildUnit():", unitName );
 
+    // TODO: 取消当前的技能准备.
     $.DispatchEvent("DOTAHideAbilityTooltip");
     $("#building_panel").ToggleClass("building-panel--hide");
 
@@ -29,7 +30,7 @@ function OnExecuteAbility1ButtonPressed( cmdName )
 {
     $.Msg( "ExecuteAbility1 as " + cmdName );
     // toggle panel
-    $("#building_panel").ToggleClass("building-panel--hide");
+    $("#building_panel_container").ToggleClass("hide");
 
     // var order = {
     //     AbilityIndex : Entities.GetAbility( Players.GetPlayerHeroEntityIndex( Players.GetLocalPlayer() ), 1 ),
@@ -47,11 +48,6 @@ function OnExecuteAbility1ButtonPressed( cmdName )
     // Game.PrepareUnitOrders( order );
 }
 
-function TogglePanel(panel)
-{
-}
-
-// Immediately-invoked Function Expression (IIFE) pattern
 (function () {
     Game.AddCommand( "+ToggleBuildingPanel", OnExecuteAbility1ButtonPressed, "", 0 );
 })();

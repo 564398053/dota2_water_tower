@@ -3524,7 +3524,7 @@
         // General -------------------------------------------------------
         "BaseClass"             "ability_datadriven"
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
-        "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_YES"
+        //"SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_YES"
         "AbilityUnitDamageType"         "DAMAGE_TYPE_PHYSICAL"
         "AbilityTextureName"            "luna_moon_glaive"
         "AbilityUnitTargetType"         "DOTA_UNIT_TARGET_TEAM_ENEMY"

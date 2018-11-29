@@ -1,3 +1,5 @@
+﻿// 配色方案： http://colorschemedesigner.com/csd-3.5/#3p61Tw0w0w0w0
+
 "lang"
 {
 "Language" "schinese"
@@ -40,6 +42,11 @@
 
 "bad_guy_Lv1" "小鸡小鸡咯咯哒"
 
+
+"tooltip_build_unset" "未设置tooltip"
+"tooltip_build_ranger_first_stage" "<font color='#63DD8D'>初阶猎手</font>\n<br/></br>金币: <font color='#FFBB73'>100</font>  人口: <font color='#FFBB73'>2</font><br/>攻: <font color='#A65500'>43</font><br/>攻速: 1.5<br/>范围: 700<br/>技能: <font color='#A65500'>多重攻击x4</font>"
+"tooltip_build_ranger_middle_stage" "<font color='#63DD8D'>熟练猎手</font>\n<br/></br>金币: <font color='#FFBB73'>900</font>  人口: <font color='#FFBB73'>3</font><br/>攻: <font color='#A65500'>309</font><br/>攻速: 1.5<br/>范围: 700<br/>技能: <font color='#A65500'>多重攻击x10</font>"
+"tooltip_build_ranger_final_stage" "<font color='#63DD8D'>高阶猎手</font>\n<br/></br>金币: <font color='#FFBB73'>900</font>  人口: <font color='#FFBB73'>5</font><br/>攻: <font color='#A65500'>1003</font><br/>攻速: 1.5<br/>范围: 700<br/>技能: <font color='#A65500'>多重攻击x10, 强击光环</font>"
 "DOTA_Tooltip_Ability_compound"	"合成"
 "DOTA_Tooltip_Ability_build_ranger_first_stage"  "建造初阶猎手"
 "DOTA_Tooltip_Ability_build_ranger_middle_stage" "建造熟练猎手"
