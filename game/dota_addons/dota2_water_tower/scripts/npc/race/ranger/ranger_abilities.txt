@@ -13,6 +13,7 @@
 
         "AbilityBehavior"                "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
         "AbilityCastPoint"                "0"
+        "AbilityType"                    "DOTA_ABILITY_TYPE_HIDDEN"
 
         // BuildingHelper info
         "Building"                        "1" //bool
@@ -1123,8 +1124,8 @@
         }
     }
 
-    // 建造标记猎手
-    "build_ranger_death_track"
+    // 建造标记猎手Lv1
+    "build_ranger_death_track_Lv1"
     {
         "BaseClass"                      "ability_datadriven"
         "AbilityTextureName"             "build_ranger_bounty_hunter"
@@ -1142,7 +1143,7 @@
         "Scale"                           "0" //bool
         "PlayerCanControl"                "1" //bool
 
-        "UnitName"                       "ranger_death_track"
+        "UnitName"                       "ranger_death_track_Lv1"
         "AbilityCooldown"                "0"
         "AbilityGoldCost"                "0"
         // End of BuildingHelper info
@@ -2976,7 +2977,7 @@
         {
             "01"
             {
-                "var_type"              "FIELD_FLOAT"
+                "var_type"              "FIELD_INTEGER"
                 "duration"              "5 5"
             }
             "02"

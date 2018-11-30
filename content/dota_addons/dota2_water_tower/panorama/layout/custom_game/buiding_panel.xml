@@ -10,56 +10,73 @@
         // sadly js in dota2 do not support 'let' keyword yet.
         //   seems hard to define the right local variable.
         //   all the local variable in loop with same name refers to the last defined one.
-        $.Msg("building panel loaded");
     </script>
     <Panel>
         <Panel id="building_panel_container" class="building-panel-container">
             <Panel class="building-panel-row">
-                <Button id="btn1" class="ability-button"
+                <Button id="btn1_1" class="ability-button"
                     onmouseout="$.DispatchEvent('DOTAHideTextTooltip')"
-                    onmouseover="$.DispatchEvent('DOTAShowTextTooltip', $('#btn1'), 'build_ranger_first_stage')"
+                    onmouseover="$.DispatchEvent('DOTAShowTextTooltip', $('#btn1_1'), 'build_ranger_first_stage')"
                     onmouseactivate="Cast('build_ranger_first_stage')">
-                    <DOTAHeroImage heroname="nevermore"/>
-                </Button>
-                <Button id="btn2" class="ability-button"
-                    onmouseout="$.DispatchEvent('DOTAHideTextTooltip')"
-                    onmouseover="$.DispatchEvent('DOTAShowTextTooltip', $('#btn1'), 'build_ranger_middle_stage')"
-                    onmouseactivate="Cast('ranger_middle_stage')">
                     <DOTAHeroImage heroname="npc_dota_hero_nevermore"/>
                 </Button>
-                <Button id="btn3" class="ability-button"
+                <Button id="btn1_2" class="ability-button"
                     onmouseout="$.DispatchEvent('DOTAHideTextTooltip')"
-                    onmouseover="$.DispatchEvent('DOTAShowTextTooltip', $('#btn1'), 'build_ranger_final_stage')"
-                    onmouseactivate="Cast('ranger_final_stage')">
-                    <DOTAHeroImage heroname="npc_dota_hero_nevermore"/>
+                    onmouseover="$.DispatchEvent('DOTAShowTextTooltip', $('#btn1_2'), 'build_ranger_venomancer_Lv1')"
+                    onmouseactivate="Cast('build_ranger_venomancer_Lv1')">
+                    <DOTAHeroImage heroname="npc_dota_hero_venomancer"/>
+                </Button>
+                <Button id="btn1_3" class="ability-button"
+                    onmouseout="$.DispatchEvent('DOTAHideTextTooltip')"
+                    onmouseover="$.DispatchEvent('DOTAShowTextTooltip', $('#btn1_3'), 'build_ranger_luna_Lv1')"
+                    onmouseactivate="Cast('build_ranger_luna_Lv1')">
+                    <DOTAHeroImage heroname="npc_dota_hero_luna"/>
+                </Button>
+                <Button id="btn1_4" class="ability-button"
+                    onmouseout="$.DispatchEvent('DOTAHideTextTooltip')"
+                    onmouseover="$.DispatchEvent('DOTAShowTextTooltip', $('#btn1_4'), 'build_ranger_concussive_hunter_Lv1')"
+                    onmouseactivate="Cast('build_ranger_concussive_hunter_Lv1')">
+                    <DOTAHeroImage heroname="npc_dota_hero_viper"/>
                 </Button>
             </Panel>
             <Panel class="building-panel-row">
-                <Button id="btn4" class="ability-button"
+                <Button id="btn2_1" class="ability-button"
                     onmouseout="$.DispatchEvent('DOTAHideTextTooltip')"
-                    onmouseover="$.DispatchEvent('DOTAShowTextTooltip', $('#btn4'), 'build_ranger_middle_stage')"
+                    onmouseover="$.DispatchEvent('DOTAShowTextTooltip', $('#btn2_1'), 'build_ranger_middle_stage')"
                     onmouseactivate="Cast('build_ranger_middle_stage')">
                     <DOTAHeroImage heroname="npc_dota_hero_nevermore"/>
                 </Button>
-                <Button id="btn5" class="ability-button">
-                    <DOTAHeroImage heroname="npc_dota_hero_nevermore"/>
+                <Button id="btn2_2" class="ability-button"
+                    onmouseout="$.DispatchEvent('DOTAHideTextTooltip')"
+                    onmouseover="$.DispatchEvent('DOTAShowTextTooltip', $('#btn2_2'), 'build_ranger_beastmaster_Lv1')"
+                    onmouseactivate="Cast('build_ranger_beastmaster_Lv1')">
+                    <DOTAHeroImage heroname="npc_dota_hero_beastmaster"/>
                 </Button>
-                <Button id="btn6" class="ability-button">
-                    <DOTAHeroImage heroname="npc_dota_hero_nevermore"/>
+                <Button id="btn2_3" class="ability-button"
+                    onmouseout="$.DispatchEvent('DOTAHideTextTooltip')"
+                    onmouseover="$.DispatchEvent('DOTAShowTextTooltip', $('#btn2_3'), 'build_ranger_sniper_Lv1')"
+                    onmouseactivate="Cast('build_ranger_sniper_Lv1')">
+                    <DOTAHeroImage heroname="npc_dota_hero_sniper"/>
+                </Button>
+                <Button id="btn2_4" class="ability-button"
+                    onmouseout="$.DispatchEvent('DOTAHideTextTooltip')"
+                    onmouseover="$.DispatchEvent('DOTAShowTextTooltip', $('#btn2_4'), 'build_ranger_death_track_Lv1')"
+                    onmouseactivate="Cast('build_ranger_death_track_Lv1')">
+                    <DOTAHeroImage heroname="npc_dota_hero_bounty_hunter"/>
                 </Button>
             </Panel>
             <Panel class="building-panel-row">
-                <Button id="btn7" class="ability-button"
+                <Button id="btn3_1" class="ability-button"
                     onmouseout="$.DispatchEvent('DOTAHideTextTooltip')"
-                    onmouseover="$.DispatchEvent('DOTAShowTextTooltip', $('#btn7'), 'build_ranger_final_stage')"
+                    onmouseover="$.DispatchEvent('DOTAShowTextTooltip', $('#btn3_1'), 'build_ranger_final_stage')"
                     onmouseactivate="Cast('build_ranger_final_stage')">
                     <DOTAHeroImage heroname="mirana"/>
                 </Button>
-                <Button id="btn8" class="ability-button">
-                    <DOTAHeroImage heroname="npc_dota_hero_nevermore"/>
+                <Button id="btn3_2" class="ability-button">
+                    <DOTAHeroImage heroname=""/>
                 </Button>
-                <Button id="btn9" class="ability-button">
-                    <DOTAHeroImage heroname="npc_dota_hero_nevermore"/>
+                <Button id="btn3_3" class="ability-button">
+                    <DOTAHeroImage heroname=""/>
                 </Button>
             </Panel>
         </Panel>

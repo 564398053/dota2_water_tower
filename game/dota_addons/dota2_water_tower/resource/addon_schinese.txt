@@ -26,7 +26,7 @@
 "ranger_sniper_Lv3"  "狙击猎手Lv3"
 "ranger_sniper_Lv4"  "狙击猎手Lv4"
 "ranger_sniper_Lv5"  "赫米特·奈辛瓦里" // Hemet Nesingwary
-"ranger_death_track" "标记猎手"
+"ranger_death_track_Lv1" "标记猎手"
 "ranger_sniper_coup_de_grace" "爆头"
 "ranger_venomancer_Lv1" "毒蛇猎手Lv1"
 "ranger_venomancer_Lv2" "毒蛇猎手Lv2"

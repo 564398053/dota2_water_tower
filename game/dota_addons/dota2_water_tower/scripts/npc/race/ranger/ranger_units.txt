@@ -1811,8 +1811,8 @@
     }
 
 
-    // 标记猎手
-    "ranger_death_track"
+    // 标记猎手Lv1
+    "ranger_death_track_Lv1"
     {
         // General -------------------------------------------------------
         "BaseClass"                     "npc_dota_creature"

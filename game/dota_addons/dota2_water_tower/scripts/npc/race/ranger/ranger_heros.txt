@@ -1,0 +1,31 @@
+"DOTAHeroes"
+{
+    // ranger见习游侠
+    "npc_dota_hero_windrunner"
+    {
+        "override_hero"                "npc_dota_hero_windrunner"
+
+        "UnitLabel"                    "builder"
+
+        "AbilityLayout"                "4"
+        "Ability1"                     "blink"
+        "Ability2"                     "compound"
+        "Ability3"                     ""
+        "Ability4"                     ""
+        "Ability5"                     "build_ranger_first_stage"
+        "Ability6"                     "build_ranger_middle_stage"
+        "Ability7"                     "build_ranger_final_stage"
+        "Ability8"                     "build_ranger_venomancer_Lv1"
+        "Ability9"                     "build_ranger_beastmaster_Lv1"
+        "Ability10"                    "" // TODO.
+        "Ability11"                    "build_ranger_luna_Lv1"
+        "Ability12"                    "build_ranger_sniper_Lv1"
+        "Ability13"                    "" // TODO
+        "Ability14"                    "build_ranger_concussive_hunter_Lv1"
+        "Ability15"                    "build_ranger_death_track_Lv1"
+
+        "SelectOnSpawn"                "1"
+        "MovementCapabilities"         "DOTA_UNIT_CAP_MOVE_FLY"
+        "MovementSpeed"                "550"
+    }
+}
