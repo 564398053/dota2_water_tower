@@ -1,5 +1,13 @@
 'use strict';
 
+if (!Game.WT) { Game.WT = {}; }
+
+Game.WT.building_panel = $( '#building_panel_container' );
+Game.WT.OnToggleBuildingPanel = function()
+{
+    Game.WT.building_panel.ToggleClass( 'hide' );
+}
+
 function Cast( abilityName ) {
     $.Msg( '[PUI] Cast ability: ', abilityName );
 
@@ -23,18 +31,5 @@ function Cast( abilityName ) {
 
     Game.PrepareUnitOrders( order );
 }
-
-// JS directly interact with elements in game.
-function OnExecuteAbility1ButtonPressed( cmdName )
-{
-    $.Msg( 'ExecuteAbility1 as ' + cmdName );
-    // toggle panel visible
-    $( '#building_panel_container' ).ToggleClass( 'hide' );
-}
-
-(function () {
-    Game.AddCommand( '+ToggleBuildingPanel', OnExecuteAbility1ButtonPressed, '', 0 );
-})();
-
 
 $.Msg( '[PUI] load building_panel.js complete' );

@@ -23,9 +23,10 @@
     </script>
 
 	<Panel>
-		<CustomUIElement type="Hud" 				layoutfile="file://{resources}/layout/custom_game/scripts.xml" />
-		<CustomUIElement type="Hud" 				layoutfile="file://{resources}/layout/custom_game/resource.xml" />
-		<CustomUIElement type="Hud" 				layoutfile="file://{resources}/layout/custom_game/notifications.xml" />
+		<CustomUIElement type="Hud" layoutfile="file://{resources}/layout/custom_game/scripts.xml" />
+		<CustomUIElement type="Hud" layoutfile="file://{resources}/layout/custom_game/resource.xml" />
+		<CustomUIElement type="Hud" layoutfile="file://{resources}/layout/custom_game/notifications.xml" />
         <CustomUIElement type="Hud" layoutfile="file://{resources}/layout/custom_game/buiding_panel.xml" />
+        <CustomUIElement type="Hud" layoutfile="file://{resources}/layout/custom_game/keybinds.xml" />
 	</Panel>
 </root>
