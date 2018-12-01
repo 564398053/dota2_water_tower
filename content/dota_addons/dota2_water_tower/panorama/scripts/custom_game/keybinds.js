@@ -6,6 +6,8 @@
 
 // Hence, their relegation to isolation here.
 
+if( !Game.WT ) { Game.WT = {}; }
+
 function WrapFunction(name) {
     return function() {
         (name)();
