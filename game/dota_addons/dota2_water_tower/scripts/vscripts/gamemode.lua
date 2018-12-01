@@ -15,6 +15,13 @@ function CustomGameMode:InitGameMode()
 	GameRules:GetGameModeEntity():SetHUDVisible(6, false)
 	GameRules:GetGameModeEntity():SetCameraDistanceOverride(1300)
 
+    -- Create a timer to handle the enemy generate for each level.
+    Timers:CreateTimer("GoToNextLevel", {
+        useGameTime = true,
+        endTime = 30,  -- in seconds
+        callback = CustomGameMode.GoToNextLevel
+    })
+
 	-- DebugPrint
 	Convars:RegisterConvar('debug_spew', tostring(DEBUG_SPEW), 'Set to 1 to start spewing debug info. Set to 0 to disable.', 0)
 
@@ -24,6 +31,7 @@ function CustomGameMode:InitGameMode()
     ListenToGameEvent('player_chat', Dynamic_Wrap(CustomGameMode, 'OnPlayerChat'), self)
     ListenToGameEvent('player_spawn', Dynamic_Wrap(CustomGameMode, 'OnPlayerSpawn'), self)
     ListenToGameEvent('npc_spawned', Dynamic_Wrap(CustomGameMode, 'OnNpcSpawned'), self)
+    ListenToGameEvent('game_start', Dynamic_Wrap(CustomGameMode, 'OnGameStart'), self)
 
 	-- Filters
     GameRules:GetGameModeEntity():SetExecuteOrderFilter( Dynamic_Wrap( CustomGameMode, "FilterExecuteOrder" ), self )
@@ -62,9 +70,13 @@ function CustomGameMode:OnPlayerPickHero(keys)
         if ability then
             local abilityName = ability:GetName()
             for k, v in pairs( HERO_ABILITY_TABLE_DEFAULT_LV1 ) do
-                if abilityName == v or StringStartsWith(abilityName, "build_") then
+                if abilityName == v then
                     ability:SetLevel( 1 )
                 end
+            end
+
+            if (StringStartsWith(abilityName, "build_")) then
+                ability:SetLevel( 1 )
             end
         end
 
@@ -204,8 +216,6 @@ function CustomGameMode:OnPlayerChat(keys)
     if keys.text == "m" then
         CreateDrop("item_glimmer_cape", position)
         CreateDrop("item_gem", position)
-    elseif keys.text == "e" then
-        GenerateEnemy()
     end
 end
 
@@ -227,13 +237,41 @@ end
 function CustomGameMode:OnPlayerSpawn(event)
 end
 
-function GenerateEnemy()
-    for i=1, 16 do
-        local entityStart = Entities:FindByName(nil, "player1_path_corner_start")
-        local enemyUnit = CreateUnitByName("enemy_Lv1", entityStart:GetOrigin(), false, nil, nil, DOTA_TEAM_BADGUYS)
+function CustomGameMode:GoToNextLevel()
+    print('GoToNextLevel')
+    -- update current level
+    if GameInfo.current_level == nil then
+        GameInfo.current_level = 1
+    else
+        GameInfo.current_level = GameInfo.current_level + 1
+    end
+    CustomGameEventManager:Send_ServerToAllClients('current_level_changed', { current_level = GameInfo.current_level })
+
+    -- update next level arrive time
+    GameInfo.next_level_arrive_time = 24
+    Timers:CreateTimer(
+        function()
+            local param = { next_level_arrive_time = GameInfo.next_level_arrive_time }
+            CustomGameEventManager:Send_ServerToAllClients('next_level_arrive_time_changed', param)
+
+            GameInfo.next_level_arrive_time = GameInfo.next_level_arrive_time - 1
+            if GameInfo.next_level_arrive_time == 0 then
+                return nil
+            else
+                return 1.0
+            end
+        end
+    )
+
+    -- generate enemy
+    for i = 1, 16 do
+        local entityStart = Entities:FindByName(nil, 'player1_path_corner_start')
+        local enemyUnit = CreateUnitByName('enemy_Lv1', entityStart:GetOrigin(), false, nil, nil, DOTA_TEAM_BADGUYS)
 
         enemyUnit:SetMustReachEachGoalEntity(true)
         enemyUnit:SetInitialGoalEntity(entityStart)
-        enemyUnit:AddNewModifier(nil, nil, "modifier_phased", {duration=0.1})
+        enemyUnit:AddNewModifier(nil, nil, 'modifier_phased', {duration=0.1})
     end
+
+    return 24; -- return delay to call this function next time.
 end

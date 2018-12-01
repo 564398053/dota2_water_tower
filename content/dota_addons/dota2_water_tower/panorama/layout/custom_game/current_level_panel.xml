@@ -1,0 +1,17 @@
+<root>
+    <styles>
+        <include src="s2r://panorama/styles/dotastyles.vcss_c" />
+        <include src="file://{resources}/styles/custom_game/current_level_panel.css" />
+    </styles>
+    <scripts>
+        <include src="file://{resources}/scripts/custom_game/current_level_panel.js" />
+    </scripts>
+    <script>
+    </script>
+    <Panel>
+        <Panel id="current_level_container" class="current-level-container">
+            <Label id="current_level" text="下一关卡" class="current-level"/>
+            <Label id="next_level_arrive_time" text="00:00:00" class="next-level-arrive-time"/>
+        </Panel>
+    </Panel>
+</root>

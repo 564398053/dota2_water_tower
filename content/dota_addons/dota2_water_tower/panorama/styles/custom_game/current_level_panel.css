@@ -1,0 +1,20 @@
+.current-level-container {
+    margin-left: 1080px;
+    margin-top: 0px;
+    width: 200px;
+    padding: 4px;
+    background-color: #1B1E21;
+    box-shadow: inset 0px -2px 2px #212121;
+    opacity: 1;
+    border: 1px solid red;
+}
+
+.current-level {
+    width: 100px;
+}
+
+.next-level-arrive-time {
+    margin-left: 100px;
+    text-align: right;
+    width: 100px;
+}

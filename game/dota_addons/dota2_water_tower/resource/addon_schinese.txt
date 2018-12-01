@@ -41,6 +41,7 @@
 "ranger_concussive_hunter_Lv1" "震荡猎手"
 
 "bad_guy_Lv1" "小鸡小鸡咯咯哒"
+"next_level" "下一关卡"
 
 
 "build_unset" "未设置tooltip"

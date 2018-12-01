@@ -3,6 +3,11 @@ if CustomGameMode == nil then
     _G.CustomGameMode = class({})
 end
 
+-- global data of game info
+if GameInfo == nil then
+    _G.GameInfo = class({})
+end
+
 require('gamemode')
 require('utilities')
 require('upgrades')
