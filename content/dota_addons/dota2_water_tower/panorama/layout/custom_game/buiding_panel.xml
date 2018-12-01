@@ -18,7 +18,7 @@
                     onmouseout="$.DispatchEvent('DOTAHideTextTooltip')"
                     onmouseover="$.DispatchEvent('DOTAShowTextTooltip', $('#btn1_1'), 'build_ranger_first_stage')"
                     onmouseactivate="Cast('build_ranger_first_stage')">
-                    <DOTAHeroImage heroname="npc_dota_hero_nevermore"/>
+                    <DOTAHeroImage heroname="npc_dota_hero_mirana"/>
                 </Button>
                 <Button id="btn1_2" class="ability-button"
                     onmouseout="$.DispatchEvent('DOTAHideTextTooltip')"
@@ -44,7 +44,7 @@
                     onmouseout="$.DispatchEvent('DOTAHideTextTooltip')"
                     onmouseover="$.DispatchEvent('DOTAShowTextTooltip', $('#btn2_1'), 'build_ranger_middle_stage')"
                     onmouseactivate="Cast('build_ranger_middle_stage')">
-                    <DOTAHeroImage heroname="npc_dota_hero_nevermore"/>
+                    <DOTAHeroImage heroname="npc_dota_hero_mirana"/>
                 </Button>
                 <Button id="btn2_2" class="ability-button"
                     onmouseout="$.DispatchEvent('DOTAHideTextTooltip')"

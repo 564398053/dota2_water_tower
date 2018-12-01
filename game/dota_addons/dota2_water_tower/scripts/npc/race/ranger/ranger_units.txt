@@ -64,18 +64,19 @@
         "CombatClassAttack"            "DOTA_COMBAT_CLASS_ATTACK_BASIC"
         "CombatClassDefend"            "DOTA_COMBAT_CLASS_DEFEND_STRUCTURE"
 
-        // Creature Data
-        //----------------------------------------------------------------
+        // Creature ------------------------------------------------------
         "Creature"
         {
             //"DisableClumpingBehavior"    "1"
             "AttachWearables"
             {
-                "Wearable1"     {    "ItemDef"        "14"        } //"Hair"
-                "Wearable2"     {    "ItemDef"        "4122"      } //"Seafarer's Shoes"
-                "Wearable3"     {    "ItemDef"        "11"        } //Hands
-                "Wearable4"     {    "ItemDef"        "12"        } //Sword
-                "Wearable5"     {    "ItemDef"        "10"        } //Boots
+                "Wearable"     {    "ItemDef"        "403"     }
+                "Wearable"     {    "ItemDef"        "404"     } // "Mirana's Mount"
+                "Wearable"     {    "ItemDef"        "405"     }
+                "Wearable"     {    "ItemDef"        "406"     }
+                "Wearable"     {    "ItemDef"        "407"     }
+                "Wearable"     {    "ItemDef"        "408"     }
+                "Wearable"     {    "ItemDef"        "409"     }
             }
         }
     }
@@ -119,7 +120,7 @@
         // Bounds
         //----------------------------------------------------------------
         "BoundsHullName"            "DOTA_HULL_SIZE_SMALL"
-        "RingRadius"                "100"
+        "RingRadius"                "32"
         "CollisionSize"             "100"
 
         // Status
@@ -139,6 +140,22 @@
         "TeamName"                     "DOTA_TEAM_GOODGUYS"
         "CombatClassAttack"            "DOTA_COMBAT_CLASS_ATTACK_BASIC"
         "CombatClassDefend"            "DOTA_COMBAT_CLASS_DEFEND_STRUCTURE"
+
+        // Creature ------------------------------------------------------
+        "Creature"
+        {
+            //"DisableClumpingBehavior"    "1"
+            "AttachWearables"
+            {
+                "Wearable"     {    "ItemDef"        "403"     }
+                "Wearable"     {    "ItemDef"        "404"     } // "Mirana's Mount"
+                "Wearable"     {    "ItemDef"        "405"     }
+                "Wearable"     {    "ItemDef"        "406"     }
+                "Wearable"     {    "ItemDef"        "407"     }
+                "Wearable"     {    "ItemDef"        "408"     }
+                "Wearable"     {    "ItemDef"        "409"     }
+            }
+        }
     }
 
     // 高阶猎手
@@ -147,7 +164,7 @@
         // General -------------------------------------------------------
         "BaseClass"                     "npc_dota_creature"
         "Model"                         "models/heroes/mirana/mirana.vmdl"
-        "ModelScale"                    "1"
+        "ModelScale"                    "0.8"
         "Level"                         "1"
         "HealthBarOffset"               "140"
         "HasInventory"                  "1"
@@ -177,7 +194,7 @@
 
         // Bounds --------------------------------------------------------
         "BoundsHullName"            "DOTA_HULL_SIZE_SMALL"
-        "RingRadius"                "100"
+        "RingRadius"                "32"
         "CollisionSize"             "100"
 
         // Status --------------------------------------------------------
@@ -213,7 +230,7 @@
         // General -------------------------------------------------------
         "BaseClass"                     "npc_dota_creature"
         "Model"                         "models/heroes/beastmaster/beastmaster.vmdl"
-        "ModelScale"                    "1"
+        "ModelScale"                    "0.8"
         "Level"                         "1"
         "HealthBarOffset"               "140"
         "HasInventory"                  "1"
@@ -244,7 +261,7 @@
 
         // Bounds --------------------------------------------------------
         "BoundsHullName"            "DOTA_HULL_SIZE_SMALL"
-        "RingRadius"                "100"
+        "RingRadius"                "32"
         "CollisionSize"             "100"
 
         // Status --------------------------------------------------------
@@ -277,7 +294,7 @@
         // General -------------------------------------------------------
         "BaseClass"                     "npc_dota_creature"
         "Model"                         "models/heroes/beastmaster/beastmaster.vmdl"
-        "ModelScale"                    "1"
+        "ModelScale"                    "0.8"
         "Level"                         "1"
         "HealthBarOffset"               "140"
         "HasInventory"                  "1"
@@ -307,7 +324,7 @@
 
         // Bounds --------------------------------------------------------
         "BoundsHullName"            "DOTA_HULL_SIZE_SMALL"
-        "RingRadius"                "100"
+        "RingRadius"                "32"
         "CollisionSize"             "100"
 
         // Status --------------------------------------------------------
@@ -340,7 +357,7 @@
         // General -------------------------------------------------------
         "BaseClass"                     "npc_dota_creature"
         "Model"                         "models/heroes/beastmaster/beastmaster.vmdl"
-        "ModelScale"                    "1"
+        "ModelScale"                    "0.8"
         "Level"                         "1"
         "HealthBarOffset"               "140"
         "HasInventory"                  "1"
@@ -370,7 +387,7 @@
 
         // Bounds --------------------------------------------------------
         "BoundsHullName"            "DOTA_HULL_SIZE_SMALL"
-        "RingRadius"                "100"
+        "RingRadius"                "32"
         "CollisionSize"             "100"
 
         // Status --------------------------------------------------------
@@ -403,7 +420,7 @@
         // General -------------------------------------------------------
         "BaseClass"                     "npc_dota_creature"
         "Model"                         "models/heroes/beastmaster/beastmaster.vmdl"
-        "ModelScale"                    "1"
+        "ModelScale"                    "0.8"
         "Level"                         "1"
         "HealthBarOffset"               "140"
         "HasInventory"                  "1"
@@ -433,7 +450,7 @@
 
         // Bounds --------------------------------------------------------
         "BoundsHullName"            "DOTA_HULL_SIZE_SMALL"
-        "RingRadius"                "100"
+        "RingRadius"                "32"
         "CollisionSize"             "100"
 
         // Status --------------------------------------------------------
@@ -466,7 +483,7 @@
         // General -------------------------------------------------------
         "BaseClass"                     "npc_dota_creature"
         "Model"                         "models/heroes/beastmaster/beastmaster.vmdl"
-        "ModelScale"                    "1"
+        "ModelScale"                    "0.8"
         "Level"                         "1"
         "HealthBarOffset"               "140"
         "HasInventory"                  "1"
@@ -495,7 +512,7 @@
 
         // Bounds --------------------------------------------------------
         "BoundsHullName"            "DOTA_HULL_SIZE_SMALL"
-        "RingRadius"                "100"
+        "RingRadius"                "32"
         "CollisionSize"             "100"
 
         // Status --------------------------------------------------------
@@ -821,7 +838,7 @@
         // General -------------------------------------------------------
         "BaseClass"                     "npc_dota_creature"
         "Model"                         "models/heroes/sniper/sniper.vmdl"
-        "ModelScale"                    "1"
+        "ModelScale"                    "0.8"
         "Level"                         "1"
         "HealthBarOffset"               "140"
         "HasInventory"                  "1"
@@ -850,7 +867,7 @@
 
         // Bounds --------------------------------------------------------
         "BoundsHullName"            "DOTA_HULL_SIZE_SMALL"
-        "RingRadius"                "100"
+        "RingRadius"                "32"
         "CollisionSize"             "100"
 
         // Status --------------------------------------------------------
@@ -883,7 +900,7 @@
         // General -------------------------------------------------------
         "BaseClass"                     "npc_dota_creature"
         "Model"                         "models/heroes/sniper/sniper.vmdl"
-        "ModelScale"                    "1"
+        "ModelScale"                    "0.8"
         "Level"                         "1"
         "HealthBarOffset"               "140"
         "HasInventory"                  "1"
@@ -912,7 +929,7 @@
 
         // Bounds --------------------------------------------------------
         "BoundsHullName"            "DOTA_HULL_SIZE_SMALL"
-        "RingRadius"                "100"
+        "RingRadius"                "32"
         "CollisionSize"             "100"
 
         // Status --------------------------------------------------------
@@ -945,7 +962,7 @@
         // General -------------------------------------------------------
         "BaseClass"                     "npc_dota_creature"
         "Model"                         "models/heroes/sniper/sniper.vmdl"
-        "ModelScale"                    "1"
+        "ModelScale"                    "0.8"
         "Level"                         "1"
         "HealthBarOffset"               "140"
         "HasInventory"                  "1"
@@ -974,7 +991,7 @@
 
         // Bounds --------------------------------------------------------
         "BoundsHullName"            "DOTA_HULL_SIZE_SMALL"
-        "RingRadius"                "100"
+        "RingRadius"                "32"
         "CollisionSize"             "100"
 
         // Status --------------------------------------------------------
@@ -1007,7 +1024,7 @@
         // General -------------------------------------------------------
         "BaseClass"                     "npc_dota_creature"
         "Model"                         "models/heroes/sniper/sniper.vmdl"
-        "ModelScale"                    "1"
+        "ModelScale"                    "0.8"
         "Level"                         "1"
         "HealthBarOffset"               "140"
         "HasInventory"                  "1"
@@ -1036,7 +1053,7 @@
 
         // Bounds --------------------------------------------------------
         "BoundsHullName"            "DOTA_HULL_SIZE_SMALL"
-        "RingRadius"                "100"
+        "RingRadius"                "32"
         "CollisionSize"             "100"
 
         // Status --------------------------------------------------------
@@ -1098,7 +1115,7 @@
 
         // Bounds --------------------------------------------------------
         "BoundsHullName"            "DOTA_HULL_SIZE_SMALL"
-        "RingRadius"                "100"
+        "RingRadius"                "32"
         "CollisionSize"             "100"
 
         // Status --------------------------------------------------------
@@ -1131,7 +1148,7 @@
         // General -------------------------------------------------------
         "BaseClass"                     "npc_dota_creature"
         "Model"                         "models/heroes/venomancer/venomancer.vmdl"
-        "ModelScale"                    "1"
+        "ModelScale"                    "0.8"
         "Level"                         "1"
         "HealthBarOffset"               "140"
         "HasInventory"                  "1"
@@ -1160,7 +1177,7 @@
 
         // Bounds --------------------------------------------------------
         "BoundsHullName"            "DOTA_HULL_SIZE_SMALL"
-        "RingRadius"                "100"
+        "RingRadius"                "32"
         "CollisionSize"             "100"
 
         // Status --------------------------------------------------------
@@ -1194,7 +1211,7 @@
         // General -------------------------------------------------------
         "BaseClass"                     "npc_dota_creature"
         "Model"                         "models/heroes/venomancer/venomancer.vmdl"
-        "ModelScale"                    "1"
+        "ModelScale"                    "0.8"
         "Level"                         "1"
         "HealthBarOffset"               "140"
         "HasInventory"                  "1"
@@ -1223,7 +1240,7 @@
 
         // Bounds --------------------------------------------------------
         "BoundsHullName"            "DOTA_HULL_SIZE_SMALL"
-        "RingRadius"                "100"
+        "RingRadius"                "32"
         "CollisionSize"             "100"
 
         // Status --------------------------------------------------------
@@ -1256,7 +1273,7 @@
         // General -------------------------------------------------------
         "BaseClass"                     "npc_dota_creature"
         "Model"                         "models/heroes/venomancer/venomancer.vmdl"
-        "ModelScale"                    "1"
+        "ModelScale"                    "0.8"
         "Level"                         "1"
         "HealthBarOffset"               "140"
         "HasInventory"                  "1"
@@ -1285,7 +1302,7 @@
 
         // Bounds --------------------------------------------------------
         "BoundsHullName"            "DOTA_HULL_SIZE_SMALL"
-        "RingRadius"                "100"
+        "RingRadius"                "32"
         "CollisionSize"             "100"
 
         // Status --------------------------------------------------------
@@ -1318,7 +1335,7 @@
         // General -------------------------------------------------------
         "BaseClass"                     "npc_dota_creature"
         "Model"                         "models/heroes/venomancer/venomancer.vmdl"
-        "ModelScale"                    "1"
+        "ModelScale"                    "0.8"
         "Level"                         "1"
         "HealthBarOffset"               "140"
         "HasInventory"                  "1"
@@ -1347,7 +1364,7 @@
 
         // Bounds --------------------------------------------------------
         "BoundsHullName"            "DOTA_HULL_SIZE_SMALL"
-        "RingRadius"                "100"
+        "RingRadius"                "32"
         "CollisionSize"             "100"
 
         // Status --------------------------------------------------------
@@ -1380,7 +1397,7 @@
         // General -------------------------------------------------------
         "BaseClass"                     "npc_dota_creature"
         "Model"                         "models/heroes/venomancer/venomancer.vmdl"
-        "ModelScale"                    "1"
+        "ModelScale"                    "0.8"
         "Level"                         "1"
         "HealthBarOffset"               "140"
         "HasInventory"                  "1"
@@ -1409,7 +1426,7 @@
 
         // Bounds --------------------------------------------------------
         "BoundsHullName"            "DOTA_HULL_SIZE_SMALL"
-        "RingRadius"                "100"
+        "RingRadius"                "32"
         "CollisionSize"             "100"
 
         // Status --------------------------------------------------------
@@ -1443,7 +1460,7 @@
         // General -------------------------------------------------------
         "BaseClass"                     "npc_dota_creature"
         "Model"                         "models/heroes/luna/luna.vmdl"
-        "ModelScale"                    "1"
+        "ModelScale"                    "0.8"
         "Level"                         "1"
         "HealthBarOffset"               "140"
         "HasInventory"                  "1"
@@ -1472,7 +1489,7 @@
 
         // Bounds --------------------------------------------------------
         "BoundsHullName"            "DOTA_HULL_SIZE_SMALL"
-        "RingRadius"                "100"
+        "RingRadius"                "32"
         "CollisionSize"             "100"
 
         // Status --------------------------------------------------------
@@ -1506,7 +1523,7 @@
         // General -------------------------------------------------------
         "BaseClass"                     "npc_dota_creature"
         "Model"                         "models/heroes/luna/luna.vmdl"
-        "ModelScale"                    "1"
+        "ModelScale"                    "0.8"
         "Level"                         "1"
         "HealthBarOffset"               "140"
         "HasInventory"                  "1"
@@ -1535,7 +1552,7 @@
 
         // Bounds --------------------------------------------------------
         "BoundsHullName"            "DOTA_HULL_SIZE_SMALL"
-        "RingRadius"                "100"
+        "RingRadius"                "32"
         "CollisionSize"             "100"
 
         // Status --------------------------------------------------------
@@ -1569,7 +1586,7 @@
         // General -------------------------------------------------------
         "BaseClass"                     "npc_dota_creature"
         "Model"                         "models/heroes/luna/luna.vmdl"
-        "ModelScale"                    "1"
+        "ModelScale"                    "0.8"
         "Level"                         "1"
         "HealthBarOffset"               "140"
         "HasInventory"                  "1"
@@ -1598,7 +1615,7 @@
 
         // Bounds --------------------------------------------------------
         "BoundsHullName"            "DOTA_HULL_SIZE_SMALL"
-        "RingRadius"                "100"
+        "RingRadius"                "32"
         "CollisionSize"             "100"
 
         // Status --------------------------------------------------------
@@ -1632,7 +1649,7 @@
         // General -------------------------------------------------------
         "BaseClass"                     "npc_dota_creature"
         "Model"                         "models/heroes/luna/luna.vmdl"
-        "ModelScale"                    "1"
+        "ModelScale"                    "0.8"
         "Level"                         "1"
         "HealthBarOffset"               "8000"
         "HasInventory"                  "1"
@@ -1661,7 +1678,7 @@
 
         // Bounds --------------------------------------------------------
         "BoundsHullName"            "DOTA_HULL_SIZE_SMALL"
-        "RingRadius"                "100"
+        "RingRadius"                "32"
         "CollisionSize"             "100"
 
         // Status --------------------------------------------------------
@@ -1695,7 +1712,7 @@
         // General -------------------------------------------------------
         "BaseClass"                     "npc_dota_creature"
         "Model"                         "models/heroes/luna/luna.vmdl"
-        "ModelScale"                    "1"
+        "ModelScale"                    "0.8"
         "Level"                         "1"
         "HealthBarOffset"               "140"
         "HasInventory"                  "1"
@@ -1724,7 +1741,7 @@
 
         // Bounds --------------------------------------------------------
         "BoundsHullName"            "DOTA_HULL_SIZE_SMALL"
-        "RingRadius"                "100"
+        "RingRadius"                "32"
         "CollisionSize"             "100"
 
         // Status --------------------------------------------------------
@@ -1758,7 +1775,7 @@
         // General -------------------------------------------------------
         "BaseClass"                     "npc_dota_creature"
         "Model"                         "models/heroes/viper/viper.vmdl"
-        "ModelScale"                    "1"
+        "ModelScale"                    "0.8"
         "Level"                         "1"
         "HealthBarOffset"               "140"
         "HasInventory"                  "1"
@@ -1787,7 +1804,7 @@
 
         // Bounds --------------------------------------------------------
         "BoundsHullName"            "DOTA_HULL_SIZE_SMALL"
-        "RingRadius"                "100"
+        "RingRadius"                "32"
         "CollisionSize"             "100"
 
         // Status --------------------------------------------------------
@@ -1817,7 +1834,7 @@
         // General -------------------------------------------------------
         "BaseClass"                     "npc_dota_creature"
         "Model"                         "models/heroes/bounty_hunter/bounty_hunter.vmdl"
-        "ModelScale"                    "1"
+        "ModelScale"                    "0.8"
         "Level"                         "1"
         "HealthBarOffset"               "140"
         "HasInventory"                  "1"
@@ -1846,7 +1863,7 @@
 
         // Bounds --------------------------------------------------------
         "BoundsHullName"            "DOTA_HULL_SIZE_SMALL"
-        "RingRadius"                "100"
+        "RingRadius"                "32"
         "CollisionSize"             "100"
 
         // Status --------------------------------------------------------
