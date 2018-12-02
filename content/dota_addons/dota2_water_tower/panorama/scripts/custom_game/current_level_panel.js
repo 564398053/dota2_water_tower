@@ -22,8 +22,13 @@ function UpdateNextLevelArriveTime( eventArgs ) {
     $( '#next_level_arrive_time' ).text = FormatTime( eventArgs.next_level_arrive_time )
 }
 
+function UpdateTimer( eventArgs ) {
+    $( '#timer' ).text = FormatTime( Math.floor(eventArgs.current_time) )
+}
+
 
 (function () {
     GameEvents.Subscribe( 'current_level_changed', UpdateCurrentLevel);
     GameEvents.Subscribe( 'next_level_arrive_time_changed', UpdateNextLevelArriveTime);
+    GameEvents.Subscribe( 'current_time_changed', UpdateTimer);
 })();

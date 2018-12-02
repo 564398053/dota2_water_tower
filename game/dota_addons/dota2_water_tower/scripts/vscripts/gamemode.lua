@@ -22,6 +22,13 @@ function CustomGameMode:InitGameMode()
         callback = CustomGameMode.GoToNextLevel
     })
 
+    Timers:CreateTimer(
+        function()
+            print("GetGameTime()", Time())
+            CustomGameEventManager:Send_ServerToAllClients('current_time_changed', { current_time = Time() } )
+            return 1.0
+        end
+    )
 	-- DebugPrint
 	Convars:RegisterConvar('debug_spew', tostring(DEBUG_SPEW), 'Set to 1 to start spewing debug info. Set to 0 to disable.', 0)
 

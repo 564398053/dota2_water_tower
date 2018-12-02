@@ -9,9 +9,12 @@
     <script>
     </script>
     <Panel>
-        <Panel id="current_level_container" class="current-level-container">
+        <Panel id="1" class="current-level-container">
             <Label id="current_level" text="下一关卡" class="current-level"/>
             <Label id="next_level_arrive_time" text="00:00:00" class="next-level-arrive-time"/>
+        </Panel>
+        <Panel id="2" class="timer-container">
+            <Label id="timer" text="00:00:00" class="timer"/>
         </Panel>
     </Panel>
 </root>
