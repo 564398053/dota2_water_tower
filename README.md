@@ -27,5 +27,5 @@
 #### TODO bug fix:
 1. 怪物行动路径不按pathway行走问题修复
 2. 时钟正确显示游戏内时间.
-3. 建筑不能携带物品bug
+3. 建筑不能携带物品bug, ```"MovementCapabilities"        "DOTA_UNIT_CAP_MOVE_NONE"```不能移动就不能拾取和丢弃物品?
 4. 隐藏建造者技能栏. 太长了不方便看和使用.
