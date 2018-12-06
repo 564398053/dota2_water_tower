@@ -41,7 +41,7 @@ function CustomGameMode:InitGameMode()
     ListenToGameEvent('game_start', Dynamic_Wrap(CustomGameMode, 'OnGameStart'), self)
 
 	-- Filters
-    GameRules:GetGameModeEntity():SetExecuteOrderFilter( Dynamic_Wrap( CustomGameMode, "FilterExecuteOrder" ), self )
+    --GameRules:GetGameModeEntity():SetExecuteOrderFilter( Dynamic_Wrap( CustomGameMode, "FilterExecuteOrder" ), self )
 
     -- Register Listener
     CustomGameEventManager:RegisterListener( "update_selected_entities", Dynamic_Wrap(CustomGameMode, 'OnPlayerSelectedEntities'))
