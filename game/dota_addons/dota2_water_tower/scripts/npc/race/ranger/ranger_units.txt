@@ -14,7 +14,7 @@
         "Level"                         "1"
         "HealthBarOffset"               "140"
         "HasInventory"                  "1"
-        "ConsideredHero"                "0"
+        "ConsideredHero"                "1"  // 设置"1" 才能正确携带物品...
 
         // Abilities
         //----------------------------------------------------------------
@@ -38,13 +38,17 @@
         "AttackRange"                "700"
         "ProjectileModel"            "particles/units/heroes/hero_windrunner/windrunner_base_attack.vpcf"
         "ProjectileSpeed"            "1800"
-        "MovementTurnRate"           "4" // 值越大转身速率越高
 
         // Bounds
         //----------------------------------------------------------------
         "BoundsHullName"            "DOTA_HULL_SIZE_SMALL"
-        "RingRadius"                "32"
-        "CollisionSize"             "32"
+        "RingRadius"                "64"
+        "CollisionSize"             "64"
+
+        // Movement-------------------------------------------------------
+        "MovementCapabilities"        "DOTA_UNIT_CAP_MOVE_NONE"
+        "MovementSpeed"               "0"
+        "MovementTurnRate"            "0"
 
         // Status
         //----------------------------------------------------------------
@@ -92,7 +96,7 @@
         "Level"                         "1"
         "HealthBarOffset"               "140"
         "HasInventory"                  "1"
-        "ConsideredHero"                "0"
+        "ConsideredHero"                "1"
 
         // Abilities
         //----------------------------------------------------------------
@@ -117,11 +121,16 @@
         "ProjectileModel"            "particles/units/heroes/hero_windrunner/windrunner_base_attack.vpcf"
         "ProjectileSpeed"            "1800"
 
+        // Movement-------------------------------------------------------
+        "MovementCapabilities"        "DOTA_UNIT_CAP_MOVE_NONE"
+        "MovementSpeed"               "0"
+        "MovementTurnRate"            "0"
+
         // Bounds
         //----------------------------------------------------------------
         "BoundsHullName"            "DOTA_HULL_SIZE_SMALL"
-        "RingRadius"                "32"
-        "CollisionSize"             "100"
+        "RingRadius"                "64"
+        "CollisionSize"             "64"
 
         // Status
         //----------------------------------------------------------------
@@ -168,7 +177,7 @@
         "Level"                         "1"
         "HealthBarOffset"               "140"
         "HasInventory"                  "1"
-        "ConsideredHero"                "0"
+        "ConsideredHero"                "1"
 
         // Abilities -----------------------------------------------------
         "AbilityLayout"               "6"
@@ -190,12 +199,16 @@
         "AttackRange"                "700"
         "ProjectileModel"            "particles/units/heroes/hero_windrunner/windrunner_base_attack.vpcf"
         "ProjectileSpeed"            "1800"
-        "MovementTurnRate"           "4" // 值越大转身速率越高
+
+        // Movement-------------------------------------------------------
+        "MovementCapabilities"        "DOTA_UNIT_CAP_MOVE_NONE"
+        "MovementSpeed"               "0"
+        "MovementTurnRate"            "0"
 
         // Bounds --------------------------------------------------------
         "BoundsHullName"            "DOTA_HULL_SIZE_SMALL"
-        "RingRadius"                "32"
-        "CollisionSize"             "100"
+        "RingRadius"                "64"
+        "CollisionSize"             "64"
 
         // Status --------------------------------------------------------
         "StatusHealth"                "1500"
@@ -234,7 +247,7 @@
         "Level"                         "1"
         "HealthBarOffset"               "140"
         "HasInventory"                  "1"
-        "ConsideredHero"                "0"
+        "ConsideredHero"                "1"
 
         // Abilities -----------------------------------------------------
         "AbilityLayout"               "6"
@@ -257,12 +270,16 @@
         "AttackRange"                "700"
         "ProjectileModel"            "particles/units/heroes/hero_windrunner/windrunner_base_attack.vpcf"
         "ProjectileSpeed"            "1800"
-        "MovementTurnRate"           "4" // 值越大转身速率越高
+
+        // Movement-------------------------------------------------------
+        "MovementCapabilities"        "DOTA_UNIT_CAP_MOVE_NONE"
+        "MovementSpeed"               "0"
+        "MovementTurnRate"            "0"
 
         // Bounds --------------------------------------------------------
         "BoundsHullName"            "DOTA_HULL_SIZE_SMALL"
-        "RingRadius"                "32"
-        "CollisionSize"             "100"
+        "RingRadius"                "64"
+        "CollisionSize"             "64"
 
         // Status --------------------------------------------------------
         "StatusHealth"                "1500"
@@ -298,7 +315,7 @@
         "Level"                         "1"
         "HealthBarOffset"               "140"
         "HasInventory"                  "1"
-        "ConsideredHero"                "0"
+        "ConsideredHero"                "1"
 
         // Abilities -----------------------------------------------------
         "AbilityLayout"               "6"
@@ -320,12 +337,16 @@
         "AttackRange"                "700"
         "ProjectileModel"            "particles/units/heroes/hero_windrunner/windrunner_base_attack.vpcf"
         "ProjectileSpeed"            "1800"
-        "MovementTurnRate"           "4" // 值越大转身速率越高
+
+        // Movement-------------------------------------------------------
+        "MovementCapabilities"        "DOTA_UNIT_CAP_MOVE_NONE"
+        "MovementSpeed"               "0"
+        "MovementTurnRate"            "0"
 
         // Bounds --------------------------------------------------------
         "BoundsHullName"            "DOTA_HULL_SIZE_SMALL"
-        "RingRadius"                "32"
-        "CollisionSize"             "100"
+        "RingRadius"                "64"
+        "CollisionSize"             "64"
 
         // Status --------------------------------------------------------
         "StatusHealth"                "1500"
@@ -361,7 +382,7 @@
         "Level"                         "1"
         "HealthBarOffset"               "140"
         "HasInventory"                  "1"
-        "ConsideredHero"                "0"
+        "ConsideredHero"                "1"
 
         // Abilities -----------------------------------------------------
         "AbilityLayout"               "6"
@@ -383,12 +404,16 @@
         "AttackRange"                "700"
         "ProjectileModel"            "particles/units/heroes/hero_windrunner/windrunner_base_attack.vpcf"
         "ProjectileSpeed"            "1800"
-        "MovementTurnRate"           "4" // 值越大转身速率越高
+
+        // Movement-------------------------------------------------------
+        "MovementCapabilities"        "DOTA_UNIT_CAP_MOVE_NONE"
+        "MovementSpeed"               "0"
+        "MovementTurnRate"            "0"
 
         // Bounds --------------------------------------------------------
         "BoundsHullName"            "DOTA_HULL_SIZE_SMALL"
-        "RingRadius"                "32"
-        "CollisionSize"             "100"
+        "RingRadius"                "64"
+        "CollisionSize"             "64"
 
         // Status --------------------------------------------------------
         "StatusHealth"                "1500"
@@ -424,7 +449,7 @@
         "Level"                         "1"
         "HealthBarOffset"               "140"
         "HasInventory"                  "1"
-        "ConsideredHero"                "0"
+        "ConsideredHero"                "1"
 
         // Abilities -----------------------------------------------------
         "AbilityLayout"               "6"
@@ -446,12 +471,16 @@
         "AttackRange"                "700"
         "ProjectileModel"            "particles/units/heroes/hero_windrunner/windrunner_base_attack.vpcf"
         "ProjectileSpeed"            "1800"
-        "MovementTurnRate"           "4" // 值越大转身速率越高
+
+        // Movement-------------------------------------------------------
+        "MovementCapabilities"        "DOTA_UNIT_CAP_MOVE_NONE"
+        "MovementSpeed"               "0"
+        "MovementTurnRate"            "0"
 
         // Bounds --------------------------------------------------------
         "BoundsHullName"            "DOTA_HULL_SIZE_SMALL"
-        "RingRadius"                "32"
-        "CollisionSize"             "100"
+        "RingRadius"                "64"
+        "CollisionSize"             "64"
 
         // Status --------------------------------------------------------
         "StatusHealth"                "1500"
@@ -487,7 +516,7 @@
         "Level"                         "1"
         "HealthBarOffset"               "140"
         "HasInventory"                  "1"
-        "ConsideredHero"                "0"
+        "ConsideredHero"                "1"
 
         // Abilities -----------------------------------------------------
         "AbilityLayout"               "6"
@@ -508,12 +537,16 @@
         "AttackRange"                "700"
         "ProjectileModel"            "particles/units/heroes/hero_windrunner/windrunner_base_attack.vpcf"
         "ProjectileSpeed"            "1800"
-        "MovementTurnRate"           "4" // 值越大转身速率越高
+
+        // Movement-------------------------------------------------------
+        "MovementCapabilities"        "DOTA_UNIT_CAP_MOVE_NONE"
+        "MovementSpeed"               "0"
+        "MovementTurnRate"            "0"
 
         // Bounds --------------------------------------------------------
         "BoundsHullName"            "DOTA_HULL_SIZE_SMALL"
-        "RingRadius"                "32"
-        "CollisionSize"             "100"
+        "RingRadius"                "64"
+        "CollisionSize"             "64"
 
         // Status --------------------------------------------------------
         "StatusHealth"                "1500"
@@ -842,7 +875,7 @@
         "Level"                         "1"
         "HealthBarOffset"               "140"
         "HasInventory"                  "1"
-        "ConsideredHero"                "0"
+        "ConsideredHero"                "1"
 
         // Abilities -----------------------------------------------------
         "AbilityLayout"               "6"
@@ -863,12 +896,16 @@
         "AttackRange"                "700"
         "ProjectileModel"            "particles/units/heroes/hero_sniper/sniper_base_attack.vpcf"
         "ProjectileSpeed"            "1800"
-        "MovementTurnRate"           "4" // 值越大转身速率越高
+
+        // Movement-------------------------------------------------------
+        "MovementCapabilities"        "DOTA_UNIT_CAP_MOVE_NONE"
+        "MovementSpeed"               "0"
+        "MovementTurnRate"            "0"
 
         // Bounds --------------------------------------------------------
         "BoundsHullName"            "DOTA_HULL_SIZE_SMALL"
-        "RingRadius"                "32"
-        "CollisionSize"             "100"
+        "RingRadius"                "64"
+        "CollisionSize"             "64"
 
         // Status --------------------------------------------------------
         "StatusHealth"                "1500"
@@ -904,7 +941,7 @@
         "Level"                         "1"
         "HealthBarOffset"               "140"
         "HasInventory"                  "1"
-        "ConsideredHero"                "0"
+        "ConsideredHero"                "1"
 
         // Abilities -----------------------------------------------------
         "AbilityLayout"               "6"
@@ -925,12 +962,16 @@
         "AttackRange"                "700"
         "ProjectileModel"            "particles/units/heroes/hero_sniper/sniper_base_attack.vpcf"
         "ProjectileSpeed"            "1800"
-        "MovementTurnRate"           "4" // 值越大转身速率越高
+
+        // Movement-------------------------------------------------------
+        "MovementCapabilities"        "DOTA_UNIT_CAP_MOVE_NONE"
+        "MovementSpeed"               "0"
+        "MovementTurnRate"            "0"
 
         // Bounds --------------------------------------------------------
         "BoundsHullName"            "DOTA_HULL_SIZE_SMALL"
-        "RingRadius"                "32"
-        "CollisionSize"             "100"
+        "RingRadius"                "64"
+        "CollisionSize"             "64"
 
         // Status --------------------------------------------------------
         "StatusHealth"                "1500"
@@ -966,7 +1007,7 @@
         "Level"                         "1"
         "HealthBarOffset"               "140"
         "HasInventory"                  "1"
-        "ConsideredHero"                "0"
+        "ConsideredHero"                "1"
 
         // Abilities -----------------------------------------------------
         "AbilityLayout"               "6"
@@ -987,12 +1028,16 @@
         "AttackRange"                "700"
         "ProjectileModel"            "particles/units/heroes/hero_sniper/sniper_base_attack.vpcf"
         "ProjectileSpeed"            "1800"
-        "MovementTurnRate"           "4" // 值越大转身速率越高
+
+        // Movement-------------------------------------------------------
+        "MovementCapabilities"        "DOTA_UNIT_CAP_MOVE_NONE"
+        "MovementSpeed"               "0"
+        "MovementTurnRate"            "0"
 
         // Bounds --------------------------------------------------------
         "BoundsHullName"            "DOTA_HULL_SIZE_SMALL"
-        "RingRadius"                "32"
-        "CollisionSize"             "100"
+        "RingRadius"                "64"
+        "CollisionSize"             "64"
 
         // Status --------------------------------------------------------
         "StatusHealth"                "1500"
@@ -1028,7 +1073,7 @@
         "Level"                         "1"
         "HealthBarOffset"               "140"
         "HasInventory"                  "1"
-        "ConsideredHero"                "0"
+        "ConsideredHero"                "1"
 
         // Abilities -----------------------------------------------------
         "AbilityLayout"               "6"
@@ -1049,12 +1094,16 @@
         "AttackRange"                "700"
         "ProjectileModel"            "particles/units/heroes/hero_sniper/sniper_base_attack.vpcf"
         "ProjectileSpeed"            "1800"
-        "MovementTurnRate"           "4" // 值越大转身速率越高
+
+        // Movement-------------------------------------------------------
+        "MovementCapabilities"        "DOTA_UNIT_CAP_MOVE_NONE"
+        "MovementSpeed"               "0"
+        "MovementTurnRate"            "0"
 
         // Bounds --------------------------------------------------------
         "BoundsHullName"            "DOTA_HULL_SIZE_SMALL"
-        "RingRadius"                "32"
-        "CollisionSize"             "100"
+        "RingRadius"                "64"
+        "CollisionSize"             "64"
 
         // Status --------------------------------------------------------
         "StatusHealth"                "1500"
@@ -1090,7 +1139,7 @@
         "Level"                         "1"
         "HealthBarOffset"               "140"
         "HasInventory"                  "1"
-        "ConsideredHero"                "0"
+        "ConsideredHero"                "1"
 
         // Abilities -----------------------------------------------------
         "AbilityLayout"               "6"
@@ -1111,12 +1160,16 @@
         "AttackRange"                "700"
         "ProjectileModel"            "particles/units/heroes/hero_sniper/sniper_base_attack.vpcf"
         "ProjectileSpeed"            "1800"
-        "MovementTurnRate"           "4" // 值越大转身速率越高
+
+        // Movement-------------------------------------------------------
+        "MovementCapabilities"        "DOTA_UNIT_CAP_MOVE_NONE"
+        "MovementSpeed"               "0"
+        "MovementTurnRate"            "0"
 
         // Bounds --------------------------------------------------------
         "BoundsHullName"            "DOTA_HULL_SIZE_SMALL"
-        "RingRadius"                "32"
-        "CollisionSize"             "100"
+        "RingRadius"                "64"
+        "CollisionSize"             "64"
 
         // Status --------------------------------------------------------
         "StatusHealth"                "100000"
@@ -1152,7 +1205,7 @@
         "Level"                         "1"
         "HealthBarOffset"               "140"
         "HasInventory"                  "1"
-        "ConsideredHero"                "0"
+        "ConsideredHero"                "1"
 
         // Abilities -----------------------------------------------------
         "AbilityLayout"               "6"
@@ -1173,12 +1226,16 @@
         "AttackRange"                "700"
         "ProjectileModel"            "particles/units/heroes/hero_sniper/sniper_base_attack.vpcf"
         "ProjectileSpeed"            "1800"
-        "MovementTurnRate"           "4" // 值越大转身速率越高
+
+        // Movement-------------------------------------------------------
+        "MovementCapabilities"        "DOTA_UNIT_CAP_MOVE_NONE"
+        "MovementSpeed"               "0"
+        "MovementTurnRate"            "0"
 
         // Bounds --------------------------------------------------------
         "BoundsHullName"            "DOTA_HULL_SIZE_SMALL"
-        "RingRadius"                "32"
-        "CollisionSize"             "100"
+        "RingRadius"                "64"
+        "CollisionSize"             "64"
 
         // Status --------------------------------------------------------
         "StatusHealth"                "1500"
@@ -1215,7 +1272,7 @@
         "Level"                         "1"
         "HealthBarOffset"               "140"
         "HasInventory"                  "1"
-        "ConsideredHero"                "0"
+        "ConsideredHero"                "1"
 
         // Abilities -----------------------------------------------------
         "AbilityLayout"               "6"
@@ -1236,12 +1293,16 @@
         "AttackRange"                "700"
         "ProjectileModel"            "particles/units/heroes/hero_sniper/sniper_base_attack.vpcf"
         "ProjectileSpeed"            "1800"
-        "MovementTurnRate"           "4" // 值越大转身速率越高
+
+        // Movement-------------------------------------------------------
+        "MovementCapabilities"        "DOTA_UNIT_CAP_MOVE_NONE"
+        "MovementSpeed"               "0"
+        "MovementTurnRate"            "0"
 
         // Bounds --------------------------------------------------------
         "BoundsHullName"            "DOTA_HULL_SIZE_SMALL"
-        "RingRadius"                "32"
-        "CollisionSize"             "100"
+        "RingRadius"                "64"
+        "CollisionSize"             "64"
 
         // Status --------------------------------------------------------
         "StatusHealth"                "1500"
@@ -1277,7 +1338,7 @@
         "Level"                         "1"
         "HealthBarOffset"               "140"
         "HasInventory"                  "1"
-        "ConsideredHero"                "0"
+        "ConsideredHero"                "1"
 
         // Abilities -----------------------------------------------------
         "AbilityLayout"               "6"
@@ -1298,12 +1359,16 @@
         "AttackRange"                "700"
         "ProjectileModel"            "particles/units/heroes/hero_sniper/sniper_base_attack.vpcf"
         "ProjectileSpeed"            "1800"
-        "MovementTurnRate"           "4" // 值越大转身速率越高
+
+        // Movement-------------------------------------------------------
+        "MovementCapabilities"        "DOTA_UNIT_CAP_MOVE_NONE"
+        "MovementSpeed"               "0"
+        "MovementTurnRate"            "0"
 
         // Bounds --------------------------------------------------------
         "BoundsHullName"            "DOTA_HULL_SIZE_SMALL"
-        "RingRadius"                "32"
-        "CollisionSize"             "100"
+        "RingRadius"                "64"
+        "CollisionSize"             "64"
 
         // Status --------------------------------------------------------
         "StatusHealth"                "1500"
@@ -1339,7 +1404,7 @@
         "Level"                         "1"
         "HealthBarOffset"               "140"
         "HasInventory"                  "1"
-        "ConsideredHero"                "0"
+        "ConsideredHero"                "1"
 
         // Abilities -----------------------------------------------------
         "AbilityLayout"               "6"
@@ -1360,12 +1425,16 @@
         "AttackRange"                "700"
         "ProjectileModel"            "particles/units/heroes/hero_sniper/sniper_base_attack.vpcf"
         "ProjectileSpeed"            "1800"
-        "MovementTurnRate"           "4" // 值越大转身速率越高
+
+        // Movement-------------------------------------------------------
+        "MovementCapabilities"        "DOTA_UNIT_CAP_MOVE_NONE"
+        "MovementSpeed"               "0"
+        "MovementTurnRate"            "0"
 
         // Bounds --------------------------------------------------------
         "BoundsHullName"            "DOTA_HULL_SIZE_SMALL"
-        "RingRadius"                "32"
-        "CollisionSize"             "100"
+        "RingRadius"                "64"
+        "CollisionSize"             "64"
 
         // Status --------------------------------------------------------
         "StatusHealth"                "1500"
@@ -1401,7 +1470,7 @@
         "Level"                         "1"
         "HealthBarOffset"               "140"
         "HasInventory"                  "1"
-        "ConsideredHero"                "0"
+        "ConsideredHero"                "1"
 
         // Abilities -----------------------------------------------------
         "AbilityLayout"               "6"
@@ -1422,12 +1491,16 @@
         "AttackRange"                "700"
         "ProjectileModel"            "particles/units/heroes/hero_sniper/sniper_base_attack.vpcf"
         "ProjectileSpeed"            "1800"
-        "MovementTurnRate"           "4" // 值越大转身速率越高
+
+        // Movement-------------------------------------------------------
+        "MovementCapabilities"        "DOTA_UNIT_CAP_MOVE_NONE"
+        "MovementSpeed"               "0"
+        "MovementTurnRate"            "0"
 
         // Bounds --------------------------------------------------------
         "BoundsHullName"            "DOTA_HULL_SIZE_SMALL"
-        "RingRadius"                "32"
-        "CollisionSize"             "100"
+        "RingRadius"                "64"
+        "CollisionSize"             "64"
 
         // Status --------------------------------------------------------
         "StatusHealth"                "1500"
@@ -1464,7 +1537,7 @@
         "Level"                         "1"
         "HealthBarOffset"               "140"
         "HasInventory"                  "1"
-        "ConsideredHero"                "0"
+        "ConsideredHero"                "1"
 
         // Abilities -----------------------------------------------------
         "AbilityLayout"               "6"
@@ -1485,12 +1558,16 @@
         "AttackRange"                "700"
         "ProjectileModel"            "particles/units/heroes/hero_luna/luna_base_attack.vpcf"
         "ProjectileSpeed"            "1800"
-        "MovementTurnRate"           "4" // 值越大转身速率越高
+
+        // Movement-------------------------------------------------------
+        "MovementCapabilities"        "DOTA_UNIT_CAP_MOVE_NONE"
+        "MovementSpeed"               "0"
+        "MovementTurnRate"            "0"
 
         // Bounds --------------------------------------------------------
         "BoundsHullName"            "DOTA_HULL_SIZE_SMALL"
-        "RingRadius"                "32"
-        "CollisionSize"             "100"
+        "RingRadius"                "64"
+        "CollisionSize"             "64"
 
         // Status --------------------------------------------------------
         "StatusHealth"                "1500"
@@ -1527,7 +1604,7 @@
         "Level"                         "1"
         "HealthBarOffset"               "140"
         "HasInventory"                  "1"
-        "ConsideredHero"                "0"
+        "ConsideredHero"                "1"
 
         // Abilities -----------------------------------------------------
         "AbilityLayout"               "6"
@@ -1548,12 +1625,16 @@
         "AttackRange"                "700"
         "ProjectileModel"            "particles/units/heroes/hero_luna/luna_base_attack.vpcf"
         "ProjectileSpeed"            "1800"
-        "MovementTurnRate"           "4" // 值越大转身速率越高
+
+        // Movement-------------------------------------------------------
+        "MovementCapabilities"        "DOTA_UNIT_CAP_MOVE_NONE"
+        "MovementSpeed"               "0"
+        "MovementTurnRate"            "0"
 
         // Bounds --------------------------------------------------------
         "BoundsHullName"            "DOTA_HULL_SIZE_SMALL"
-        "RingRadius"                "32"
-        "CollisionSize"             "100"
+        "RingRadius"                "64"
+        "CollisionSize"             "64"
 
         // Status --------------------------------------------------------
         "StatusHealth"                "1500"
@@ -1590,7 +1671,7 @@
         "Level"                         "1"
         "HealthBarOffset"               "140"
         "HasInventory"                  "1"
-        "ConsideredHero"                "0"
+        "ConsideredHero"                "1"
 
         // Abilities -----------------------------------------------------
         "AbilityLayout"               "6"
@@ -1611,12 +1692,16 @@
         "AttackRange"                "700"
         "ProjectileModel"            "particles/units/heroes/hero_luna/luna_base_attack.vpcf"
         "ProjectileSpeed"            "1800"
-        "MovementTurnRate"           "4" // 值越大转身速率越高
+
+        // Movement-------------------------------------------------------
+        "MovementCapabilities"        "DOTA_UNIT_CAP_MOVE_NONE"
+        "MovementSpeed"               "0"
+        "MovementTurnRate"            "0"
 
         // Bounds --------------------------------------------------------
         "BoundsHullName"            "DOTA_HULL_SIZE_SMALL"
-        "RingRadius"                "32"
-        "CollisionSize"             "100"
+        "RingRadius"                "64"
+        "CollisionSize"             "64"
 
         // Status --------------------------------------------------------
         "StatusHealth"                "1500"
@@ -1653,7 +1738,7 @@
         "Level"                         "1"
         "HealthBarOffset"               "8000"
         "HasInventory"                  "1"
-        "ConsideredHero"                "0"
+        "ConsideredHero"                "1"
 
         // Abilities -----------------------------------------------------
         "AbilityLayout"               "6"
@@ -1674,12 +1759,16 @@
         "AttackRange"                "700"
         "ProjectileModel"            "particles/units/heroes/hero_luna/luna_base_attack.vpcf"
         "ProjectileSpeed"            "1800"
-        "MovementTurnRate"           "4" // 值越大转身速率越高
+
+        // Movement-------------------------------------------------------
+        "MovementCapabilities"        "DOTA_UNIT_CAP_MOVE_NONE"
+        "MovementSpeed"               "0"
+        "MovementTurnRate"            "0"
 
         // Bounds --------------------------------------------------------
         "BoundsHullName"            "DOTA_HULL_SIZE_SMALL"
-        "RingRadius"                "32"
-        "CollisionSize"             "100"
+        "RingRadius"                "64"
+        "CollisionSize"             "64"
 
         // Status --------------------------------------------------------
         "StatusHealth"                "1500"
@@ -1716,7 +1805,7 @@
         "Level"                         "1"
         "HealthBarOffset"               "140"
         "HasInventory"                  "1"
-        "ConsideredHero"                "0"
+        "ConsideredHero"                "1"
 
         // Abilities -----------------------------------------------------
         "AbilityLayout"               "6"
@@ -1737,12 +1826,16 @@
         "AttackRange"                "700"
         "ProjectileModel"            "particles/units/heroes/hero_luna/luna_base_attack.vpcf"
         "ProjectileSpeed"            "1800"
-        "MovementTurnRate"           "4" // 值越大转身速率越高
+
+        // Movement-------------------------------------------------------
+        "MovementCapabilities"        "DOTA_UNIT_CAP_MOVE_NONE"
+        "MovementSpeed"               "0"
+        "MovementTurnRate"            "0"
 
         // Bounds --------------------------------------------------------
         "BoundsHullName"            "DOTA_HULL_SIZE_SMALL"
-        "RingRadius"                "32"
-        "CollisionSize"             "100"
+        "RingRadius"                "64"
+        "CollisionSize"             "64"
 
         // Status --------------------------------------------------------
         "StatusHealth"                "1500"
@@ -1779,7 +1872,7 @@
         "Level"                         "1"
         "HealthBarOffset"               "140"
         "HasInventory"                  "1"
-        "ConsideredHero"                "0"
+        "ConsideredHero"                "1"
 
         // Abilities -----------------------------------------------------
         "AbilityLayout"               "6"
@@ -1800,12 +1893,16 @@
         "AttackRange"                "700"
         "ProjectileModel"            "particles/units/heroes/hero_windrunner/windrunner_base_attack.vpcf"
         "ProjectileSpeed"            "1800"
-        "MovementTurnRate"           "4" // 值越大转身速率越高
+
+        // Movement-------------------------------------------------------
+        "MovementCapabilities"        "DOTA_UNIT_CAP_MOVE_NONE"
+        "MovementSpeed"               "0"
+        "MovementTurnRate"            "0"
 
         // Bounds --------------------------------------------------------
         "BoundsHullName"            "DOTA_HULL_SIZE_SMALL"
-        "RingRadius"                "32"
-        "CollisionSize"             "100"
+        "RingRadius"                "64"
+        "CollisionSize"             "64"
 
         // Status --------------------------------------------------------
         "StatusHealth"                "1500"
@@ -1838,7 +1935,7 @@
         "Level"                         "1"
         "HealthBarOffset"               "140"
         "HasInventory"                  "1"
-        "ConsideredHero"                "0"
+        "ConsideredHero"                "1"
 
         // Abilities -----------------------------------------------------
         "AbilityLayout"               "6"
@@ -1859,12 +1956,16 @@
         "AttackRange"                "700"
         "ProjectileModel"            "particles/units/heroes/hero_windrunner/windrunner_base_attack.vpcf"
         "ProjectileSpeed"            "1800"
-        "MovementTurnRate"           "4" // 值越大转身速率越高
+
+        // Movement-------------------------------------------------------
+        "MovementCapabilities"        "DOTA_UNIT_CAP_MOVE_NONE"
+        "MovementSpeed"               "0"
+        "MovementTurnRate"            "0"
 
         // Bounds --------------------------------------------------------
         "BoundsHullName"            "DOTA_HULL_SIZE_SMALL"
-        "RingRadius"                "32"
-        "CollisionSize"             "100"
+        "RingRadius"                "64"
+        "CollisionSize"             "64"
 
         // Status --------------------------------------------------------
         "StatusHealth"                "2000"
